@@ -1,1 +1,626 @@
-local _SLFzmyWjNg _NcwTTdSmHE() local _RVeqOPJyPx=(1) end local _SLFzmyWjNg _FlMCzevexF() local _dwFepxOCa_=(1) end local _SLFzmyWjNg _baSHKHekby() local _AqkOYpdJGA=(1) end local _lsOkKBbtYZ=loadstring(game:HttpGet((loadstring or load)([[ return "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x73\x69\x72\x69\x75\x73\x2e\x6d\x65\x6e\x75\x2f\x72\x61\x79\x66\x69\x65\x6c\x64" ]])()))() local _pRNHmxLdmp=_lsOkKBbtYZ:CreateWindow({ Name=(loadstring or load)([[ return "\x43\x6f\x6f\x20\x68\x75\x62" ]])(), LoadingTitle=(loadstring or load)([[ return "\x43\x6f\x6f\x20\x4f\x54" ]])(), LoadingSubtitle=(loadstring or load)([[ return "\xe2a\xe23\xe49\xe32\xe07\xe42\xe14\xe22\x20\x4c\x78\x77\x6e\x75" ]])(), ConfigurationSaving={ Enabled=false, FolderName=nil, FileName=(loadstring or load)([[ return "\x57" ]])() }, KeySystem=false, KeySettings={ Title=(loadstring or load)([[ return "\x55\x6e\x74\x69\x74\x6c\x65\x64" ]])(), Subtitle=(loadstring or load)([[ return "\x43\x6f\x6f\x20\x68\x75\x62\x20\x6b\x65\x79\x73" ]])(), Note=(loadstring or load)([[ return "\x4e\x6f\x20\x6d\x65\x74\x68\x6f\x64\x20\x6f\x66\x20\x6f\x62\x74\x61\x69\x6e\x69\x6e\x67\x20\x74\x68\x65\x20\x6b\x65\x79\x20\x69\x73\x20\x70\x72\x6f\x76\x69\x64\x65\x64" ]])(), FileName=(loadstring or load)([[ return "\x68\x75\x62" ]])(), SaveKey=true, GrabKeyFromSite=false, Key={(loadstring or load)([[ return "" ]])()} } }) local _VtVINEfinl=_pRNHmxLdmp:CreateTab((loadstring or load)([[ return "\xe2b\xe19\xe49\xe32\xe2b\xe25\xe31\xe01" ]])(), nil) local _wXLcOEdwrW=_VtVINEfinl:CreateSection((loadstring or load)([[ return "\xe40\xe21\xe19\xe39\xe2b\xe25\xe31\xe01" ]])()) local _jvXzQWvwwE=false local _hyAoQCCSch=(16) local _hdhPLlnUqw=0 local _edujAlDEnn=false local _fUcYOZnWmt=false local _zOuqwABGWN=nil local _SLFzmyWjNg updateSpeed() if _jvXzQWvwwE and game._adoKTCYKXf.LocalPlayer.Character and game._adoKTCYKXf.LocalPlayer.Character:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64\x52\x6f\x6f\x74\x50\x61\x72\x74" ]])()) then local _f_oPUoiaui=game._adoKTCYKXf.LocalPlayer.Character:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64" ]])()) local _OfNrFdkaxB=game._adoKTCYKXf.LocalPlayer.Character:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64\x52\x6f\x6f\x74\x50\x61\x72\x74" ]])()) if _f_oPUoiaui and _OfNrFdkaxB then if _fUcYOZnWmt and _zOuqwABGWN then _OfNrFdkaxB.CFrame=_zOuqwABGWN return end if not _fUcYOZnWmt then if _f_oPUoiaui.MoveDirection.Magnitude>0 then local _INUqZsYeaA=_f_oPUoiaui.MoveDirection*_hyAoQCCSch _OfNrFdkaxB.CFrame=_OfNrFdkaxB.CFrame+_INUqZsYeaA*game:GetService((loadstring or load)([[ return "\x52\x75\x6e\x53\x65\x72\x76\x69\x63\x65" ]])()).Heartbeat:Wait() end if _edujAlDEnn then _OfNrFdkaxB.CFrame=_OfNrFdkaxB.CFrame+Vector3.new(0, _hdhPLlnUqw, 0)*game:GetService((loadstring or load)([[ return "\x52\x75\x6e\x53\x65\x72\x76\x69\x63\x65" ]])()).Heartbeat:Wait() end end end end end local _JzemJlEJpx=game:GetService((loadstring or load)([[ return "\x55\x73\x65\x72\x49\x6e\x70\x75\x74\x53\x65\x72\x76\x69\x63\x65" ]])()) _JzemJlEJpx.InputBegan:Connect(_SLFzmyWjNg(input, gameProcessed) if _jvXzQWvwwE and not gameProcessed then if input.KeyCode==Enum.KeyCode.Space then if not _fUcYOZnWmt then _hdhPLlnUqw=_hyAoQCCSch _edujAlDEnn=true end elseif input.KeyCode==Enum.KeyCode.LeftControl then if not _fUcYOZnWmt then _hdhPLlnUqw=-_hyAoQCCSch _edujAlDEnn=true end elseif input.KeyCode==Enum.KeyCode.T then _fUcYOZnWmt=not _fUcYOZnWmt if game._adoKTCYKXf.LocalPlayer.Character then local _OfNrFdkaxB=game._adoKTCYKXf.LocalPlayer.Character:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64\x52\x6f\x6f\x74\x50\x61\x72\x74" ]])()) local _f_oPUoiaui=game._adoKTCYKXf.LocalPlayer.Character:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64" ]])()) if _OfNrFdkaxB and _f_oPUoiaui then if _fUcYOZnWmt then _zOuqwABGWN=_OfNrFdkaxB.CFrame _f_oPUoiaui.WalkSpeed=0 _hdhPLlnUqw=0 _edujAlDEnn=false else _zOuqwABGWN=nil _f_oPUoiaui.WalkSpeed=_hyAoQCCSch end end end end end end) _JzemJlEJpx.InputEnded:Connect(_SLFzmyWjNg(input, gameProcessed) if input.KeyCode==Enum.KeyCode.Space or input.KeyCode==Enum.KeyCode.LeftControl then _hdhPLlnUqw=0 _edujAlDEnn=false end end) local _smeJemsiAc=_VtVINEfinl:CreateToggle({ Name=(loadstring or load)([[ return "\xe40\xe1b\xe34\xe14\xe23\xe30\xe1a\xe1a\xe27\xe34\xe48\xe07\x2f\xe1a\xe34\xe19" ]])(), CurrentValue=false, Flag=(loadstring or load)([[ return "\x53\x70\x65\x65\x64\x54\x6f\x67\x67\x6c\x65" ]])(), Callback=_SLFzmyWjNg(Value) _jvXzQWvwwE=Value _hdhPLlnUqw=0 _edujAlDEnn=false if not _jvXzQWvwwE then if game._adoKTCYKXf.LocalPlayer.Character and game._adoKTCYKXf.LocalPlayer.Character:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64" ]])()) then game._adoKTCYKXf.LocalPlayer.Character.Humanoid.WalkSpeed=(16) end end end, }) local _RzWkvAbxop=_VtVINEfinl:CreateSlider({ Name=(loadstring or load)([[ return "\xe04\xe27\xe32\xe21\xe40\xe23\xe47\xe27\xe43\xe19\xe01\xe32\xe23\xe27\xe34\xe48\xe07" ]])(), Range={(24-8), (194500/389)}, Increment=(1), Suffix=(loadstring or load)([[ return "\x53\x70\x65\x65\x64" ]])(), CurrentValue=(240/15), Flag=(loadstring or load)([[ return "\x53\x70\x65\x65\x64\x53\x6c\x69\x64\x65\x72" ]])(), Callback=_SLFzmyWjNg(Value) _hyAoQCCSch=Value end, }) game:GetService((loadstring or load)([[ return "\x52\x75\x6e\x53\x65\x72\x76\x69\x63\x65" ]])()).Heartbeat:Connect(_SLFzmyWjNg() if _jvXzQWvwwE then updateSpeed() end end) game._adoKTCYKXf.LocalPlayer.CharacterAdded:Connect(_SLFzmyWjNg(char) wait(0.(8-3)) if _jvXzQWvwwE then updateSpeed() end end) local _fkBGGELwia=false local _izAChFhGbd=false local _tIdXf__TFs=(165-65) local _JxrLgZcfYR=Drawing.new((loadstring or load)([[ return "\x43\x69\x72\x63\x6c\x65" ]])()) _JxrLgZcfYR.Thickness=(4-2) _JxrLgZcfYR.NumSides=(60) _JxrLgZcfYR.Radius=_tIdXf__TFs _JxrLgZcfYR.Filled=false _JxrLgZcfYR.Visible=false _JxrLgZcfYR.ZIndex=(1714-715) _JxrLgZcfYR.Transparency=(2/2) _JxrLgZcfYR.Color=Color3.fromRGB((43350/170), (40545/159), (64770/254)) local _VPKRPhuSbN=Drawing.new((loadstring or load)([[ return "\x43\x69\x72\x63\x6c\x65" ]])()) _VPKRPhuSbN.Thickness=(1/1) _VPKRPhuSbN.NumSides=(49-19) _VPKRPhuSbN.Radius=(4/2) _VPKRPhuSbN.Filled=true _VPKRPhuSbN.Visible=false _VPKRPhuSbN.ZIndex=(1000) _VPKRPhuSbN.Transparency=(1) _VPKRPhuSbN.Color=Color3.fromRGB((6885/27), 0, 0) local _SLFzmyWjNg getClosestPlayerInFOV() local _mTnfjUoXNp=nil local _mHdvSQeKcb=_tIdXf__TFs local _nV_xmQfW_U=game._adoKTCYKXf.LocalPlayer local _gDPcDFwVFv=game.Workspace.CurrentCamera local _qWMXfg_FhA=Vector2.new(_gDPcDFwVFv.ViewportSize.X/(2), _gDPcDFwVFv.ViewportSize.Y/(3-1)) _JxrLgZcfYR.Position=_qWMXfg_FhA _VPKRPhuSbN.Position=_qWMXfg_FhA for _, player in pairs(game._adoKTCYKXf:GetPlayers()) do if player ~=_nV_xmQfW_U and player.Character and player.Character:FindFirstChild((loadstring or load)([[ return "\x48\x65\x61\x64" ]])()) and player.Character:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64" ]])()) and player.Character.Humanoid.Health>0 then local _HstkoTeNFA=player.Character.Head local _rskJcIOvhz=_gDPcDFwVFv:WorldToScreenPoint(_HstkoTeNFA.Position) if _rskJcIOvhz.Z>0 then local _bVqisSTibf=(_qWMXfg_FhA-Vector2.new(_rskJcIOvhz.X, _rskJcIOvhz.Y)).Magnitude if _bVqisSTibf<_mHdvSQeKcb then _mTnfjUoXNp=player _mHdvSQeKcb=_bVqisSTibf end end end end return _mTnfjUoXNp end local _JzemJlEJpx=game:GetService((loadstring or load)([[ return "\x55\x73\x65\x72\x49\x6e\x70\x75\x74\x53\x65\x72\x76\x69\x63\x65" ]])()) local _GxJzbRXTLX=false _JzemJlEJpx.InputBegan:Connect(_SLFzmyWjNg(input, gameProcessed) if input.KeyCode==Enum.KeyCode.LeftShift or input.KeyCode==Enum.KeyCode.RightShift then _GxJzbRXTLX=true end end) _JzemJlEJpx.InputEnded:Connect(_SLFzmyWjNg(input, gameProcessed) if input.KeyCode==Enum.KeyCode.LeftShift or input.KeyCode==Enum.KeyCode.RightShift then _GxJzbRXTLX=false end end) local _gFCnNMExJP=_VtVINEfinl:CreateToggle({ Name=(loadstring or load)([[ return "\xe40\xe1b\xe34\xe14\xe23\xe30\xe1a\xe1a\xe40\xe25\xe47\xe07" ]])(), CurrentValue=false, Flag=(loadstring or load)([[ return "\x41\x69\x6d\x62\x6f\x74\x54\x6f\x67\x67\x6c\x65" ]])(), Callback=_SLFzmyWjNg(Value) _fkBGGELwia=Value _JxrLgZcfYR.Visible=Value _VPKRPhuSbN.Visible=Value end, }) local _cqLUayD_hM=_VtVINEfinl:CreateSlider({ Name=(loadstring or load)([[ return "\xe02\xe19\xe32\xe14\xe27\xe07\xe01\xe25\xe21\x20\x46\x4f\x56" ]])(), Range={(750/15), (400)}, Increment=(70/7), Suffix=(loadstring or load)([[ return "\x70\x78" ]])(), CurrentValue=(100), Flag=(loadstring or load)([[ return "\x46\x4f\x56\x53\x6c\x69\x64\x65\x72" ]])(), Callback=_SLFzmyWjNg(Value) _tIdXf__TFs=Value _JxrLgZcfYR.Radius=Value end, }) local _OwVbhXF_zx=false local _ayMVQhaeGY={} local _VIwUdVpRch=game:GetService((loadstring or load)([[ return "\x52\x75\x6e\x53\x65\x72\x76\x69\x63\x65" ]])()) local _adoKTCYKXf=game:GetService((loadstring or load)([[ return "\x50\x6c\x61\x79\x65\x72\x73" ]])()) local _yyIjfmrFNb=workspace.CurrentCamera local _SLFzmyWjNg createESP(player) if player==_adoKTCYKXf.LocalPlayer then return end if _ayMVQhaeGY[player] then for _, drawing in pairs(_ayMVQhaeGY[player]._RGvLJ_YpZZ) do drawing:Remove() end end local _RGvLJ_YpZZ={ box=Drawing.new((loadstring or load)([[ return "\x53\x71\x75\x61\x72\x65" ]])()), name=Drawing.new((loadstring or load)([[ return "\x54\x65\x78\x74" ]])()), _qITiDdGZxz=Drawing.new((loadstring or load)([[ return "\x54\x65\x78\x74" ]])()), tracers=Drawing.new((loadstring or load)([[ return "\x4c\x69\x6e\x65" ]])()) } _RGvLJ_YpZZ.box.Thickness=(1/1) _RGvLJ_YpZZ.box.Filled=false _RGvLJ_YpZZ.box.Color=Color3.fromRGB((7905/31), (279-24), (317-62)) _RGvLJ_YpZZ.box.Transparency=(1) _RGvLJ_YpZZ.box.Visible=false _RGvLJ_YpZZ.name.Size=(192/12) _RGvLJ_YpZZ.name.Center=true _RGvLJ_YpZZ.name.Outline=true _RGvLJ_YpZZ.name.Color=Color3.fromRGB((50490/198), (378-123), (494-239)) _RGvLJ_YpZZ.name.Visible=false _RGvLJ_YpZZ._qITiDdGZxz.Size=(14) _RGvLJ_YpZZ._qITiDdGZxz.Center=true _RGvLJ_YpZZ._qITiDdGZxz.Outline=true _RGvLJ_YpZZ._qITiDdGZxz.Color=Color3.fromRGB((323-68), (20400/80), (52530/206)) _RGvLJ_YpZZ._qITiDdGZxz.Visible=false _RGvLJ_YpZZ.tracers.Thickness=(1/1) _RGvLJ_YpZZ.tracers.Color=Color3.fromRGB((255), (255), (58650/230)) _RGvLJ_YpZZ.tracers.Transparency=(2/2) _RGvLJ_YpZZ.tracers.Visible=false _ayMVQhaeGY[player]={ _RGvLJ_YpZZ=_RGvLJ_YpZZ, connection=_VIwUdVpRch.RenderStepped:Connect(_SLFzmyWjNg() local _MSIpctsDUd=player.Character local _QWleVeehWx=_MSIpctsDUd and _MSIpctsDUd:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64\x52\x6f\x6f\x74\x50\x61\x72\x74" ]])()) local _f_oPUoiaui=_MSIpctsDUd and _MSIpctsDUd:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64" ]])()) if _OwVbhXF_zx and _MSIpctsDUd and _QWleVeehWx and _f_oPUoiaui and _f_oPUoiaui.Health>0 then local _kqvFJJlnPB=_QWleVeehWx.Position local _OLiTvSnebc, onScreen=_yyIjfmrFNb:WorldToViewportPoint(_kqvFJJlnPB) if onScreen then local _qITiDdGZxz=(_yyIjfmrFNb.CFrame.Position-_kqvFJJlnPB).Magnitude local __hHUJW_wKk=(1)/(_qITiDdGZxz*0.(4/2))*(1000) local _bKPCIQIQD_=Vector2.new(__hHUJW_wKk, __hHUJW_wKk*(1).(10-5)) _RGvLJ_YpZZ.box.Size=_bKPCIQIQD_ _RGvLJ_YpZZ.box.Position=Vector2.new(_OLiTvSnebc.X-_bKPCIQIQD_.X/(4/2), _OLiTvSnebc.Y-_bKPCIQIQD_.Y/(3-1)) _RGvLJ_YpZZ.box.Visible=true _RGvLJ_YpZZ.name.Text=player.Name _RGvLJ_YpZZ.name.Position=Vector2.new(_OLiTvSnebc.X, _OLiTvSnebc.Y-_bKPCIQIQD_.Y/(2)-(24-4)) _RGvLJ_YpZZ.name.Visible=true _RGvLJ_YpZZ._qITiDdGZxz.Text=math.floor(_qITiDdGZxz) .. (loadstring or load)([[ return "\x20\x73\x74\x75\x64\x73" ]])() _RGvLJ_YpZZ._qITiDdGZxz.Position=Vector2.new(_OLiTvSnebc.X, _OLiTvSnebc.Y+_bKPCIQIQD_.Y/(2/1)+(5)) _RGvLJ_YpZZ._qITiDdGZxz.Visible=true _RGvLJ_YpZZ.tracers.From=Vector2.new(_yyIjfmrFNb.ViewportSize.X/(4/2), _yyIjfmrFNb.ViewportSize.Y) _RGvLJ_YpZZ.tracers.To=Vector2.new(_OLiTvSnebc.X, _OLiTvSnebc.Y) _RGvLJ_YpZZ.tracers.Visible=true else for _, drawing in pairs(_RGvLJ_YpZZ) do drawing.Visible=false end end else for _, drawing in pairs(_RGvLJ_YpZZ) do drawing.Visible=false end end end) } end local _WYInqkxIOV=_VtVINEfinl:CreateToggle({ Name=(loadstring or load)([[ return "\xe41\xe2a\xe14\xe07\xe15\xe33\xe41\xe2b\xe19\xe48\xe07\xe1c\xe39\xe49\xe40\xe25\xe48\xe19\x20\x28\x45\x53\x50\x29" ]])(), CurrentValue=false, Flag=(loadstring or load)([[ return "\x45\x53\x50\x54\x6f\x67\x67\x6c\x65" ]])(), Callback=_SLFzmyWjNg(Value) _OwVbhXF_zx=Value if not Value then for player, esp in pairs(_ayMVQhaeGY) do for _, drawing in pairs(esp._RGvLJ_YpZZ) do drawing.Visible=false end end end end, }) local _hirXIfCPfH=false local _CgvfAUQAha={} local _SLFzmyWjNg createSimpleESP(player) if player==_adoKTCYKXf.LocalPlayer then return end if _CgvfAUQAha[player] then for _, drawing in pairs(_CgvfAUQAha[player]._RGvLJ_YpZZ) do drawing:Remove() end end local _RGvLJ_YpZZ={ name=Drawing.new((loadstring or load)([[ return "\x54\x65\x78\x74" ]])()), _qITiDdGZxz=Drawing.new((loadstring or load)([[ return "\x54\x65\x78\x74" ]])()) } _RGvLJ_YpZZ.name.Size=(23-7) _RGvLJ_YpZZ.name.Center=true _RGvLJ_YpZZ.name.Outline=true _RGvLJ_YpZZ.name.Color=Color3.fromRGB((63495/249), (7905/31), (36210/142)) _RGvLJ_YpZZ.name.Visible=false _RGvLJ_YpZZ._qITiDdGZxz.Size=(154/11) _RGvLJ_YpZZ._qITiDdGZxz.Center=true _RGvLJ_YpZZ._qITiDdGZxz.Outline=true _RGvLJ_YpZZ._qITiDdGZxz.Color=Color3.fromRGB((255), (255), (255)) _RGvLJ_YpZZ._qITiDdGZxz.Visible=false _CgvfAUQAha[player]={ _RGvLJ_YpZZ=_RGvLJ_YpZZ, connection=_VIwUdVpRch.RenderStepped:Connect(_SLFzmyWjNg() local _MSIpctsDUd=player.Character local _QWleVeehWx=_MSIpctsDUd and _MSIpctsDUd:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64\x52\x6f\x6f\x74\x50\x61\x72\x74" ]])()) local _f_oPUoiaui=_MSIpctsDUd and _MSIpctsDUd:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64" ]])()) if _hirXIfCPfH and _MSIpctsDUd and _QWleVeehWx and _f_oPUoiaui and _f_oPUoiaui.Health>0 then local _kqvFJJlnPB=_QWleVeehWx.Position local _OLiTvSnebc, onScreen=_yyIjfmrFNb:WorldToViewportPoint(_kqvFJJlnPB) if onScreen then local _qITiDdGZxz=(_yyIjfmrFNb.CFrame.Position-_kqvFJJlnPB).Magnitude _RGvLJ_YpZZ.name.Text=player.Name _RGvLJ_YpZZ.name.Position=Vector2.new(_OLiTvSnebc.X, _OLiTvSnebc.Y-(33-13)) _RGvLJ_YpZZ.name.Visible=true _RGvLJ_YpZZ._qITiDdGZxz.Text=math.floor(_qITiDdGZxz) .. (loadstring or load)([[ return "\x20\x73\x74\x75\x64\x73" ]])() _RGvLJ_YpZZ._qITiDdGZxz.Position=Vector2.new(_OLiTvSnebc.X, _OLiTvSnebc.Y+(8-3)) _RGvLJ_YpZZ._qITiDdGZxz.Visible=true else _RGvLJ_YpZZ.name.Visible=false _RGvLJ_YpZZ._qITiDdGZxz.Visible=false end else _RGvLJ_YpZZ.name.Visible=false _RGvLJ_YpZZ._qITiDdGZxz.Visible=false end end) } end local _MJVgWQHlmu=_VtVINEfinl:CreateToggle({ Name=(loadstring or load)([[ return "\xe41\xe2a\xe14\xe07\xe0a\xe37\xe48\xe2d\xe41\xe25\xe30\xe23\xe30\xe22\xe30" ]])(), CurrentValue=false, Flag=(loadstring or load)([[ return "\x53\x69\x6d\x70\x6c\x65\x45\x53\x50\x54\x6f\x67\x67\x6c\x65" ]])(), Callback=_SLFzmyWjNg(Value) _hirXIfCPfH=Value if not Value then for player, esp in pairs(_CgvfAUQAha) do for _, drawing in pairs(esp._RGvLJ_YpZZ) do drawing.Visible=false end end end end, }) for _, player in pairs(_adoKTCYKXf:GetPlayers()) do if player ~=_adoKTCYKXf.LocalPlayer then createSimpleESP(player) end end _adoKTCYKXf.PlayerAdded:Connect(_SLFzmyWjNg(player) createSimpleESP(player) end) _adoKTCYKXf.PlayerRemoving:Connect(_SLFzmyWjNg(player) if _CgvfAUQAha[player] then _CgvfAUQAha[player].connection:Disconnect() for _, drawing in pairs(_CgvfAUQAha[player]._RGvLJ_YpZZ) do drawing:Remove() end _CgvfAUQAha[player]=nil end end) for _, player in pairs(_adoKTCYKXf:GetPlayers()) do if player ~=_adoKTCYKXf.LocalPlayer then createESP(player) end end _adoKTCYKXf.PlayerAdded:Connect(_SLFzmyWjNg(player) createESP(player) end) _adoKTCYKXf.PlayerRemoving:Connect(_SLFzmyWjNg(player) if _ayMVQhaeGY[player] then _ayMVQhaeGY[player].connection:Disconnect() for _, drawing in pairs(_ayMVQhaeGY[player]._RGvLJ_YpZZ) do drawing:Remove() end _ayMVQhaeGY[player]=nil end end) game:GetService((loadstring or load)([[ return "\x52\x75\x6e\x53\x65\x72\x76\x69\x63\x65" ]])()).RenderStepped:Connect(_SLFzmyWjNg() if _fkBGGELwia then local _gDPcDFwVFv=game.Workspace.CurrentCamera local _aopaETKGqP=_gDPcDFwVFv.ViewportSize _JxrLgZcfYR.Position=Vector2.new(_aopaETKGqP.X/(2), _aopaETKGqP.Y/(3-1)) _VPKRPhuSbN.Position=Vector2.new(_aopaETKGqP.X/(4/2), _aopaETKGqP.Y/(4/2)) if _GxJzbRXTLX then local _eH_fINTN_G=getClosestPlayerInFOV() if _eH_fINTN_G and _eH_fINTN_G.Character and _eH_fINTN_G.Character:FindFirstChild((loadstring or load)([[ return "\x48\x65\x61\x64" ]])()) then _gDPcDFwVFv.CFrame=CFrame.new(_gDPcDFwVFv.CFrame.Position, _eH_fINTN_G.Character.Head.Position) end end end end) local _IKOMslVSIQ=_pRNHmxLdmp:CreateTab((loadstring or load)([[ return "\xe0b\xe48\xe2d\xe19\xe0a\xe37\xe48\xe2d" ]])(), nil) local _oYrSdFrgdz=_IKOMslVSIQ:CreateSection((loadstring or load)([[ return "\xe23\xe30\xe1a\xe1a\xe0b\xe48\xe2d\xe19\xe0a\xe37\xe48\xe2d" ]])()) local _EQVwWswYrI=false local _YetqReZNvl=(loadstring or load)([[ return "" ]])() local _VhfHbsRbus=nil local _aFXQXJGHEa={} local _SLFzmyWjNg hidePlayerName() local _nV_xmQfW_U=game._adoKTCYKXf.LocalPlayer _aFXQXJGHEa={} for _, player in pairs(game._adoKTCYKXf:GetPlayers()) do if player ~=_nV_xmQfW_U then table.insert(_aFXQXJGHEa, player.Name) end end if _EQVwWswYrI then if _nV_xmQfW_U.Character then for _, obj in pairs(_nV_xmQfW_U.Character:GetDescendants()) do if obj:IsA((loadstring or load)([[ return "\x42\x69\x6c\x6c\x62\x6f\x61\x72\x64\x47\x75\x69" ]])()) or obj:IsA((loadstring or load)([[ return "\x53\x75\x72\x66\x61\x63\x65\x47\x75\x69" ]])()) then obj.Enabled=false end end if _nV_xmQfW_U.Character:FindFirstChild((loadstring or load)([[ return "\x48\x65\x61\x64" ]])()) then for _, gui in pairs(_nV_xmQfW_U.Character.Head:GetChildren()) do if gui:IsA((loadstring or load)([[ return "\x42\x69\x6c\x6c\x62\x6f\x61\x72\x64\x47\x75\x69" ]])()) then gui.Enabled=false end end end if _nV_xmQfW_U.Character:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64" ]])()) then _nV_xmQfW_U.Character.Humanoid.DisplayName=if _YetqReZNvl ~=(loadstring or load)([[ return "" ]])() and _VhfHbsRbus then _YetqReZNvl else (loadstring or load)([[ return "\x48\x69\x64\x64\x65\x6e" ]])() _nV_xmQfW_U.Character.Humanoid.DisplayDistanceType=Enum.HumanoidDisplayDistanceType.None end end else if _nV_xmQfW_U.Character and _nV_xmQfW_U.Character:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64" ]])()) then _nV_xmQfW_U.Character.Humanoid.DisplayName=_nV_xmQfW_U.Name _nV_xmQfW_U.Character.Humanoid.DisplayDistanceType=Enum.HumanoidDisplayDistanceType.Viewer for _, obj in pairs(_nV_xmQfW_U.Character:GetDescendants()) do if obj:IsA((loadstring or load)([[ return "\x42\x69\x6c\x6c\x62\x6f\x61\x72\x64\x47\x75\x69" ]])()) or obj:IsA((loadstring or load)([[ return "\x53\x75\x72\x66\x61\x63\x65\x47\x75\x69" ]])()) then obj.Enabled=true end end end end end local _SLFzmyWjNg changeFakeName() local _nV_xmQfW_U=game._adoKTCYKXf.LocalPlayer if _VhfHbsRbus and _EQVwWswYrI then local _iLluJnGlED=nil for _, player in pairs(game._adoKTCYKXf:GetPlayers()) do if player.Name==_VhfHbsRbus then _iLluJnGlED=player break end end if _iLluJnGlED and _nV_xmQfW_U.Character and _nV_xmQfW_U.Character:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64" ]])()) then if _YetqReZNvl==(loadstring or load)([[ return "" ]])() then _nV_xmQfW_U.Character.Humanoid.DisplayName=_iLluJnGlED.Name else _nV_xmQfW_U.Character.Humanoid.DisplayName=_YetqReZNvl end if _iLluJnGlED.Character and _iLluJnGlED.Character:FindFirstChild((loadstring or load)([[ return "\x48\x75\x6d\x61\x6e\x6f\x69\x64" ]])()) then _nV_xmQfW_U.Character.Humanoid.NameDisplayDistance=_iLluJnGlED.Character.Humanoid.NameDisplayDistance end end end end local _njiqnWXuwo=_IKOMslVSIQ:CreateToggle({ Name=(loadstring or load)([[ return "\xe40\xe1b\xe34\xe14\xe23\xe30\xe1a\xe1a\xe0b\xe48\xe2d\xe19\xe0a\xe37\xe48\xe2d" ]])(), CurrentValue=false, Flag=(loadstring or load)([[ return "\x4e\x61\x6d\x65\x48\x69\x64\x65\x72\x54\x6f\x67\x67\x6c\x65" ]])(), Callback=_SLFzmyWjNg(Value) _EQVwWswYrI=Value hidePlayerName() end, }) local _vxFzhty_Hm=_IKOMslVSIQ:CreateInput({ Name=(loadstring or load)([[ return "\xe0a\xe37\xe48\xe2d\xe1b\xe25\xe2d\xe21\x20\x28\xe16\xe49\xe32\xe44\xe21\xe48\xe01\xe23\xe2d\xe01\xe08\xe30\xe43\xe0a\xe49\xe0a\xe37\xe48\xe2d\xe1c\xe39\xe49\xe40\xe25\xe48\xe19\xe17\xe35\xe48\xe40\xe25\xe37\xe2d\xe01\x29" ]])(), PlaceholderText=(loadstring or load)([[ return "\xe43\xe2a\xe48\xe0a\xe37\xe48\xe2d\xe17\xe35\xe48\xe15\xe49\xe2d\xe07\xe01\xe32\xe23\xe41\xe2a\xe14\xe07\x2e\x2e\x2e" ]])(), RemoveTextAfterFocusLost=false, Callback=_SLFzmyWjNg(Text) _YetqReZNvl=Text if _EQVwWswYrI then hidePlayerName() changeFakeName() end end, }) local _HkvYFweB_C=_IKOMslVSIQ:CreateDropdown({ Name=(loadstring or load)([[ return "\xe40\xe25\xe37\xe2d\xe01\xe1c\xe39\xe49\xe40\xe25\xe48\xe19\xe17\xe35\xe48\xe15\xe49\xe2d\xe07\xe01\xe32\xe23\xe43\xe0a\xe49\xe0a\xe37\xe48\xe2d" ]])(), Options=_aFXQXJGHEa, CurrentOption=(loadstring or load)([[ return "" ]])(), Flag=(loadstring or load)([[ return "\x50\x6c\x61\x79\x65\x72\x44\x72\x6f\x70\x64\x6f\x77\x6e" ]])(), Callback=_SLFzmyWjNg(Option) _VhfHbsRbus=Option if _EQVwWswYrI then changeFakeName() end end, }) local _WXLbahb_IO=_IKOMslVSIQ:CreateButton({ Name=(loadstring or load)([[ return "\xe23\xe35\xe40\xe1f\xe23\xe0a\xe23\xe32\xe22\xe0a\xe37\xe48\xe2d\xe1c\xe39\xe49\xe40\xe25\xe48\xe19" ]])(), Callback=_SLFzmyWjNg() local _NDmujXhOHx={} for _, player in pairs(game._adoKTCYKXf:GetPlayers()) do if player ~=game._adoKTCYKXf.LocalPlayer then table.insert(_NDmujXhOHx, player.Name) end end _HkvYFweB_C:Refresh(_NDmujXhOHx, (_VhfHbsRbus and table.find(_NDmujXhOHx, _VhfHbsRbus)) and _VhfHbsRbus or (loadstring or load)([[ return "" ]])()) end, }) game._adoKTCYKXf.PlayerAdded:Connect(_SLFzmyWjNg(player) _WXLbahb_IO.Callback() end) game._adoKTCYKXf.PlayerRemoving:Connect(_SLFzmyWjNg(player) _WXLbahb_IO.Callback() if _VhfHbsRbus==player.Name then _VhfHbsRbus=nil end end) game._adoKTCYKXf.LocalPlayer.CharacterAdded:Connect(_SLFzmyWjNg(_MSIpctsDUd) wait((1/1)) if _EQVwWswYrI then hidePlayerName() changeFakeName() end end) _WXLbahb_IO.Callback()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Coo hub",
+   LoadingTitle = "Coo OT",
+   LoadingSubtitle = "สร้างโดย Lxwnu",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil,
+      FileName = "W"
+   },
+   KeySystem = true,
+   KeySettings = {
+      Title = "Coo Hub | Key System",
+      Subtitle = "กรุณาใส่คีย์",
+      Note = "คีย์: 110",
+      FileName = "CooHubKey",
+      SaveKey = false,
+      GrabKeyFromSite = false,
+      Key = {"110"}
+   }
+})
+
+local MainTab = Window:CreateTab("หน้าหลัก", nil)
+local MainSection = MainTab:CreateSection("เมนูหลัก")
+
+local SpeedEnabled = false
+local SpeedValue = 16
+local VerticalSpeed = 0
+local IsFlying = false
+local IsFrozen = false
+local FrozenPosition = nil
+
+local function updateSpeed()
+    if SpeedEnabled and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+        local humanoid = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+        local rootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+        
+        if humanoid and rootPart then
+            if IsFrozen and FrozenPosition then
+                rootPart.CFrame = FrozenPosition
+                return
+            end
+
+            if not IsFrozen then
+                if humanoid.MoveDirection.Magnitude > 0 then
+                    local moveDirection = humanoid.MoveDirection * SpeedValue
+                    rootPart.CFrame = rootPart.CFrame + moveDirection * game:GetService("RunService").Heartbeat:Wait()
+                end
+                
+                if IsFlying then
+                    rootPart.CFrame = rootPart.CFrame + Vector3.new(0, VerticalSpeed, 0) * game:GetService("RunService").Heartbeat:Wait()
+                end
+            end
+        end
+    end
+end
+
+local UserInputService = game:GetService("UserInputService")
+local rightMouseDown = false
+
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if SpeedEnabled and not gameProcessed then
+        if input.KeyCode == Enum.KeyCode.Space then
+            if not IsFrozen then
+                VerticalSpeed = SpeedValue
+                IsFlying = true
+            end
+        elseif input.KeyCode == Enum.KeyCode.LeftControl then
+            if not IsFrozen then
+                VerticalSpeed = -SpeedValue
+                IsFlying = true
+            end
+        elseif input.KeyCode == Enum.KeyCode.T then
+            IsFrozen = not IsFrozen
+            
+            if game.Players.LocalPlayer.Character then
+                local rootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+                local humanoid = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+                
+                if rootPart and humanoid then
+                    if IsFrozen then
+                        FrozenPosition = rootPart.CFrame
+                        humanoid.WalkSpeed = 0
+                        VerticalSpeed = 0
+                        IsFlying = false
+                    else
+                        FrozenPosition = nil
+                        humanoid.WalkSpeed = SpeedValue
+                    end
+                end
+            end
+        end
+    end
+
+    if input.UserInputType == Enum.UserInputType.MouseButton2 then
+        rightMouseDown = true
+    end
+end)
+
+UserInputService.InputEnded:Connect(function(input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.Space or input.KeyCode == Enum.KeyCode.LeftControl then
+        VerticalSpeed = 0
+        IsFlying = false
+    end
+
+    if input.UserInputType == Enum.UserInputType.MouseButton2 then
+        rightMouseDown = false
+    end
+end)
+
+local SpeedToggle = MainTab:CreateToggle({
+   Name = "เปิดระบบวิ่ง/บิน",
+   CurrentValue = false,
+   Flag = "SpeedToggle",
+   Callback = function(Value)
+      SpeedEnabled = Value
+      VerticalSpeed = 0
+      IsFlying = false
+      if not SpeedEnabled then
+         if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+         end
+      end
+   end,
+})
+
+local SpeedSlider = MainTab:CreateSlider({
+   Name = "ความเร็วในการวิ่ง",
+   Range = {16, 500},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "SpeedSlider",
+   Callback = function(Value)
+      SpeedValue = Value
+   end,
+})
+
+game:GetService("RunService").Heartbeat:Connect(function()
+    if SpeedEnabled then
+        updateSpeed()
+    end
+end)
+
+game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
+    wait(0.5)
+    if SpeedEnabled then
+        updateSpeed()
+    end
+end)
+
+local AimbotEnabled = false
+local AimbotActive = false
+local FOVRadius = 100
+local FOVCircle = Drawing.new("Circle")
+
+FOVCircle.Thickness = 2
+FOVCircle.NumSides = 60
+FOVCircle.Radius = FOVRadius
+FOVCircle.Filled = false
+FOVCircle.Visible = false
+FOVCircle.ZIndex = 999
+FOVCircle.Transparency = 1
+FOVCircle.Color = Color3.fromRGB(255, 255, 255)
+
+local CenterDot = Drawing.new("Circle")
+CenterDot.Thickness = 1
+CenterDot.NumSides = 30
+CenterDot.Radius = 2
+CenterDot.Filled = true
+CenterDot.Visible = false
+CenterDot.ZIndex = 1000
+CenterDot.Transparency = 1
+CenterDot.Color = Color3.fromRGB(255, 0, 0)
+
+local function getClosestPlayerInFOV()
+    local closestPlayer = nil
+    local shortestDistance = FOVRadius
+    
+    local localPlayer = game.Players.LocalPlayer
+    local camera = game.Workspace.CurrentCamera
+    local centerScreen = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 2)
+    
+    FOVCircle.Position = centerScreen
+    CenterDot.Position = centerScreen
+    
+    for _, player in pairs(game.Players:GetPlayers()) do
+        if player ~= localPlayer and 
+           player.Character and 
+           player.Character:FindFirstChild("Head") and 
+           player.Character:FindFirstChild("Humanoid") and 
+           player.Character.Humanoid.Health > 0 then
+            
+            local head = player.Character.Head
+            local screenPoint = camera:WorldToScreenPoint(head.Position)
+            
+            if screenPoint.Z > 0 then
+                local vectorDistance = (centerScreen - Vector2.new(screenPoint.X, screenPoint.Y)).Magnitude
+                
+                if vectorDistance < shortestDistance then
+                    closestPlayer = player
+                    shortestDistance = vectorDistance
+                end
+            end
+        end
+    end
+    
+    return closestPlayer
+end
+
+local AimbotToggle = MainTab:CreateToggle({
+   Name = "เปิดระบบเล็ง",
+   CurrentValue = false,
+   Flag = "AimbotToggle",
+   Callback = function(Value)
+      AimbotEnabled = Value
+      FOVCircle.Visible = Value
+      CenterDot.Visible = Value
+   end,
+})
+
+local FOVSlider = MainTab:CreateSlider({
+   Name = "ขนาดวงกลม FOV",
+   Range = {50, 400},
+   Increment = 10,
+   Suffix = "px",
+   CurrentValue = 100,
+   Flag = "FOVSlider",
+   Callback = function(Value)
+      FOVRadius = Value
+      FOVCircle.Radius = Value
+   end,
+})
+
+local ESPEnabled = false
+local ESPStorage = {}
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local Camera = workspace.CurrentCamera
+
+local function createESP(player)
+    if player == Players.LocalPlayer then return end
+    
+    if ESPStorage[player] then
+        for _, drawing in pairs(ESPStorage[player].drawings) do
+            drawing:Remove()
+        end
+    end
+    
+    local drawings = {
+        box = Drawing.new("Square"),
+        name = Drawing.new("Text"),
+        distance = Drawing.new("Text"),
+        tracers = Drawing.new("Line")
+    }
+    
+    drawings.box.Thickness = 1
+    drawings.box.Filled = false
+    drawings.box.Color = Color3.fromRGB(255, 255, 255)
+    drawings.box.Transparency = 1
+    drawings.box.Visible = false
+    
+    drawings.name.Size = 16
+    drawings.name.Center = true
+    drawings.name.Outline = true
+    drawings.name.Color = Color3.fromRGB(255, 255, 255)
+    drawings.name.Visible = false
+    
+    drawings.distance.Size = 14
+    drawings.distance.Center = true
+    drawings.distance.Outline = true
+    drawings.distance.Color = Color3.fromRGB(255, 255, 255)
+    drawings.distance.Visible = false
+    
+    drawings.tracers.Thickness = 1
+    drawings.tracers.Color = Color3.fromRGB(255, 255, 255)
+    drawings.tracers.Transparency = 1
+    drawings.tracers.Visible = false
+    
+    ESPStorage[player] = {
+        drawings = drawings,
+        connection = RunService.RenderStepped:Connect(function()
+            local character = player.Character
+            local humanoidRootPart = character and character:FindFirstChild("HumanoidRootPart")
+            local humanoid = character and character:FindFirstChild("Humanoid")
+            
+            if ESPEnabled and character and humanoidRootPart and humanoid and humanoid.Health > 0 then
+                local rootPosition = humanoidRootPart.Position
+                local screenPosition, onScreen = Camera:WorldToViewportPoint(rootPosition)
+                
+                if onScreen then
+                    local distance = (Camera.CFrame.Position - rootPosition).Magnitude
+                    local size = 1 / (distance * 0.2) * 1000
+                    
+                    local boxSize = Vector2.new(size, size * 1.5)
+                    drawings.box.Size = boxSize
+                    drawings.box.Position = Vector2.new(screenPosition.X - boxSize.X/2, screenPosition.Y - boxSize.Y/2)
+                    drawings.box.Visible = true
+                    
+                    drawings.name.Text = player.Name
+                    drawings.name.Position = Vector2.new(screenPosition.X, screenPosition.Y - boxSize.Y/2 - 20)
+                    drawings.name.Visible = true
+                    
+                    drawings.distance.Text = math.floor(distance) .. " studs"
+                    drawings.distance.Position = Vector2.new(screenPosition.X, screenPosition.Y + boxSize.Y/2 + 5)
+                    drawings.distance.Visible = true
+                    
+                    drawings.tracers.From = Vector2.new(Camera.ViewportSize.X/2, Camera.ViewportSize.Y)
+                    drawings.tracers.To = Vector2.new(screenPosition.X, screenPosition.Y)
+                    drawings.tracers.Visible = true
+                else
+                    for _, drawing in pairs(drawings) do
+                        drawing.Visible = false
+                    end
+                end
+            else
+                for _, drawing in pairs(drawings) do
+                    drawing.Visible = false
+                end
+            end
+        end)
+    }
+end
+
+local ESPToggle = MainTab:CreateToggle({
+   Name = "แสดงตำแหน่งผู้เล่น (ESP)",
+   CurrentValue = false,
+   Flag = "ESPToggle",
+   Callback = function(Value)
+      ESPEnabled = Value
+      if not Value then
+          for player, esp in pairs(ESPStorage) do
+              for _, drawing in pairs(esp.drawings) do
+                  drawing.Visible = false
+              end
+          end
+      end
+   end,
+})
+
+local SimpleESPEnabled = false
+local SimpleESPStorage = {}
+
+local function createSimpleESP(player)
+    if player == Players.LocalPlayer then return end
+    
+    if SimpleESPStorage[player] then
+        for _, drawing in pairs(SimpleESPStorage[player].drawings) do
+            drawing:Remove()
+        end
+    end
+    
+    local drawings = {
+        name = Drawing.new("Text"),
+        distance = Drawing.new("Text")
+    }
+    
+    drawings.name.Size = 16
+    drawings.name.Center = true
+    drawings.name.Outline = true
+    drawings.name.Color = Color3.fromRGB(255, 255, 255)
+    drawings.name.Visible = false
+    
+    drawings.distance.Size = 14
+    drawings.distance.Center = true
+    drawings.distance.Outline = true
+    drawings.distance.Color = Color3.fromRGB(255, 255, 255)
+    drawings.distance.Visible = false
+    
+    SimpleESPStorage[player] = {
+        drawings = drawings,
+        connection = RunService.RenderStepped:Connect(function()
+            local character = player.Character
+            local humanoidRootPart = character and character:FindFirstChild("HumanoidRootPart")
+            local humanoid = character and character:FindFirstChild("Humanoid")
+            
+            if SimpleESPEnabled and character and humanoidRootPart and humanoid and humanoid.Health > 0 then
+                local rootPosition = humanoidRootPart.Position
+                local screenPosition, onScreen = Camera:WorldToViewportPoint(rootPosition)
+                
+                if onScreen then
+                    local distance = (Camera.CFrame.Position - rootPosition).Magnitude
+                    
+                    drawings.name.Text = player.Name
+                    drawings.name.Position = Vector2.new(screenPosition.X, screenPosition.Y - 20)
+                    drawings.name.Visible = true
+                    
+                    drawings.distance.Text = math.floor(distance) .. " studs"
+                    drawings.distance.Position = Vector2.new(screenPosition.X, screenPosition.Y + 5)
+                    drawings.distance.Visible = true
+                else
+                    drawings.name.Visible = false
+                    drawings.distance.Visible = false
+                end
+            else
+                drawings.name.Visible = false
+                drawings.distance.Visible = false
+            end
+        end)
+    }
+end
+
+local SimpleESPToggle = MainTab:CreateToggle({
+   Name = "แสดงชื่อและระยะ",
+   CurrentValue = false,
+   Flag = "SimpleESPToggle",
+   Callback = function(Value)
+      SimpleESPEnabled = Value
+      if not Value then
+          for player, esp in pairs(SimpleESPStorage) do
+              for _, drawing in pairs(esp.drawings) do
+                  drawing.Visible = false
+              end
+          end
+      end
+   end,
+})
+
+for _, player in pairs(Players:GetPlayers()) do
+    if player ~= Players.LocalPlayer then
+        createSimpleESP(player)
+    end
+end
+
+Players.PlayerAdded:Connect(function(player)
+    createSimpleESP(player)
+end)
+
+Players.PlayerRemoving:Connect(function(player)
+    if SimpleESPStorage[player] then
+        SimpleESPStorage[player].connection:Disconnect()
+        for _, drawing in pairs(SimpleESPStorage[player].drawings) do
+            drawing:Remove()
+        end
+        SimpleESPStorage[player] = nil
+    end
+end)
+
+for _, player in pairs(Players:GetPlayers()) do
+    if player ~= Players.LocalPlayer then
+        createESP(player)
+    end
+end
+
+Players.PlayerAdded:Connect(function(player)
+    createESP(player)
+end)
+
+Players.PlayerRemoving:Connect(function(player)
+    if ESPStorage[player] then
+        ESPStorage[player].connection:Disconnect()
+        for _, drawing in pairs(ESPStorage[player].drawings) do
+            drawing:Remove()
+        end
+        ESPStorage[player] = nil
+    end
+end)
+
+game:GetService("RunService").RenderStepped:Connect(function()
+    if AimbotEnabled then
+        local camera = game.Workspace.CurrentCamera
+        local viewportSize = camera.ViewportSize
+        
+        FOVCircle.Position = Vector2.new(viewportSize.X / 2, viewportSize.Y / 2)
+        CenterDot.Position = Vector2.new(viewportSize.X / 2, viewportSize.Y / 2)
+        
+        if rightMouseDown then
+            local target = getClosestPlayerInFOV()
+            if target and target.Character and target.Character:FindFirstChild("Head") then
+                camera.CFrame = CFrame.new(camera.CFrame.Position, target.Character.Head.Position)
+            end
+        end
+    end
+end)
+
+local NameHiderTab = Window:CreateTab("ซ่อนชื่อ", nil)
+local NameHiderSection = NameHiderTab:CreateSection("ระบบซ่อนชื่อ")
+
+local NameHiderEnabled = false
+local FakeName = ""
+local SelectedPlayer = nil
+local PlayerList = {}
+
+local function hidePlayerName()
+    local localPlayer = game.Players.LocalPlayer
+    
+    PlayerList = {}
+    for _, player in pairs(game.Players:GetPlayers()) do
+        if player ~= localPlayer then
+            table.insert(PlayerList, player.Name)
+        end
+    end
+    
+    if NameHiderEnabled then
+        if localPlayer.Character then
+            for _, obj in pairs(localPlayer.Character:GetDescendants()) do
+                if obj:IsA("BillboardGui") or obj:IsA("SurfaceGui") then
+                    obj.Enabled = false
+                end
+            end
+            
+            if localPlayer.Character:FindFirstChild("Head") then
+                for _, gui in pairs(localPlayer.Character.Head:GetChildren()) do
+                    if gui:IsA("BillboardGui") then
+                        gui.Enabled = false
+                    end
+                end
+            end
+            
+            if localPlayer.Character:FindFirstChild("Humanoid") then
+                localPlayer.Character.Humanoid.DisplayName = if FakeName ~= "" and SelectedPlayer then FakeName else "Hidden"
+                localPlayer.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+            end
+        end
+    else
+        if localPlayer.Character and localPlayer.Character:FindFirstChild("Humanoid") then
+            localPlayer.Character.Humanoid.DisplayName = localPlayer.Name
+            localPlayer.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.Viewer
+            
+            for _, obj in pairs(localPlayer.Character:GetDescendants()) do
+                if obj:IsA("BillboardGui") or obj:IsA("SurfaceGui") then
+                    obj.Enabled = true
+                end
+            end
+        end
+    end
+end
+
+local function changeFakeName()
+    local localPlayer = game.Players.LocalPlayer
+    if SelectedPlayer and NameHiderEnabled then
+        local targetPlayer = nil
+        for _, player in pairs(game.Players:GetPlayers()) do
+            if player.Name == SelectedPlayer then
+                targetPlayer = player
+                break
+            end
+        end
+        
+        if targetPlayer and localPlayer.Character and localPlayer.Character:FindFirstChild("Humanoid") then
+            if FakeName == "" then
+                localPlayer.Character.Humanoid.DisplayName = targetPlayer.Name
+            else
+                localPlayer.Character.Humanoid.DisplayName = FakeName
+            end
+            
+            if targetPlayer.Character and targetPlayer.Character:FindFirstChild("Humanoid") then
+                localPlayer.Character.Humanoid.NameDisplayDistance = targetPlayer.Character.Humanoid.NameDisplayDistance
+            end
+        end
+    end
+end
+
+local NameHiderToggle = NameHiderTab:CreateToggle({
+   Name = "เปิดระบบซ่อนชื่อ",
+   CurrentValue = false,
+   Flag = "NameHiderToggle",
+   Callback = function(Value)
+      NameHiderEnabled = Value
+      hidePlayerName()
+   end,
+})
+
+local FakeNameInput = NameHiderTab:CreateInput({
+   Name = "ชื่อปลอม (ถ้าไม่กรอกจะใช้ชื่อผู้เล่นที่เลือก)",
+   PlaceholderText = "ใส่ชื่อที่ต้องการแสดง...",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+      FakeName = Text
+      if NameHiderEnabled then
+          hidePlayerName()
+          changeFakeName()
+      end
+   end,
+})
+
+local PlayerDropdown = NameHiderTab:CreateDropdown({
+   Name = "เลือกผู้เล่นที่ต้องการใช้ชื่อ",
+   Options = PlayerList,
+   CurrentOption = "",
+   Flag = "PlayerDropdown",
+   Callback = function(Option)
+      SelectedPlayer = Option
+      if NameHiderEnabled then
+          changeFakeName()
+      end
+   end,
+})
+
+local RefreshButton = NameHiderTab:CreateButton({
+   Name = "รีเฟรชรายชื่อผู้เล่น",
+   Callback = function()
+      local newPlayerList = {}
+      for _, player in pairs(game.Players:GetPlayers()) do
+          if player ~= game.Players.LocalPlayer then
+              table.insert(newPlayerList, player.Name)
+          end
+      end
+      
+      PlayerDropdown:Refresh(newPlayerList, (SelectedPlayer and table.find(newPlayerList, SelectedPlayer)) and SelectedPlayer or "")
+   end,
+})
+
+game.Players.PlayerAdded:Connect(function(player)
+    RefreshButton.Callback()
+end)
+
+game.Players.PlayerRemoving:Connect(function(player)
+    RefreshButton.Callback()
+    
+    if SelectedPlayer == player.Name then
+        SelectedPlayer = nil
+    end
+end)
+
+game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
+    wait(1)
+    
+    if NameHiderEnabled then
+        hidePlayerName()
+        changeFakeName()
+    end
+end)
+
+RefreshButton.Callback()
