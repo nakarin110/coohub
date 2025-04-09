@@ -1,38 +1,36 @@
-local _860JbWrott = "_jrLnp1po7JMim2zniK4q"
-local _lCcclyEsGq = function() return end
-local _qwMmRYz2iP = {82, 56, 73, 40, 13, 27, 52, 71}
-local _D1xZ8zMVqK = {}
-local _PWbetJfcTX = {}
-local function _fvcgBShZCM()
-    local _xiXZZ = 719
-    local _0xmd2 = 789
-    for i=1,3 do
-        local _BtZnw = i
+local function _nFQ1QPaMfw()
+    local a, b, c = 1, 2, 3
+    if a ~= nil then
+        if b >= a then
+            for i = 1, 5 do
+                c = c + i
+                if c % 2 == 0 then
+                    c = c * 2
+                else
+                    c = c - 1
+                end
+            end
+        else
+            c = 0
+        end
     end
-    for i=1,5 do
-        local _AW7Ld = i
-    end
-    if 0 == 1 then
-        local _tJV1i = 506
-    end
+    return c
 end
-local function _d6NN8yWhNF()
-    for i=1,6 do
-        local _hz7yF = i
-    end
-    for i=1,8 do
-        local _RfqtS = i
-    end
-    if 0 == 1 then
-        local _1vY6C = 965
-    end
-end
-_d6NN8yWhNF()
-_d6NN8yWhNF()
+_nFQ1QPaMfw()
 
-local _ZjFhbh1Ytl = loadstring(game:HttpGet(string.char(104, 116, 116, 112, 115, 58, 47, 47, 115, 105, 114, 105, 117, 115, 46, 109, 101, 110, 117, 47, 114, 97, 121, 102, 105, 101, 108, 100)))()
+local _ZiTijRdC1A = {}
+local _6cXrzht5Oi = {}
+local _x0DnAE8in9 = "_ygwCtIdnfEWhXzbl01"
+local _DPIU7936io = function() return end
+local _21spQIGH1M = coroutine.create(function() end)
+local _pH0iDJsIDc = "_1Yk9lUf01dO"
+local _GpHgtg406a = "_1xvlge6yp"
+local _Ep8seE5pFi = function() return end
+if false then local _dwtqj15BqR = 307 end
 
-local _BNX7wZsr6p = _ZjFhbh1Ytl:CreateWindow({
+local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+
+local Window = Rayfield:CreateWindow({
    Name = string.char(67, 111, 111, 32, 104, 117, 98),
    LoadingTitle = string.char(67, 111, 111, 32, 79, 84),
    LoadingSubtitle = string.char(3626, 3619, 3657, 3634, 3591, 3650, 3604, 3618, 32, 76, 120, 119, 110, 117),
@@ -45,79 +43,80 @@ local _BNX7wZsr6p = _ZjFhbh1Ytl:CreateWindow({
    KeySettings = {
       Title = string.char(85, 110, 116, 105, 116, 108, 101, 100),
       Subtitle = string.char(67, 111, 111, 32, 104, 117, 98, 32, 107, 101, 121, 115),
-      Note = string.char(78, 111, 32, 109, 101, 116, 104, 111, 100, 32, 111, 102, 32, 111, 98, 116, 97, 105, 110, 105, 110, 103, 32, 116, 104, 101, 32, 107, 101, 121, 32, 105, 115, 32, 112, 114, 111, 118, 105, 100, 101, 100),
+      Note = string.char(78) .. string.char(111) .. " " .. "m" .. string.char(101) .. string.char(116) .. "h" .. "o" .. "d" .. string.char(32) .. "o" .. string.char(102) .. string.char(32) .. "o" .. string.char(98) .. "t" .. "a" .. string.char(105) .. string.char(110) .. "i" .. "n" .. string.char(103) .. string.char(32) .. string.char(116) .. "h" .. string.char(101) .. string.char(32) .. string.char(107) .. "e" .. "y" .. string.char(32) .. "i" .. string.char(115) .. " " .. string.char(112) .. "r" .. string.char(111) .. string.char(118) .. "i" .. "d" .. string.char(101) .. "d",
       FileName = string.char(104, 117, 98),
       SaveKey = true,
       GrabKeyFromSite = false,
       Key = {string.char()}
    }
+while false do local _Oib3ilmBBX = 301 break end  -- AEnscjxzCeQyaiFLCAdo
 })
 
-local _4Q5Di0cCGE = _BNX7wZsr6p:CreateTab(string.char(3627, 3609, 3657, 3634, 3627, 3621, 3633, 3585), nil)
-local _v0SbvlEjn1 = _4Q5Di0cCGE:CreateSection(string.char(3648, 3617, 3609, 3641, 3627, 3621, 3633, 3585))
+local _mgvJAXQpYQ = Window:CreateTab(string.char(3627, 3609, 3657, 3634, 3627, 3621, 3633, 3585), nil)
+local _Ige4vMlhQ2 = _mgvJAXQpYQ:CreateSection(string.char(3648, 3617, 3609, 3641, 3627, 3621, 3633, 3585))
 
-local _kUQ3vxvPfW = false
-local _iyA2vozG5C = 16
-local _4XsMPPYXr7 = 0
-local _9Ezsq8oVQf = false
-local _nF9uUdAkvJ = false
-local _rB11cNexWl = nil
+local _HOQVEWZ0xY = false
+local _zRUNta1q3s = 16
+local _D9v3iJKPGi = 0
+local _bZzN8FFCpH = false
+local _IuuM076DuG = false
+local _bSNABKTIn3 = nil
 
 local function updateSpeed()
-    if _kUQ3vxvPfW and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100, 82, 111, 111, 116, 80, 97, 114, 116)) then
-        local _apBZJbnLNZ = game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100))
-        local _5gEyepx0hx = game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100, 82, 111, 111, 116, 80, 97, 114, 116))
+    if _HOQVEWZ0xY and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100, 82, 111, 111, 116, 80, 97, 114, 116)) then
+        local _IBbeZFLVa7 = game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100))
+        local _EIHIHsz09K = game.Players.LocalPlayer.Character:FindFirstChild(string.char(72) .. "u" .. string.char(109) .. "a" .. string.char(110) .. "o" .. string.char(105) .. "d" .. string.char(82) .. "o" .. string.char(111) .. string.char(116) .. string.char(80) .. "a" .. string.char(114) .. "t")
         
-        if _apBZJbnLNZ and _5gEyepx0hx then
-            if _nF9uUdAkvJ and _rB11cNexWl then
-                _5gEyepx0hx.CFrame = _rB11cNexWl
+        if _IBbeZFLVa7 and _EIHIHsz09K then
+            if _IuuM076DuG and _bSNABKTIn3 then
+                _EIHIHsz09K.CFrame = _bSNABKTIn3
                 return
             end
 
-            if not _nF9uUdAkvJ then
-                if _apBZJbnLNZ.MoveDirection.Magnitude > 0 then
-                    local _nHdvEmhr7i = _apBZJbnLNZ.MoveDirection * _iyA2vozG5C
-                    _5gEyepx0hx.CFrame = _5gEyepx0hx.CFrame + _nHdvEmhr7i * game:GetService(string.char(82, 117, 110, 83, 101, 114, 118, 105, 99, 101)).Heartbeat:Wait()
+            if not _IuuM076DuG then
+                if _IBbeZFLVa7.MoveDirection.Magnitude > 0 then
+                    local _9tTezzlUPT = _IBbeZFLVa7.MoveDirection * _zRUNta1q3s
+                    _EIHIHsz09K.CFrame = _EIHIHsz09K.CFrame + _9tTezzlUPT * game:GetService("R" .. "u" .. "n" .. string.char(83) .. string.char(101) .. string.char(114) .. "v" .. "i" .. "c" .. string.char(101)).Heartbeat:Wait()
                 end
                 
-                if _9Ezsq8oVQf then
-                    _5gEyepx0hx.CFrame = _5gEyepx0hx.CFrame + Vector3.new(0, _4XsMPPYXr7, 0) * game:GetService(string.char(82, 117, 110, 83, 101, 114, 118, 105, 99, 101)).Heartbeat:Wait()
+                if _bZzN8FFCpH then
+                    _EIHIHsz09K.CFrame = _EIHIHsz09K.CFrame + Vector3.new(0, _D9v3iJKPGi, 0) * game:GetService(string.char(82) .. "u" .. "n" .. "S" .. string.char(101) .. "r" .. string.char(118) .. "i" .. string.char(99) .. string.char(101)).Heartbeat:Wait()
                 end
             end
         end
     end
 end
 
-local _xdBsR8tvmZ = game:GetService(string.char(85, 115, 101, 114, 73, 110, 112, 117, 116, 83, 101, 114, 118, 105, 99, 101))
+local _qlMWvC75rM = game:GetService(string.char(85, 115, 101, 114, 73, 110, 112, 117, 116, 83, 101, 114, 118, 105, 99, 101))
 
-_xdBsR8tvmZ.InputBegan:Connect(function(input, gameProcessed)
-    if _kUQ3vxvPfW and not gameProcessed then
+_qlMWvC75rM.InputBegan:Connect(function(input, gameProcessed)
+    if _HOQVEWZ0xY and not gameProcessed then
         if input.KeyCode == Enum.KeyCode.Space then
-            if not _nF9uUdAkvJ then
-                _4XsMPPYXr7 = _iyA2vozG5C
-                _9Ezsq8oVQf = true
+            if not _IuuM076DuG then
+                _D9v3iJKPGi = _zRUNta1q3s
+                _bZzN8FFCpH = true
             end
         elseif input.KeyCode == Enum.KeyCode.LeftControl then
-            if not _nF9uUdAkvJ then
-                _4XsMPPYXr7 = -_iyA2vozG5C
-                _9Ezsq8oVQf = true
+            if not _IuuM076DuG then
+                _D9v3iJKPGi = -_zRUNta1q3s
+                _bZzN8FFCpH = true
             end
         elseif input.KeyCode == Enum.KeyCode.T then
-            _nF9uUdAkvJ = not _nF9uUdAkvJ
+            _IuuM076DuG = not _IuuM076DuG
             
             if game.Players.LocalPlayer.Character then
-                local _5gEyepx0hx = game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100, 82, 111, 111, 116, 80, 97, 114, 116))
-                local _apBZJbnLNZ = game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100))
+                local _EIHIHsz09K = game.Players.LocalPlayer.Character:FindFirstChild(string.char(72) .. "u" .. "m" .. "a" .. string.char(110) .. "o" .. "i" .. string.char(100) .. "R" .. "o" .. "o" .. "t" .. "P" .. string.char(97) .. string.char(114) .. string.char(116))
+                local _IBbeZFLVa7 = game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100))
                 
-                if _5gEyepx0hx and _apBZJbnLNZ then
-                    if _nF9uUdAkvJ then
-                        _rB11cNexWl = _5gEyepx0hx.CFrame
-                        _apBZJbnLNZ.WalkSpeed = 0
-                        _4XsMPPYXr7 = 0
-                        _9Ezsq8oVQf = false
+                if _EIHIHsz09K and _IBbeZFLVa7 then
+                    if _IuuM076DuG then
+                        _bSNABKTIn3 = _EIHIHsz09K.CFrame
+                        _IBbeZFLVa7.WalkSpeed = 0
+                        _D9v3iJKPGi = 0
+                        _bZzN8FFCpH = false
                     else
-                        _rB11cNexWl = nil
-                        _apBZJbnLNZ.WalkSpeed = _iyA2vozG5C
+                        _bSNABKTIn3 = nil
+                        _IBbeZFLVa7.WalkSpeed = _zRUNta1q3s
                     end
                 end
             end
@@ -125,237 +124,238 @@ _xdBsR8tvmZ.InputBegan:Connect(function(input, gameProcessed)
     end
 end)
 
-_xdBsR8tvmZ.InputEnded:Connect(function(input, gameProcessed)
+_qlMWvC75rM.InputEnded:Connect(function(input, gameProcessed)
     if input.KeyCode == Enum.KeyCode.Space or input.KeyCode == Enum.KeyCode.LeftControl then
-        _4XsMPPYXr7 = 0
-        _9Ezsq8oVQf = false
+        _D9v3iJKPGi = 0
+        _bZzN8FFCpH = false
     end
 end)
 
-local _KaEscG19nm = _4Q5Di0cCGE:CreateToggle({
-   Name = string.char(3648, 3611, 3636, 3604, 3619, 3632, 3610, 3610, 3623, 3636, 3656, 3591, 47, 3610, 3636, 3609),
+local _j19qfx3Wy8 = _mgvJAXQpYQ:CreateToggle({
+   Name = "เ" .. string.char(3611) .. "ิ" .. "ด" .. "ร" .. string.char(3632) .. string.char(3610) .. string.char(3610) .. "ว" .. string.char(3636) .. "่" .. string.char(3591) .. string.char(47) .. "บ" .. "ิ" .. string.char(3609),
    CurrentValue = false,
    Flag = string.char(83, 112, 101, 101, 100, 84, 111, 103, 103, 108, 101),
    Callback = function(Value)
-      _kUQ3vxvPfW = Value
-      _4XsMPPYXr7 = 0
-      _9Ezsq8oVQf = false
-      if not _kUQ3vxvPfW then
+      _HOQVEWZ0xY = Value
+      _D9v3iJKPGi = 0
+      _bZzN8FFCpH = false
+      if not _HOQVEWZ0xY then
          if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
          end
       end
+if false then local _dwtqj15BqR = 307 end  -- ZHPwtKRjdsGFhOOxHiee
    end,
 })
 
-local _06AzQQBh4g = _4Q5Di0cCGE:CreateSlider({
-   Name = string.char(3588, 3623, 3634, 3617, 3648, 3619, 3655, 3623, 3651, 3609, 3585, 3634, 3619, 3623, 3636, 3656, 3591),
+local _ZzbSj9iBU8 = _mgvJAXQpYQ:CreateSlider({
+   Name = "ค" .. "ว" .. string.char(3634) .. string.char(3617) .. string.char(3648) .. "ร" .. string.char(3655) .. "ว" .. "ใ" .. string.char(3609) .. "ก" .. string.char(3634) .. "ร" .. "ว" .. string.char(3636) .. string.char(3656) .. string.char(3591),
    Range = {16, 500},
    Increment = 1,
    Suffix = string.char(83, 112, 101, 101, 100),
    CurrentValue = 16,
    Flag = string.char(83, 112, 101, 101, 100, 83, 108, 105, 100, 101, 114),
    Callback = function(Value)
-      _iyA2vozG5C = Value
+      _zRUNta1q3s = Value
    end,
 })
 
 game:GetService(string.char(82, 117, 110, 83, 101, 114, 118, 105, 99, 101)).Heartbeat:Connect(function()
-    if _kUQ3vxvPfW then
+    if _HOQVEWZ0xY then
         updateSpeed()
     end
 end)
 
 game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
     wait(0.5)
-    if _kUQ3vxvPfW then
+    if _HOQVEWZ0xY then
         updateSpeed()
     end
 end)
 
-local _75P7RmP07Y = false
-local _5CNY7fkwif = false
-local _hV7cyRK0s0 = 100
-local _SQ9KdBjKm6 = Drawing.new(string.char(67, 105, 114, 99, 108, 101))
+local _cpJHSSVMxx = false
+local _7JOiAVI61i = false
+local _D1l6UycNui = 100
+local _uWnvbgaL07 = Drawing.new(string.char(67, 105, 114, 99, 108, 101))
 
-_SQ9KdBjKm6.Thickness = 2
-if false then local _jQGySTq1WR = 337 end  -- XiULvsnefpZYDKaJkiKG
-_SQ9KdBjKm6.NumSides = 60
-_SQ9KdBjKm6.Radius = _hV7cyRK0s0
-_SQ9KdBjKm6.Filled = false
-_SQ9KdBjKm6.Visible = false
-_SQ9KdBjKm6.ZIndex = 999
-_SQ9KdBjKm6.Transparency = 1
-_SQ9KdBjKm6.Color = Color3.fromRGB(255, 255, 255)
+_uWnvbgaL07.Thickness = 2
+_uWnvbgaL07.NumSides = 60
+_uWnvbgaL07.Radius = _D1l6UycNui
+_uWnvbgaL07.Filled = false
+_uWnvbgaL07.Visible = false
+_uWnvbgaL07.ZIndex = 999
+_uWnvbgaL07.Transparency = 1
+_uWnvbgaL07.Color = Color3.fromRGB(255, 255, 255)
 
-local _11Yu48QThn = Drawing.new(string.char(67, 105, 114, 99, 108, 101))
-_11Yu48QThn.Thickness = 1
-_11Yu48QThn.NumSides = 30
-_11Yu48QThn.Radius = 2
-_11Yu48QThn.Filled = true
-_11Yu48QThn.Visible = false
-_11Yu48QThn.ZIndex = 1000
-_11Yu48QThn.Transparency = 1
-_11Yu48QThn.Color = Color3.fromRGB(255, 0, 0)
+local _Q4K4GO0UOB = Drawing.new(string.char(67, 105, 114, 99, 108, 101))
+_Q4K4GO0UOB.Thickness = 1
+_Q4K4GO0UOB.NumSides = 30
+_Q4K4GO0UOB.Radius = 2
+_Q4K4GO0UOB.Filled = true
+_Q4K4GO0UOB.Visible = false
+_Q4K4GO0UOB.ZIndex = 1000
+_Q4K4GO0UOB.Transparency = 1
+_Q4K4GO0UOB.Color = Color3.fromRGB(255, 0, 0)
 
 local function getClosestPlayerInFOV()
-    local _B06slL4Xz3 = nil
-    local _Fav0MKjUZc = _hV7cyRK0s0
+    local _33YIxVgit7 = nil
+    local _g1quMySnah = _D1l6UycNui
     
-    local _9exMMLPL0N = game.Players.LocalPlayer
-    local _BUgf6Rr0xB = game.Workspace.CurrentCamera
-    local _NeL0JsRtbB = Vector2.new(_BUgf6Rr0xB.ViewportSize.X / 2, _BUgf6Rr0xB.ViewportSize.Y / 2)
+    local _HFtbZZ6u8T = game.Players.LocalPlayer
+    local _fnRgx5PdL5 = game.Workspace.CurrentCamera
+    local _6FrpdiNRL7 = Vector2.new(_fnRgx5PdL5.ViewportSize.X / 2, _fnRgx5PdL5.ViewportSize.Y / 2)
     
-    _SQ9KdBjKm6.Position = _NeL0JsRtbB
-    _11Yu48QThn.Position = _NeL0JsRtbB
+    _uWnvbgaL07.Position = _6FrpdiNRL7
+    _Q4K4GO0UOB.Position = _6FrpdiNRL7
     
-    for _hcupGeWg0C, player in pairs(game.Players:GetPlayers()) do
-        if player ~= _9exMMLPL0N and 
+    for _cCk8CO4HXA, player in pairs(game.Players:GetPlayers()) do
+        if player ~= _HFtbZZ6u8T and 
            player.Character and 
+if false then local _b2qnyFS6F1 = 553 end  -- wGOCaqFJEWkbrzuDmhDj
            player.Character:FindFirstChild(string.char(72, 101, 97, 100)) and 
            player.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) and 
            player.Character.Humanoid.Health > 0 then
             
-            local _y51Tg8hM7t = player.Character.Head
-            local _BiGBhsArdZ = _BUgf6Rr0xB:WorldToScreenPoint(_y51Tg8hM7t.Position)
+            local _Cxd0ESlLcc = player.Character.Head
+            local _Vu7SIXDrHT = _fnRgx5PdL5:WorldToScreenPoint(_Cxd0ESlLcc.Position)
             
-            if _BiGBhsArdZ.Z > 0 then
-                local _T4grtd9Mry = (_NeL0JsRtbB - Vector2.new(_BiGBhsArdZ.X, _BiGBhsArdZ.Y)).Magnitude
+            if _Vu7SIXDrHT.Z > 0 then
+                local _30IdltkMhQ = (_6FrpdiNRL7 - Vector2.new(_Vu7SIXDrHT.X, _Vu7SIXDrHT.Y)).Magnitude
                 
-                if _T4grtd9Mry < _Fav0MKjUZc then
-                    _B06slL4Xz3 = player
-                    _Fav0MKjUZc = _T4grtd9Mry
+                if _30IdltkMhQ < _g1quMySnah then
+                    _33YIxVgit7 = player
+                    _g1quMySnah = _30IdltkMhQ
                 end
             end
         end
     end
     
-    return _B06slL4Xz3
+    return _33YIxVgit7
 end
 
-local _xdBsR8tvmZ = game:GetService(string.char(85, 115, 101, 114, 73, 110, 112, 117, 116, 83, 101, 114, 118, 105, 99, 101))
-local _NkvFvzJgBD = false
+local _qlMWvC75rM = game:GetService("U" .. string.char(115) .. string.char(101) .. "r" .. "I" .. "n" .. "p" .. string.char(117) .. string.char(116) .. string.char(83) .. string.char(101) .. "r" .. string.char(118) .. "i" .. string.char(99) .. "e")
+local _6qiA3FDS9n = false
 
-_xdBsR8tvmZ.InputBegan:Connect(function(input, gameProcessed)
+_qlMWvC75rM.InputBegan:Connect(function(input, gameProcessed)
     if input.KeyCode == Enum.KeyCode.LeftShift or input.KeyCode == Enum.KeyCode.RightShift then
-        _NkvFvzJgBD = true
+        _6qiA3FDS9n = true
     end
 end)
 
-_xdBsR8tvmZ.InputEnded:Connect(function(input, gameProcessed)
+_qlMWvC75rM.InputEnded:Connect(function(input, gameProcessed)
     if input.KeyCode == Enum.KeyCode.LeftShift or input.KeyCode == Enum.KeyCode.RightShift then
-        _NkvFvzJgBD = false
+        _6qiA3FDS9n = false
     end
 end)
 
-local _hy6y1dnMCc = _4Q5Di0cCGE:CreateToggle({
-   Name = string.char(3648, 3611, 3636, 3604, 3619, 3632, 3610, 3610, 3648, 3621, 3655, 3591),
+local _0USOPMO9Lb = _mgvJAXQpYQ:CreateToggle({
+   Name = "เ" .. "ป" .. string.char(3636) .. string.char(3604) .. string.char(3619) .. string.char(3632) .. string.char(3610) .. "บ" .. string.char(3648) .. string.char(3621) .. "็" .. "ง",
    CurrentValue = false,
-   Flag = string.char(65, 105, 109, 98, 111, 116, 84, 111, 103, 103, 108, 101),
+   Flag = string.char(65) .. string.char(105) .. string.char(109) .. string.char(98) .. string.char(111) .. string.char(116) .. "T" .. "o" .. "g" .. "g" .. string.char(108) .. string.char(101),
    Callback = function(Value)
-      _75P7RmP07Y = Value
-      _SQ9KdBjKm6.Visible = Value
-      _11Yu48QThn.Visible = Value
+      _cpJHSSVMxx = Value
+      _uWnvbgaL07.Visible = Value
+      _Q4K4GO0UOB.Visible = Value
    end,
 })
 
-local _3312ehFS12 = _4Q5Di0cCGE:CreateSlider({
-   Name = string.char(3586, 3609, 3634, 3604, 3623, 3591, 3585, 3621, 3617, 32, 70, 79, 86),
+local _IYn3Aemfil = _mgvJAXQpYQ:CreateSlider({
+   Name = string.char(3586) .. "น" .. string.char(3634) .. string.char(3604) .. string.char(3623) .. string.char(3591) .. string.char(3585) .. "ล" .. "ม" .. " " .. "F" .. "O" .. string.char(86),
    Range = {50, 400},
    Increment = 10,
    Suffix = string.char(112, 120),
    CurrentValue = 100,
    Flag = string.char(70, 79, 86, 83, 108, 105, 100, 101, 114),
    Callback = function(Value)
-      _hV7cyRK0s0 = Value
-      _SQ9KdBjKm6.Radius = Value
+      _D1l6UycNui = Value
+      _uWnvbgaL07.Radius = Value
    end,
 })
 
-local _3HitTKNY5o = false
-if false then local _6BPk1mlNZw = 718 end  -- axkPqbVEwkuTogiuhUPE
-local _VlHxCoZ6hZ = {}
-local _BiquoQgorH = game:GetService(string.char(82, 117, 110, 83, 101, 114, 118, 105, 99, 101))
-local _4Yv3QyRQSz = game:GetService(string.char(80, 108, 97, 121, 101, 114, 115))
-local _wulLx4dCWd = workspace.CurrentCamera
+local _0FsG38EJ4R = false
+local _o3BueWRion = {}
+local _tbEENNRAUj = game:GetService(string.char(82) .. string.char(117) .. "n" .. string.char(83) .. string.char(101) .. string.char(114) .. "v" .. string.char(105) .. string.char(99) .. string.char(101))
+local _p80OLiUf81 = game:GetService(string.char(80, 108, 97, 121, 101, 114, 115))
+local _HUVPuyIqll = workspace.CurrentCamera
 
 local function createESP(player)
-    if player == _4Yv3QyRQSz.LocalPlayer then return end
+    if player == _p80OLiUf81.LocalPlayer then return end
     
-    if _VlHxCoZ6hZ[player] then
-        for _hcupGeWg0C, drawing in pairs(_VlHxCoZ6hZ[player]._nJAeJoxHiu) do
+    if _o3BueWRion[player] then
+        for _cCk8CO4HXA, drawing in pairs(_o3BueWRion[player]._I1Fmzpkh9y) do
             drawing:Remove()
         end
     end
     
-    local _nJAeJoxHiu = {
+    local _I1Fmzpkh9y = {
         box = Drawing.new(string.char(83, 113, 117, 97, 114, 101)),
         name = Drawing.new(string.char(84, 101, 120, 116)),
         distance = Drawing.new(string.char(84, 101, 120, 116)),
         tracers = Drawing.new(string.char(76, 105, 110, 101))
+if false then local _dwtqj15BqR = 307 end  -- qcmpPIVtofmHTcmczIEI
     }
     
-    _nJAeJoxHiu.box.Thickness = 1
-    _nJAeJoxHiu.box.Filled = false
-    _nJAeJoxHiu.box.Color = Color3.fromRGB(255, 255, 255)
-    _nJAeJoxHiu.box.Transparency = 1
-    _nJAeJoxHiu.box.Visible = false
+    _I1Fmzpkh9y.box.Thickness = 1
+    _I1Fmzpkh9y.box.Filled = false
+    _I1Fmzpkh9y.box.Color = Color3.fromRGB(255, 255, 255)
+    _I1Fmzpkh9y.box.Transparency = 1
+    _I1Fmzpkh9y.box.Visible = false
     
-    _nJAeJoxHiu.name.Size = 16
-    _nJAeJoxHiu.name.Center = true
-    _nJAeJoxHiu.name.Outline = true
-    _nJAeJoxHiu.name.Color = Color3.fromRGB(255, 255, 255)
-    _nJAeJoxHiu.name.Visible = false
+    _I1Fmzpkh9y.name.Size = 16
+    _I1Fmzpkh9y.name.Center = true
+    _I1Fmzpkh9y.name.Outline = true
+    _I1Fmzpkh9y.name.Color = Color3.fromRGB(255, 255, 255)
+    _I1Fmzpkh9y.name.Visible = false
     
-    _nJAeJoxHiu.distance.Size = 14
-    _nJAeJoxHiu.distance.Center = true
-    _nJAeJoxHiu.distance.Outline = true
-    _nJAeJoxHiu.distance.Color = Color3.fromRGB(255, 255, 255)
-    _nJAeJoxHiu.distance.Visible = false
+    _I1Fmzpkh9y.distance.Size = 14
+    _I1Fmzpkh9y.distance.Center = true
+    _I1Fmzpkh9y.distance.Outline = true
+    _I1Fmzpkh9y.distance.Color = Color3.fromRGB(255, 255, 255)
+    _I1Fmzpkh9y.distance.Visible = false
     
-    _nJAeJoxHiu.tracers.Thickness = 1
-    _nJAeJoxHiu.tracers.Color = Color3.fromRGB(255, 255, 255)
-    _nJAeJoxHiu.tracers.Transparency = 1
-    _nJAeJoxHiu.tracers.Visible = false
+    _I1Fmzpkh9y.tracers.Thickness = 1
+    _I1Fmzpkh9y.tracers.Color = Color3.fromRGB(255, 255, 255)
+    _I1Fmzpkh9y.tracers.Transparency = 1
+    _I1Fmzpkh9y.tracers.Visible = false
     
-    _VlHxCoZ6hZ[player] = {
-        _nJAeJoxHiu = _nJAeJoxHiu,
-        connection = _BiquoQgorH.RenderStepped:Connect(function()
-            local _YZUMmut0Kc = player.Character
-            local _1KQAURPtPg = _YZUMmut0Kc and _YZUMmut0Kc:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100, 82, 111, 111, 116, 80, 97, 114, 116))
-            local _apBZJbnLNZ = _YZUMmut0Kc and _YZUMmut0Kc:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100))
+    _o3BueWRion[player] = {
+        _I1Fmzpkh9y = _I1Fmzpkh9y,
+        connection = _tbEENNRAUj.RenderStepped:Connect(function()
+            local _nXl2rNxIXT = player.Character
+            local _cjNWf4Xks1 = _nXl2rNxIXT and _nXl2rNxIXT:FindFirstChild("H" .. string.char(117) .. "m" .. "a" .. "n" .. "o" .. string.char(105) .. "d" .. string.char(82) .. string.char(111) .. "o" .. string.char(116) .. string.char(80) .. string.char(97) .. "r" .. "t")
+            local _IBbeZFLVa7 = _nXl2rNxIXT and _nXl2rNxIXT:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100))
             
-            if _3HitTKNY5o and _YZUMmut0Kc and _1KQAURPtPg and _apBZJbnLNZ and _apBZJbnLNZ.Health > 0 then
-                local _iST2oCi6wz = _1KQAURPtPg.Position
-                local _CmSDp2lCZz, onScreen = _wulLx4dCWd:WorldToViewportPoint(_iST2oCi6wz)
+            if _0FsG38EJ4R and _nXl2rNxIXT and _cjNWf4Xks1 and _IBbeZFLVa7 and _IBbeZFLVa7.Health > 0 then
+                local _x912L3l5M9 = _cjNWf4Xks1.Position
+                local _Fv48s5pXAi, onScreen = _HUVPuyIqll:WorldToViewportPoint(_x912L3l5M9)
                 
                 if onScreen then
-                    local _XYGZs0dk9x = (_wulLx4dCWd.CFrame.Position - _iST2oCi6wz).Magnitude
-                    local _cSkf78trvC = 1 / (_XYGZs0dk9x * 0.2) * 1000
+                    local _eJGpsnT0r6 = (_HUVPuyIqll.CFrame.Position - _x912L3l5M9).Magnitude
+                    local _VLJX0oXqQU = 1 / (_eJGpsnT0r6 * 0.2) * 1000
                     
-                    local _VhlxxyceEd = Vector2.new(_cSkf78trvC, _cSkf78trvC * 1.5)
-                    _nJAeJoxHiu.box.Size = _VhlxxyceEd
-                    _nJAeJoxHiu.box.Position = Vector2.new(_CmSDp2lCZz.X - _VhlxxyceEd.X/2, _CmSDp2lCZz.Y - _VhlxxyceEd.Y/2)
-                    _nJAeJoxHiu.box.Visible = true
+                    local _HSGyyF199P = Vector2.new(_VLJX0oXqQU, _VLJX0oXqQU * 1.5)
+                    _I1Fmzpkh9y.box.Size = _HSGyyF199P
+                    _I1Fmzpkh9y.box.Position = Vector2.new(_Fv48s5pXAi.X - _HSGyyF199P.X/2, _Fv48s5pXAi.Y - _HSGyyF199P.Y/2)
+                    _I1Fmzpkh9y.box.Visible = true
                     
-                    _nJAeJoxHiu.name.Text = player.Name
-                    _nJAeJoxHiu.name.Position = Vector2.new(_CmSDp2lCZz.X, _CmSDp2lCZz.Y - _VhlxxyceEd.Y/2 - 20)
-                    _nJAeJoxHiu.name.Visible = true
+                    _I1Fmzpkh9y.name.Text = player.Name
+                    _I1Fmzpkh9y.name.Position = Vector2.new(_Fv48s5pXAi.X, _Fv48s5pXAi.Y - _HSGyyF199P.Y/2 - 20)
+                    _I1Fmzpkh9y.name.Visible = true
                     
-                    _nJAeJoxHiu._XYGZs0dk9x.Text = math.floor(_XYGZs0dk9x) .. string.char(32, 115, 116, 117, 100, 115)
-                    _nJAeJoxHiu._XYGZs0dk9x.Position = Vector2.new(_CmSDp2lCZz.X, _CmSDp2lCZz.Y + _VhlxxyceEd.Y/2 + 5)
-                    _nJAeJoxHiu._XYGZs0dk9x.Visible = true
+                    _I1Fmzpkh9y._eJGpsnT0r6.Text = math.floor(_eJGpsnT0r6) .. string.char(32, 115, 116, 117, 100, 115)
+                    _I1Fmzpkh9y._eJGpsnT0r6.Position = Vector2.new(_Fv48s5pXAi.X, _Fv48s5pXAi.Y + _HSGyyF199P.Y/2 + 5)
+                    _I1Fmzpkh9y._eJGpsnT0r6.Visible = true
                     
-                    _nJAeJoxHiu.tracers.From = Vector2.new(_wulLx4dCWd.ViewportSize.X/2, _wulLx4dCWd.ViewportSize.Y)
-                    _nJAeJoxHiu.tracers.To = Vector2.new(_CmSDp2lCZz.X, _CmSDp2lCZz.Y)
-                    _nJAeJoxHiu.tracers.Visible = true
+                    _I1Fmzpkh9y.tracers.From = Vector2.new(_HUVPuyIqll.ViewportSize.X/2, _HUVPuyIqll.ViewportSize.Y)
+                    _I1Fmzpkh9y.tracers.To = Vector2.new(_Fv48s5pXAi.X, _Fv48s5pXAi.Y)
+                    _I1Fmzpkh9y.tracers.Visible = true
                 else
-                    for _hcupGeWg0C, drawing in pairs(_nJAeJoxHiu) do
+                    for _cCk8CO4HXA, drawing in pairs(_I1Fmzpkh9y) do
                         drawing.Visible = false
                     end
                 end
             else
-                for _hcupGeWg0C, drawing in pairs(_nJAeJoxHiu) do
+                for _cCk8CO4HXA, drawing in pairs(_I1Fmzpkh9y) do
                     drawing.Visible = false
                 end
             end
@@ -363,15 +363,15 @@ local function createESP(player)
     }
 end
 
-local _9N5PU0yJfp = _4Q5Di0cCGE:CreateToggle({
-   Name = string.char(3649, 3626, 3604, 3591, 3605, 3635, 3649, 3627, 3609, 3656, 3591, 3612, 3641, 3657, 3648, 3621, 3656, 3609, 32, 40, 69, 83, 80, 41),
+local _tK0GFn2Bl0 = _mgvJAXQpYQ:CreateToggle({
+   Name = string.char(3649) .. "ส" .. string.char(3604) .. "ง" .. string.char(3605) .. "ำ" .. string.char(3649) .. string.char(3627) .. string.char(3609) .. "่" .. string.char(3591) .. string.char(3612) .. string.char(3641) .. "้" .. string.char(3648) .. string.char(3621) .. string.char(3656) .. string.char(3609) .. string.char(32) .. string.char(40) .. string.char(69) .. "S" .. "P" .. string.char(41),
    CurrentValue = false,
    Flag = string.char(69, 83, 80, 84, 111, 103, 103, 108, 101),
    Callback = function(Value)
-      _3HitTKNY5o = Value
+      _0FsG38EJ4R = Value
       if not Value then
-          for _ulb5Gnh7AM, esp in pairs(_VlHxCoZ6hZ) do
-              for _hcupGeWg0C, drawing in pairs(esp._nJAeJoxHiu) do
+          for _4QlWi1adSY, esp in pairs(_o3BueWRion) do
+              for _cCk8CO4HXA, drawing in pairs(esp._I1Fmzpkh9y) do
                   drawing.Visible = false
               end
           end
@@ -379,78 +379,77 @@ local _9N5PU0yJfp = _4Q5Di0cCGE:CreateToggle({
    end,
 })
 
-local _ZTYqzYFhnN = false
-local _R1MfGXeWfn = {}
+local _Pg3INVSkN7 = false
+local _z4i5vAfYBv = {}
 
-local function createSimpleESP(_ulb5Gnh7AM)
-    if _ulb5Gnh7AM == _4Yv3QyRQSz.LocalPlayer then return end
+local function createSimpleESP(_4QlWi1adSY)
+    if _4QlWi1adSY == _p80OLiUf81.LocalPlayer then return end
     
-    if _R1MfGXeWfn[_ulb5Gnh7AM] then
-        for _hcupGeWg0C, drawing in pairs(_R1MfGXeWfn[_ulb5Gnh7AM]._nJAeJoxHiu) do
+    if _z4i5vAfYBv[_4QlWi1adSY] then
+        for _cCk8CO4HXA, drawing in pairs(_z4i5vAfYBv[_4QlWi1adSY]._I1Fmzpkh9y) do
             drawing:Remove()
         end
     end
     
-    local _nJAeJoxHiu = {
+    local _I1Fmzpkh9y = {
         name = Drawing.new(string.char(84, 101, 120, 116)),
-        _XYGZs0dk9x = Drawing.new(string.char(84, 101, 120, 116))
+        _eJGpsnT0r6 = Drawing.new(string.char(84, 101, 120, 116))
     }
     
-    _nJAeJoxHiu.name.Size = 16
-    _nJAeJoxHiu.name.Center = true
-    _nJAeJoxHiu.name.Outline = true
-    _nJAeJoxHiu.name.Color = Color3.fromRGB(255, 255, 255)
-    _nJAeJoxHiu.name.Visible = false
+    _I1Fmzpkh9y.name.Size = 16
+    _I1Fmzpkh9y.name.Center = true
+    _I1Fmzpkh9y.name.Outline = true
+    _I1Fmzpkh9y.name.Color = Color3.fromRGB(255, 255, 255)
+    _I1Fmzpkh9y.name.Visible = false
     
-    _nJAeJoxHiu._XYGZs0dk9x.Size = 14
-    _nJAeJoxHiu._XYGZs0dk9x.Center = true
-    _nJAeJoxHiu._XYGZs0dk9x.Outline = true
-    _nJAeJoxHiu._XYGZs0dk9x.Color = Color3.fromRGB(255, 255, 255)
-    _nJAeJoxHiu._XYGZs0dk9x.Visible = false
+    _I1Fmzpkh9y._eJGpsnT0r6.Size = 14
+    _I1Fmzpkh9y._eJGpsnT0r6.Center = true
+    _I1Fmzpkh9y._eJGpsnT0r6.Outline = true
+    _I1Fmzpkh9y._eJGpsnT0r6.Color = Color3.fromRGB(255, 255, 255)
+    _I1Fmzpkh9y._eJGpsnT0r6.Visible = false
     
-    _R1MfGXeWfn[_ulb5Gnh7AM] = {
-        _nJAeJoxHiu = _nJAeJoxHiu,
-        connection = _BiquoQgorH.RenderStepped:Connect(function()
-            local _YZUMmut0Kc = _ulb5Gnh7AM.Character
-            local _1KQAURPtPg = _YZUMmut0Kc and _YZUMmut0Kc:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100, 82, 111, 111, 116, 80, 97, 114, 116))
-            local _apBZJbnLNZ = _YZUMmut0Kc and _YZUMmut0Kc:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100))
+    _z4i5vAfYBv[_4QlWi1adSY] = {
+        _I1Fmzpkh9y = _I1Fmzpkh9y,
+        connection = _tbEENNRAUj.RenderStepped:Connect(function()
+            local _nXl2rNxIXT = _4QlWi1adSY.Character
+            local _cjNWf4Xks1 = _nXl2rNxIXT and _nXl2rNxIXT:FindFirstChild(string.char(72) .. string.char(117) .. string.char(109) .. string.char(97) .. "n" .. string.char(111) .. "i" .. "d" .. "R" .. string.char(111) .. "o" .. string.char(116) .. string.char(80) .. string.char(97) .. string.char(114) .. string.char(116))
+            local _IBbeZFLVa7 = _nXl2rNxIXT and _nXl2rNxIXT:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100))
             
-            if _ZTYqzYFhnN and _YZUMmut0Kc and _1KQAURPtPg and _apBZJbnLNZ and _apBZJbnLNZ.Health > 0 then
-                local _iST2oCi6wz = _1KQAURPtPg.Position
-                local _CmSDp2lCZz, onScreen = _wulLx4dCWd:WorldToViewportPoint(_iST2oCi6wz)
+            if _Pg3INVSkN7 and _nXl2rNxIXT and _cjNWf4Xks1 and _IBbeZFLVa7 and _IBbeZFLVa7.Health > 0 then
+                local _x912L3l5M9 = _cjNWf4Xks1.Position
+                local _Fv48s5pXAi, onScreen = _HUVPuyIqll:WorldToViewportPoint(_x912L3l5M9)
                 
                 if onScreen then
-                    local _XYGZs0dk9x = (_wulLx4dCWd.CFrame.Position - _iST2oCi6wz).Magnitude
+                    local _eJGpsnT0r6 = (_HUVPuyIqll.CFrame.Position - _x912L3l5M9).Magnitude
                     
-                    _nJAeJoxHiu.name.Text = _ulb5Gnh7AM.Name
-                    _nJAeJoxHiu.name.Position = Vector2.new(_CmSDp2lCZz.X, _CmSDp2lCZz.Y - 20)
-                    _nJAeJoxHiu.name.Visible = true
+                    _I1Fmzpkh9y.name.Text = _4QlWi1adSY.Name
+                    _I1Fmzpkh9y.name.Position = Vector2.new(_Fv48s5pXAi.X, _Fv48s5pXAi.Y - 20)
+                    _I1Fmzpkh9y.name.Visible = true
                     
-                    _nJAeJoxHiu._XYGZs0dk9x.Text = math.floor(_XYGZs0dk9x) .. string.char(32, 115, 116, 117, 100, 115)
-                    _nJAeJoxHiu._XYGZs0dk9x.Position = Vector2.new(_CmSDp2lCZz.X, _CmSDp2lCZz.Y + 5)
-                    _nJAeJoxHiu._XYGZs0dk9x.Visible = true
+                    _I1Fmzpkh9y._eJGpsnT0r6.Text = math.floor(_eJGpsnT0r6) .. string.char(32, 115, 116, 117, 100, 115)
+                    _I1Fmzpkh9y._eJGpsnT0r6.Position = Vector2.new(_Fv48s5pXAi.X, _Fv48s5pXAi.Y + 5)
+                    _I1Fmzpkh9y._eJGpsnT0r6.Visible = true
                 else
-                    _nJAeJoxHiu.name.Visible = false
-                    _nJAeJoxHiu._XYGZs0dk9x.Visible = false
+                    _I1Fmzpkh9y.name.Visible = false
+                    _I1Fmzpkh9y._eJGpsnT0r6.Visible = false
                 end
             else
-                _nJAeJoxHiu.name.Visible = false
-                _nJAeJoxHiu._XYGZs0dk9x.Visible = false
+                _I1Fmzpkh9y.name.Visible = false
+                _I1Fmzpkh9y._eJGpsnT0r6.Visible = false
             end
         end)
     }
 end
-if false then local _sTRzyXjs7Q = 366 end  -- OkimokeTWcsCDeiNllgo
 
-local _eP4PFo8N2C = _4Q5Di0cCGE:CreateToggle({
-   Name = string.char(3649, 3626, 3604, 3591, 3594, 3639, 3656, 3629, 3649, 3621, 3632, 3619, 3632, 3618, 3632),
+local _Q00KYXihpS = _mgvJAXQpYQ:CreateToggle({
+   Name = string.char(3649) .. "ส" .. "ด" .. string.char(3591) .. "ช" .. string.char(3639) .. "่" .. "อ" .. "แ" .. string.char(3621) .. "ะ" .. "ร" .. string.char(3632) .. string.char(3618) .. "ะ",
    CurrentValue = false,
-   Flag = string.char(83, 105, 109, 112, 108, 101, 69, 83, 80, 84, 111, 103, 103, 108, 101),
+   Flag = string.char(83) .. "i" .. "m" .. string.char(112) .. string.char(108) .. "e" .. "E" .. string.char(83) .. string.char(80) .. string.char(84) .. string.char(111) .. string.char(103) .. "g" .. string.char(108) .. string.char(101),
    Callback = function(Value)
-      _ZTYqzYFhnN = Value
+      _Pg3INVSkN7 = Value
       if not Value then
-          for _ulb5Gnh7AM, esp in pairs(_R1MfGXeWfn) do
-              for _hcupGeWg0C, drawing in pairs(esp._nJAeJoxHiu) do
+          for _4QlWi1adSY, esp in pairs(_z4i5vAfYBv) do
+              for _cCk8CO4HXA, drawing in pairs(esp._I1Fmzpkh9y) do
                   drawing.Visible = false
               end
           end
@@ -458,109 +457,110 @@ local _eP4PFo8N2C = _4Q5Di0cCGE:CreateToggle({
    end,
 })
 
-for _hcupGeWg0C, _ulb5Gnh7AM in pairs(_4Yv3QyRQSz:GetPlayers()) do
-    if _ulb5Gnh7AM ~= _4Yv3QyRQSz.LocalPlayer then
-        createSimpleESP(_ulb5Gnh7AM)
+for _cCk8CO4HXA, _4QlWi1adSY in pairs(_p80OLiUf81:GetPlayers()) do
+    if _4QlWi1adSY ~= _p80OLiUf81.LocalPlayer then
+        createSimpleESP(_4QlWi1adSY)
     end
 end
 
-_4Yv3QyRQSz.PlayerAdded:Connect(function(_ulb5Gnh7AM)
-    createSimpleESP(_ulb5Gnh7AM)
+_p80OLiUf81.PlayerAdded:Connect(function(_4QlWi1adSY)
+    createSimpleESP(_4QlWi1adSY)
 end)
 
-_4Yv3QyRQSz.PlayerRemoving:Connect(function(_ulb5Gnh7AM)
-    if _R1MfGXeWfn[_ulb5Gnh7AM] then
-        _R1MfGXeWfn[_ulb5Gnh7AM].connection:Disconnect()
-        for _hcupGeWg0C, drawing in pairs(_R1MfGXeWfn[_ulb5Gnh7AM]._nJAeJoxHiu) do
+_p80OLiUf81.PlayerRemoving:Connect(function(_4QlWi1adSY)
+    if _z4i5vAfYBv[_4QlWi1adSY] then
+        _z4i5vAfYBv[_4QlWi1adSY].connection:Disconnect()
+        for _cCk8CO4HXA, drawing in pairs(_z4i5vAfYBv[_4QlWi1adSY]._I1Fmzpkh9y) do
             drawing:Remove()
         end
-        _R1MfGXeWfn[_ulb5Gnh7AM] = nil
+        _z4i5vAfYBv[_4QlWi1adSY] = nil
     end
 end)
 
-for _hcupGeWg0C, _ulb5Gnh7AM in pairs(_4Yv3QyRQSz:GetPlayers()) do
-    if _ulb5Gnh7AM ~= _4Yv3QyRQSz.LocalPlayer then
-        createESP(_ulb5Gnh7AM)
+for _cCk8CO4HXA, _4QlWi1adSY in pairs(_p80OLiUf81:GetPlayers()) do
+    if _4QlWi1adSY ~= _p80OLiUf81.LocalPlayer then
+        createESP(_4QlWi1adSY)
     end
 end
 
-_4Yv3QyRQSz.PlayerAdded:Connect(function(_ulb5Gnh7AM)
-    createESP(_ulb5Gnh7AM)
+_p80OLiUf81.PlayerAdded:Connect(function(_4QlWi1adSY)
+    createESP(_4QlWi1adSY)
 end)
 
-_4Yv3QyRQSz.PlayerRemoving:Connect(function(_ulb5Gnh7AM)
-    if _VlHxCoZ6hZ[_ulb5Gnh7AM] then
-        _VlHxCoZ6hZ[_ulb5Gnh7AM].connection:Disconnect()
-        for _hcupGeWg0C, drawing in pairs(_VlHxCoZ6hZ[_ulb5Gnh7AM]._nJAeJoxHiu) do
+_p80OLiUf81.PlayerRemoving:Connect(function(_4QlWi1adSY)
+    if _o3BueWRion[_4QlWi1adSY] then
+        _o3BueWRion[_4QlWi1adSY].connection:Disconnect()
+        for _cCk8CO4HXA, drawing in pairs(_o3BueWRion[_4QlWi1adSY]._I1Fmzpkh9y) do
             drawing:Remove()
         end
-        _VlHxCoZ6hZ[_ulb5Gnh7AM] = nil
+        _o3BueWRion[_4QlWi1adSY] = nil
     end
 end)
 
 game:GetService(string.char(82, 117, 110, 83, 101, 114, 118, 105, 99, 101)).RenderStepped:Connect(function()
-    if _75P7RmP07Y then
-        local _BUgf6Rr0xB = game.Workspace.CurrentCamera
-        local _r88EZ7Zrqa = _BUgf6Rr0xB.ViewportSize
+    if _cpJHSSVMxx then
+        local _fnRgx5PdL5 = game.Workspace.CurrentCamera
+        local _DsDxrmfmcV = _fnRgx5PdL5.ViewportSize
         
-        _SQ9KdBjKm6.Position = Vector2.new(_r88EZ7Zrqa.X / 2, _r88EZ7Zrqa.Y / 2)
-        _11Yu48QThn.Position = Vector2.new(_r88EZ7Zrqa.X / 2, _r88EZ7Zrqa.Y / 2)
+        _uWnvbgaL07.Position = Vector2.new(_DsDxrmfmcV.X / 2, _DsDxrmfmcV.Y / 2)
+        _Q4K4GO0UOB.Position = Vector2.new(_DsDxrmfmcV.X / 2, _DsDxrmfmcV.Y / 2)
         
-        if _NkvFvzJgBD then
-            local _GjezVoavV5 = getClosestPlayerInFOV()
-            if _GjezVoavV5 and _GjezVoavV5.Character and _GjezVoavV5.Character:FindFirstChild(string.char(72, 101, 97, 100)) then
-                _BUgf6Rr0xB.CFrame = CFrame.new(_BUgf6Rr0xB.CFrame.Position, _GjezVoavV5.Character.Head.Position)
+        if _6qiA3FDS9n then
+            local _XhoN8nvZJ0 = getClosestPlayerInFOV()
+            if _XhoN8nvZJ0 and _XhoN8nvZJ0.Character and _XhoN8nvZJ0.Character:FindFirstChild(string.char(72, 101, 97, 100)) then
+                _fnRgx5PdL5.CFrame = CFrame.new(_fnRgx5PdL5.CFrame.Position, _XhoN8nvZJ0.Character.Head.Position)
             end
         end
     end
 end)
 
-local _Jd5SC2M0EM = _BNX7wZsr6p:CreateTab(string.char(3595, 3656, 3629, 3609, 3594, 3639, 3656, 3629), nil)
-local _nFgs0Xdbuk = _Jd5SC2M0EM:CreateSection(string.char(3619, 3632, 3610, 3610, 3595, 3656, 3629, 3609, 3594, 3639, 3656, 3629))
+local _5xC14FE38Y = Window:CreateTab(string.char(3595, 3656, 3629, 3609, 3594, 3639, 3656, 3629), nil)
+local _hLMjdO81sQ = _5xC14FE38Y:CreateSection("ร" .. string.char(3632) .. "บ" .. "บ" .. string.char(3595) .. "่" .. "อ" .. "น" .. "ช" .. "ื" .. "่" .. "อ")
 
-local _Cuenq2FSis = false
-local _rVLp9DNPZ9 = string.char()
-local _52fa026gpk = nil
-local _RVYPhLiqCp = {}
+local _Ul0vOZlQM0 = false
+local _YvVL2OSooO = string.char()
+local _OKiSlnxP5d = nil
+local _3OOnGsRC41 = {}
 
 local function hidePlayerName()
-    local _9exMMLPL0N = game._4Yv3QyRQSz.LocalPlayer
+    local _HFtbZZ6u8T = game._p80OLiUf81.LocalPlayer
     
-    _RVYPhLiqCp = {}
-    for _hcupGeWg0C, _ulb5Gnh7AM in pairs(game._4Yv3QyRQSz:GetPlayers()) do
-        if _ulb5Gnh7AM ~= _9exMMLPL0N then
-            table.insert(_RVYPhLiqCp, _ulb5Gnh7AM.Name)
+    _3OOnGsRC41 = {}
+    for _cCk8CO4HXA, _4QlWi1adSY in pairs(game._p80OLiUf81:GetPlayers()) do
+        if _4QlWi1adSY ~= _HFtbZZ6u8T then
+            table.insert(_3OOnGsRC41, _4QlWi1adSY.Name)
         end
     end
     
-    if _Cuenq2FSis then
-        if _9exMMLPL0N.Character then
-            for _hcupGeWg0C, obj in pairs(_9exMMLPL0N.Character:GetDescendants()) do
-                if obj:IsA(string.char(66, 105, 108, 108, 98, 111, 97, 114, 100, 71, 117, 105)) or obj:IsA(string.char(83, 117, 114, 102, 97, 99, 101, 71, 117, 105)) then
+    if _Ul0vOZlQM0 then
+        if _HFtbZZ6u8T.Character then
+            for _cCk8CO4HXA, obj in pairs(_HFtbZZ6u8T.Character:GetDescendants()) do
+                if obj:IsA(string.char(66) .. "i" .. "l" .. "l" .. "b" .. string.char(111) .. "a" .. string.char(114) .. "d" .. "G" .. "u" .. string.char(105)) or obj:IsA(string.char(83, 117, 114, 102, 97, 99, 101, 71, 117, 105)) then
                     obj.Enabled = false
                 end
             end
             
-            if _9exMMLPL0N.Character:FindFirstChild(string.char(72, 101, 97, 100)) then
-                for _hcupGeWg0C, gui in pairs(_9exMMLPL0N.Character.Head:GetChildren()) do
-                    if gui:IsA(string.char(66, 105, 108, 108, 98, 111, 97, 114, 100, 71, 117, 105)) then
+            if _HFtbZZ6u8T.Character:FindFirstChild(string.char(72, 101, 97, 100)) then
+                for _cCk8CO4HXA, gui in pairs(_HFtbZZ6u8T.Character.Head:GetChildren()) do
+                    if gui:IsA("B" .. string.char(105) .. string.char(108) .. "l" .. string.char(98) .. string.char(111) .. "a" .. string.char(114) .. string.char(100) .. string.char(71) .. "u" .. "i") then
                         gui.Enabled = false
                     end
                 end
             end
             
-            if _9exMMLPL0N.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
-                _9exMMLPL0N.Character.Humanoid.DisplayName = if _rVLp9DNPZ9 ~= string.char() and _52fa026gpk then _rVLp9DNPZ9 else string.char(72, 105, 100, 100, 101, 110)
-                _9exMMLPL0N.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+            if _HFtbZZ6u8T.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
+                _HFtbZZ6u8T.Character.Humanoid.DisplayName = if _YvVL2OSooO ~= string.char() and _OKiSlnxP5d then _YvVL2OSooO else string.char(72, 105, 100, 100, 101, 110)
+                _HFtbZZ6u8T.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
             end
         end
     else
-        if _9exMMLPL0N.Character and _9exMMLPL0N.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
-            _9exMMLPL0N.Character.Humanoid.DisplayName = _9exMMLPL0N.Name
-            _9exMMLPL0N.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.Viewer
+        if _HFtbZZ6u8T.Character and _HFtbZZ6u8T.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
+            _HFtbZZ6u8T.Character.Humanoid.DisplayName = _HFtbZZ6u8T.Name
+            _HFtbZZ6u8T.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.Viewer
             
-            for _hcupGeWg0C, obj in pairs(_9exMMLPL0N.Character:GetDescendants()) do
-                if obj:IsA(string.char(66, 105, 108, 108, 98, 111, 97, 114, 100, 71, 117, 105)) or obj:IsA(string.char(83, 117, 114, 102, 97, 99, 101, 71, 117, 105)) then
+            for _cCk8CO4HXA, obj in pairs(_HFtbZZ6u8T.Character:GetDescendants()) do
+do local _9CInu1OUtm = 38 end  -- eNMUuQFEGjinKTejfYaX
+                if obj:IsA("B" .. string.char(105) .. "l" .. "l" .. string.char(98) .. string.char(111) .. string.char(97) .. "r" .. string.char(100) .. string.char(71) .. string.char(117) .. string.char(105)) or obj:IsA(string.char(83, 117, 114, 102, 97, 99, 101, 71, 117, 105)) then
                     obj.Enabled = true
                 end
             end
@@ -569,99 +569,100 @@ local function hidePlayerName()
 end
 
 local function changeFakeName()
-    local _9exMMLPL0N = game._4Yv3QyRQSz.LocalPlayer
-    if _52fa026gpk and _Cuenq2FSis then
-        local _Fo7YNJUBMe = nil
-        for _hcupGeWg0C, _ulb5Gnh7AM in pairs(game._4Yv3QyRQSz:GetPlayers()) do
-            if _ulb5Gnh7AM.Name == _52fa026gpk then
-                _Fo7YNJUBMe = _ulb5Gnh7AM
+    local _HFtbZZ6u8T = game._p80OLiUf81.LocalPlayer
+    if _OKiSlnxP5d and _Ul0vOZlQM0 then
+        local _ov1Ir3AsjI = nil
+        for _cCk8CO4HXA, _4QlWi1adSY in pairs(game._p80OLiUf81:GetPlayers()) do
+            if _4QlWi1adSY.Name == _OKiSlnxP5d then
+                _ov1Ir3AsjI = _4QlWi1adSY
                 break
             end
         end
         
-        if _Fo7YNJUBMe and _9exMMLPL0N.Character and _9exMMLPL0N.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
-            if _rVLp9DNPZ9 == string.char() then
-                _9exMMLPL0N.Character.Humanoid.DisplayName = _Fo7YNJUBMe.Name
+        if _ov1Ir3AsjI and _HFtbZZ6u8T.Character and _HFtbZZ6u8T.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
+            if _YvVL2OSooO == string.char() then
+                _HFtbZZ6u8T.Character.Humanoid.DisplayName = _ov1Ir3AsjI.Name
             else
-                _9exMMLPL0N.Character.Humanoid.DisplayName = _rVLp9DNPZ9
+                _HFtbZZ6u8T.Character.Humanoid.DisplayName = _YvVL2OSooO
             end
             
-            if _Fo7YNJUBMe.Character and _Fo7YNJUBMe.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
-                _9exMMLPL0N.Character.Humanoid.NameDisplayDistance = _Fo7YNJUBMe.Character.Humanoid.NameDisplayDistance
+            if _ov1Ir3AsjI.Character and _ov1Ir3AsjI.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
+                _HFtbZZ6u8T.Character.Humanoid.NameDisplayDistance = _ov1Ir3AsjI.Character.Humanoid.NameDisplayDistance
             end
         end
     end
 end
 
-local _UvFvLqw8Jj = _Jd5SC2M0EM:CreateToggle({
+local _lUspus71Bl = _5xC14FE38Y:CreateToggle({
    Name = string.char(3648, 3611, 3636, 3604, 3619, 3632, 3610, 3610, 3595, 3656, 3629, 3609, 3594, 3639, 3656, 3629),
    CurrentValue = false,
    Flag = string.char(78, 97, 109, 101, 72, 105, 100, 101, 114, 84, 111, 103, 103, 108, 101),
    Callback = function(Value)
-      _Cuenq2FSis = Value
+      _Ul0vOZlQM0 = Value
       hidePlayerName()
    end,
 })
 
-local _nn4KUAJFPh = _Jd5SC2M0EM:CreateInput({
+local _aBhULfMT03 = _5xC14FE38Y:CreateInput({
    Name = string.char(3594, 3639, 3656, 3629, 3611, 3621, 3629, 3617, 32, 40, 3606, 3657, 3634, 3652, 3617, 3656, 3585, 3619, 3629, 3585, 3592, 3632, 3651, 3594, 3657, 3594, 3639, 3656, 3629, 3612, 3641, 3657, 3648, 3621, 3656, 3609, 3607, 3637, 3656, 3648, 3621, 3639, 3629, 3585, 41),
    PlaceholderText = string.char(3651, 3626, 3656, 3594, 3639, 3656, 3629, 3607, 3637, 3656, 3605, 3657, 3629, 3591, 3585, 3634, 3619, 3649, 3626, 3604, 3591, 46, 46, 46),
    RemoveTextAfterFocusLost = false,
    Callback = function(Text)
-      _rVLp9DNPZ9 = Text
-      if _Cuenq2FSis then
+      _YvVL2OSooO = Text
+      if _Ul0vOZlQM0 then
           hidePlayerName()
           changeFakeName()
       end
    end,
 })
 
-local _K8CU7rqfCh = _Jd5SC2M0EM:CreateDropdown({
+local _H747gstX6T = _5xC14FE38Y:CreateDropdown({
    Name = string.char(3648, 3621, 3639, 3629, 3585, 3612, 3641, 3657, 3648, 3621, 3656, 3609, 3607, 3637, 3656, 3605, 3657, 3629, 3591, 3585, 3634, 3619, 3651, 3594, 3657, 3594, 3639, 3656, 3629),
-   Options = _RVYPhLiqCp,
+   Options = _3OOnGsRC41,
    CurrentOption = string.char(),
    Flag = string.char(80, 108, 97, 121, 101, 114, 68, 114, 111, 112, 100, 111, 119, 110),
    Callback = function(Option)
-      _52fa026gpk = Option
-      if _Cuenq2FSis then
+      _OKiSlnxP5d = Option
+      if _Ul0vOZlQM0 then
           changeFakeName()
       end
    end,
 })
 
-local _ZXipPAJ0As = _Jd5SC2M0EM:CreateButton({
-   Name = string.char(3619, 3637, 3648, 3615, 3619, 3594, 3619, 3634, 3618, 3594, 3639, 3656, 3629, 3612, 3641, 3657, 3648, 3621, 3656, 3609),
+local _ljt0U2sGCU = _5xC14FE38Y:CreateButton({
+   Name = "ร" .. string.char(3637) .. "เ" .. string.char(3615) .. string.char(3619) .. string.char(3594) .. string.char(3619) .. "า" .. string.char(3618) .. string.char(3594) .. "ื" .. "่" .. string.char(3629) .. "ผ" .. string.char(3641) .. "้" .. "เ" .. "ล" .. "่" .. string.char(3609),
    Callback = function()
-      local _YR41p7Zpr7 = {}
-      for _hcupGeWg0C, _ulb5Gnh7AM in pairs(game._4Yv3QyRQSz:GetPlayers()) do
-          if _ulb5Gnh7AM ~= game._4Yv3QyRQSz.LocalPlayer then
-              table.insert(_YR41p7Zpr7, _ulb5Gnh7AM.Name)
+      local _Ov8LgCgrAo = {}
+      for _cCk8CO4HXA, _4QlWi1adSY in pairs(game._p80OLiUf81:GetPlayers()) do
+          if _4QlWi1adSY ~= game._p80OLiUf81.LocalPlayer then
+              table.insert(_Ov8LgCgrAo, _4QlWi1adSY.Name)
           end
       end
       
-      _K8CU7rqfCh:Refresh(_YR41p7Zpr7, (_52fa026gpk and table.find(_YR41p7Zpr7, _52fa026gpk)) and _52fa026gpk or string.char())
+      _H747gstX6T:Refresh(_Ov8LgCgrAo, (_OKiSlnxP5d and table.find(_Ov8LgCgrAo, _OKiSlnxP5d)) and _OKiSlnxP5d or string.char())
    end,
 })
 
-game._4Yv3QyRQSz.PlayerAdded:Connect(function(_ulb5Gnh7AM)
-    _ZXipPAJ0As.Callback()
+game._p80OLiUf81.PlayerAdded:Connect(function(_4QlWi1adSY)
+    _ljt0U2sGCU.Callback()
 end)
 
-game._4Yv3QyRQSz.PlayerRemoving:Connect(function(_ulb5Gnh7AM)
-    _ZXipPAJ0As.Callback()
+game._p80OLiUf81.PlayerRemoving:Connect(function(_4QlWi1adSY)
+    _ljt0U2sGCU.Callback()
     
-    if _52fa026gpk == _ulb5Gnh7AM.Name then
-        _52fa026gpk = nil
+    if _OKiSlnxP5d == _4QlWi1adSY.Name then
+        _OKiSlnxP5d = nil
     end
 end)
 
-game._4Yv3QyRQSz.LocalPlayer.CharacterAdded:Connect(function(_YZUMmut0Kc)
+game._p80OLiUf81.LocalPlayer.CharacterAdded:Connect(function(_nXl2rNxIXT)
     wait(1)
     
-    if _Cuenq2FSis then
+    if _Ul0vOZlQM0 then
         hidePlayerName()
         changeFakeName()
     end
 end)
 
-_ZXipPAJ0As.Callback()
+_ljt0U2sGCU.Callback()
+
