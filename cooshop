@@ -1,122 +1,318 @@
-local function _nFQ1QPaMfw()
-    local a, b, c = 1, 2, 3
-    if a ~= nil then
-        if b >= a then
-            for i = 1, 5 do
-                c = c + i
-                if c % 2 == 0 then
-                    c = c * 2
-                else
-                    c = c - 1
-                end
-            end
-        else
-            c = 0
-        end
-    end
-    return c
-end
-_nFQ1QPaMfw()
-
-local _ZiTijRdC1A = {}
-local _6cXrzht5Oi = {}
-local _x0DnAE8in9 = "_ygwCtIdnfEWhXzbl01"
-local _DPIU7936io = function() return end
-local _21spQIGH1M = coroutine.create(function() end)
-local _pH0iDJsIDc = "_1Yk9lUf01dO"
-local _GpHgtg406a = "_1xvlge6yp"
-local _Ep8seE5pFi = function() return end
-if false then local _dwtqj15BqR = 307 end
-
-local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = string.char(67, 111, 111, 32, 104, 117, 98),
-   LoadingTitle = string.char(67, 111, 111, 32, 79, 84),
-   LoadingSubtitle = string.char(3626, 3619, 3657, 3634, 3591, 3650, 3604, 3618, 32, 76, 120, 119, 110, 117),
+   Name = "Coo hub",
+   LoadingTitle = "Coo OT",
+   LoadingSubtitle = "สร้างโดย COOHUB",
    ConfigurationSaving = {
       Enabled = false,
       FolderName = nil,
-      FileName = string.char(87)
+      FileName = "W"
    },
-   KeySystem = false,
+   KeySystem = true,
    KeySettings = {
-      Title = string.char(85, 110, 116, 105, 116, 108, 101, 100),
-      Subtitle = string.char(67, 111, 111, 32, 104, 117, 98, 32, 107, 101, 121, 115),
-      Note = string.char(78) .. string.char(111) .. " " .. "m" .. string.char(101) .. string.char(116) .. "h" .. "o" .. "d" .. string.char(32) .. "o" .. string.char(102) .. string.char(32) .. "o" .. string.char(98) .. "t" .. "a" .. string.char(105) .. string.char(110) .. "i" .. "n" .. string.char(103) .. string.char(32) .. string.char(116) .. "h" .. string.char(101) .. string.char(32) .. string.char(107) .. "e" .. "y" .. string.char(32) .. "i" .. string.char(115) .. " " .. string.char(112) .. "r" .. string.char(111) .. string.char(118) .. "i" .. "d" .. string.char(101) .. "d",
-      FileName = string.char(104, 117, 98),
-      SaveKey = true,
+      Title = "Coo Hub - กรุณาใส่คีย์",
+      Subtitle = "คีย์จำเป็นต้องใส่ทุกครั้งที่เข้าเกม",
+      Note = "กรุณาติดต่อผู้สร้างเพื่อขอคีย์",
+      FileName = "hub",
+      SaveKey = false,
       GrabKeyFromSite = false,
-      Key = {string.char()}
+      Key = {
+         "coo1-QWE2-RT34-5YUI", "coo2-AS76-F4H3-2JKL", "coo3-ZXC5-VB67-NM89",
+         "coo4-123A-BC45-D6EF", "coo5-GHI7-JK89-L0MN", "coo6-OPQ1-RST2-UV34",
+         "coo7-WXY5-Z678-9012", "coo8-34A5-BC67-DEF8", "coo9-GHI9-JK01-LMN2",
+         "coo10-OP34-QRS5-TUV6", "coo11-WXY7-Z890-123A", "coo12-BCD4-EFG5-HIJ6",
+         "coo13-KLM7-NOP8-QRS9", "coo14-TUV0-WXY1-ZAB2", "coo15-CDE3-FGH4-IJK5",
+         "coo16-LMN6-OPQ7-RST8", "coo17-UVW9-XYZ0-123A", "coo18-BCD4-EFG5-HIJ6",
+         "coo19-KLM7-NOP8-QRS9", "coo20-TUV0-WXY1-ZAB2", "coo21-CDE3-FGH4-IJK5",
+         "coo22-LMN6-OPQ7-RST8", "coo23-UVW9-XYZ0-123A", "coo24-BCD4-EFG5-HIJ6",
+         "coo25-KLM7-NOP8-QRS9", "coo26-TUV0-WXY1-ZAB2", "coo27-CDE3-FGH4-IJK5",
+         "coo28-LMN6-OPQ7-RST8", "coo29-UVW9-XYZ0-123A", "coo30-BCD4-EFG5-HIJ6",
+         "coo31-KLM7-NOP8-QRS9", "coo32-TUV0-WXY1-ZAB2", "coo33-CDE3-FGH4-IJK5",
+         "coo34-LMN6-OPQ7-RST8", "coo35-UVW9-XYZ0-123A", "coo36-BCD4-EFG5-HIJ6",
+         "coo37-KLM7-NOP8-QRS9", "coo38-TUV0-WXY1-ZAB2", "coo39-CDE3-FGH4-IJK5",
+         "coo40-LMN6-OPQ7-RST8", "coo41-UVW9-XYZ0-123A", "coo42-BCD4-EFG5-HIJ6",
+         "coo43-KLM7-NOP8-QRS9", "coo44-TUV0-WXY1-ZAB2", "coo45-CDE3-FGH4-IJK5",
+         "coo46-LMN6-OPQ7-RST8", "coo47-UVW9-XYZ0-123A", "coo48-BCD4-EFG5-HIJ6",
+         "coo49-KLM7-NOP8-QRS9", "coo50-TUV0-WXY1-ZAB2", "coo51-CDE3-FGH4-IJK5",
+         "coo52-LMN6-OPQ7-RST8", "coo53-UVW9-XYZ0-123A", "coo54-BCD4-EFG5-HIJ6",
+         "coo55-KLM7-NOP8-QRS9", "coo56-TUV0-WXY1-ZAB2", "coo57-CDE3-FGH4-IJK5",
+         "coo58-LMN6-OPQ7-RST8", "coo59-UVW9-XYZ0-123A", "coo60-BCD4-EFG5-HIJ6",
+         "coo61-KLM7-NOP8-QRS9", "coo62-TUV0-WXY1-ZAB2", "coo63-CDE3-FGH4-IJK5",
+         "coo64-LMN6-OPQ7-RST8", "coo65-UVW9-XYZ0-123A", "coo66-BCD4-EFG5-HIJ6",
+         "coo67-KLM7-NOP8-QRS9", "coo68-TUV0-WXY1-ZAB2", "coo69-CDE3-FGH4-IJK5",
+         "coo70-LMN6-OPQ7-RST8", "coo71-UVW9-XYZ0-123A", "coo72-BCD4-EFG5-HIJ6",
+         "coo73-KLM7-NOP8-QRS9", "coo74-TUV0-WXY1-ZAB2", "coo75-CDE3-FGH4-IJK5",
+         "coo76-LMN6-OPQ7-RST8", "coo77-UVW9-XYZ0-123A", "coo78-BCD4-EFG5-HIJ6",
+         "coo79-KLM7-NOP8-QRS9", "coo80-TUV0-WXY1-ZAB2", "coo81-CDE3-FGH4-IJK5",
+         "coo82-LMN6-OPQ7-RST8", "coo83-UVW9-XYZ0-123A", "coo84-BCD4-EFG5-HIJ6",
+         "coo85-KLM7-NOP8-QRS9", "coo86-TUV0-WXY1-ZAB2", "coo87-CDE3-FGH4-IJK5",
+         "coo88-LMN6-OPQ7-RST8", "coo89-UVW9-XYZ0-123A", "coo90-BCD4-EFG5-HIJ6",
+         "coo91-KLM7-NOP8-QRS9", "coo92-TUV0-WXY1-ZAB2", "coo93-CDE3-FGH4-IJK5",
+         "coo94-LMN6-OPQ7-RST8", "coo95-UVW9-XYZ0-123A", "coo96-BCD4-EFG5-HIJ6",
+         "coo97-KLM7-NOP8-QRS9", "coo98-TUV0-WXY1-ZAB2", "coo99-CDE3-FGH4-IJK5",
+         "coo100-LMN6-OPQ7-RST8"
+      }
    }
-while false do local _Oib3ilmBBX = 301 break end  -- AEnscjxzCeQyaiFLCAdo
 })
 
-local _mgvJAXQpYQ = Window:CreateTab(string.char(3627, 3609, 3657, 3634, 3627, 3621, 3633, 3585), nil)
-local _Ige4vMlhQ2 = _mgvJAXQpYQ:CreateSection(string.char(3648, 3617, 3609, 3641, 3627, 3621, 3633, 3585))
+local MainTab = Window:CreateTab("หน้าหลัก", nil)
+local MainSection = MainTab:CreateSection("เมนูหลัก")
 
-local _HOQVEWZ0xY = false
-local _zRUNta1q3s = 16
-local _D9v3iJKPGi = 0
-local _bZzN8FFCpH = false
-local _IuuM076DuG = false
-local _bSNABKTIn3 = nil
+-- Detect if the user is on mobile
+local UserInputService = game:GetService("UserInputService")
+local isMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
+
+-- Variables for movement system
+local SpeedEnabled = false
+local SpeedValue = 16
+local VerticalSpeed = 0
+local IsFlying = false
+local IsFrozen = false
+local FrozenPosition = nil
+
+-- Mobile-specific variables
+local MobileControlsEnabled = false
+local TouchControls = {}
+local TouchDirections = {Up = false, Down = false, Left = false, Right = false}
+local DriveDirection = Vector3.new(0, 0, 0)
+
+-- Create mobile controls if on mobile device
+if isMobile then
+    local ScreenGui = Instance.new("ScreenGui")
+    ScreenGui.Name = "CooHubMobileControls"
+    ScreenGui.ResetOnSpawn = false
+    ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    
+    -- Function to create touch button
+    local function createTouchButton(name, position, text)
+        local button = Instance.new("TextButton")
+        button.Name = name
+        button.Size = UDim2.new(0, 50, 0, 50)
+        button.Position = position
+        button.Text = text
+        button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        button.BackgroundTransparency = 0.5
+        button.TextColor3 = Color3.fromRGB(255, 255, 255)
+        button.BorderSizePixel = 2
+        button.BorderColor3 = Color3.fromRGB(255, 255, 255)
+        button.Parent = ScreenGui
+        button.Visible = false
+        
+        return button
+    end
+    
+    -- Create directional buttons
+    TouchControls.Up = createTouchButton("UpButton", UDim2.new(0.2, 0, 0.7, 0), "↑")
+    TouchControls.Down = createTouchButton("DownButton", UDim2.new(0.2, 0, 0.8, 0), "↓")
+    TouchControls.Left = createTouchButton("LeftButton", UDim2.new(0.1, 0, 0.8, 0), "←")
+    TouchControls.Right = createTouchButton("RightButton", UDim2.new(0.3, 0, 0.8, 0), "→")
+    
+    -- Create fly buttons
+    TouchControls.FlyUp = createTouchButton("FlyUpButton", UDim2.new(0.8, 0, 0.7, 0), "⇧")
+    TouchControls.FlyDown = createTouchButton("FlyDownButton", UDim2.new(0.8, 0, 0.8, 0), "⇩")
+    
+    -- Create freeze button
+    TouchControls.Freeze = createTouchButton("FreezeButton", UDim2.new(0.5, 0, 0.8, 0), "T")
+    
+    -- Handle touch events for mobile controls
+    for direction, button in pairs(TouchControls) do
+        button.TouchLongPress:Connect(function()
+            if direction == "Up" then
+                TouchDirections.Up = true
+            elseif direction == "Down" then
+                TouchDirections.Down = true
+            elseif direction == "Left" then
+                TouchDirections.Left = true
+            elseif direction == "Right" then
+                TouchDirections.Right = true
+            elseif direction == "FlyUp" then
+                VerticalSpeed = SpeedValue
+                IsFlying = true
+            elseif direction == "FlyDown" then
+                VerticalSpeed = -SpeedValue
+                IsFlying = true
+            elseif direction == "Freeze" and not IsFrozen then
+                IsFrozen = not IsFrozen
+                
+                if game.Players.LocalPlayer.Character then
+                    local rootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+                    local humanoid = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+                    
+                    if rootPart and humanoid then
+                        if IsFrozen then
+                            FrozenPosition = rootPart.CFrame
+                            humanoid.WalkSpeed = 0
+                            VerticalSpeed = 0
+                            IsFlying = false
+                        else
+                            FrozenPosition = nil
+                            humanoid.WalkSpeed = SpeedValue
+                        end
+                    end
+                end
+            end
+        end)
+        
+        button.TouchTap:Connect(function()
+            if direction == "Freeze" then
+                IsFrozen = not IsFrozen
+                
+                if game.Players.LocalPlayer.Character then
+                    local rootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+                    local humanoid = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+                    
+                    if rootPart and humanoid then
+                        if IsFrozen then
+                            FrozenPosition = rootPart.CFrame
+                            humanoid.WalkSpeed = 0
+                            VerticalSpeed = 0
+                            IsFlying = false
+                        else
+                            FrozenPosition = nil
+                            humanoid.WalkSpeed = SpeedValue
+                        end
+                    end
+                end
+            end
+        end)
+        
+        button.TouchEnded:Connect(function()
+            if direction == "Up" then
+                TouchDirections.Up = false
+            elseif direction == "Down" then
+                TouchDirections.Down = false
+            elseif direction == "Left" then
+                TouchDirections.Left = false
+            elseif direction == "Right" then
+                TouchDirections.Right = false
+            elseif direction == "FlyUp" or direction == "FlyDown" then
+                VerticalSpeed = 0
+                IsFlying = false
+            end
+        end)
+    end
+end
+
+-- Function to calculate movement direction from touch inputs
+local function calculateMobileDirection()
+    local direction = Vector3.new(0, 0, 0)
+    
+    if TouchDirections.Up then
+        direction = direction + Vector3.new(0, 0, -1)
+    end
+    if TouchDirections.Down then
+        direction = direction + Vector3.new(0, 0, 1)
+    end
+    if TouchDirections.Left then
+        direction = direction + Vector3.new(-1, 0, 0)
+    end
+    if TouchDirections.Right then
+        direction = direction + Vector3.new(1, 0, 0)
+    end
+    
+    -- Normalize the direction vector if it's not zero
+    if direction.Magnitude > 0 then
+        direction = direction.Unit
+    end
+    
+    return direction
+end
+
+-- Function to toggle visibility of mobile controls
+local function toggleMobileControls(visible)
+    if isMobile then
+        for _, button in pairs(TouchControls) do
+            button.Visible = visible
+        end
+        MobileControlsEnabled = visible
+    end
+end
 
 local function updateSpeed()
-    if _HOQVEWZ0xY and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100, 82, 111, 111, 116, 80, 97, 114, 116)) then
-        local _IBbeZFLVa7 = game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100))
-        local _EIHIHsz09K = game.Players.LocalPlayer.Character:FindFirstChild(string.char(72) .. "u" .. string.char(109) .. "a" .. string.char(110) .. "o" .. string.char(105) .. "d" .. string.char(82) .. "o" .. string.char(111) .. string.char(116) .. string.char(80) .. "a" .. string.char(114) .. "t")
+    if SpeedEnabled and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+        local humanoid = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+        local rootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
         
-        if _IBbeZFLVa7 and _EIHIHsz09K then
-            if _IuuM076DuG and _bSNABKTIn3 then
-                _EIHIHsz09K.CFrame = _bSNABKTIn3
+        if humanoid and rootPart then
+            if IsFrozen and FrozenPosition then
+                rootPart.CFrame = FrozenPosition
                 return
             end
 
-            if not _IuuM076DuG then
-                if _IBbeZFLVa7.MoveDirection.Magnitude > 0 then
-                    local _9tTezzlUPT = _IBbeZFLVa7.MoveDirection * _zRUNta1q3s
-                    _EIHIHsz09K.CFrame = _EIHIHsz09K.CFrame + _9tTezzlUPT * game:GetService("R" .. "u" .. "n" .. string.char(83) .. string.char(101) .. string.char(114) .. "v" .. "i" .. "c" .. string.char(101)).Heartbeat:Wait()
+            if not IsFrozen then
+                if isMobile and MobileControlsEnabled then
+                    -- Handle mobile movement based on touch controls
+                    local moveDirection = calculateMobileDirection()
+                    
+                    -- If we have a movement direction, apply it
+                    if moveDirection.Magnitude > 0 then
+                        -- Transform direction relative to camera
+                        local camera = workspace.CurrentCamera
+                        local cameraDirection = camera.CFrame.LookVector
+                        local rightVector = camera.CFrame.RightVector
+                        
+                        local adjustedDirection = (rightVector * moveDirection.X) + (Vector3.new(cameraDirection.X, 0, cameraDirection.Z).Unit * moveDirection.Z)
+                        rootPart.CFrame = rootPart.CFrame + adjustedDirection * SpeedValue * game:GetService("RunService").Heartbeat:Wait()
+                    end
+                else
+                    -- PC movement handling
+                    if humanoid.MoveDirection.Magnitude > 0 then
+                        local moveDirection = humanoid.MoveDirection * SpeedValue
+                        rootPart.CFrame = rootPart.CFrame + moveDirection * game:GetService("RunService").Heartbeat:Wait()
+                    end
                 end
                 
-                if _bZzN8FFCpH then
-                    _EIHIHsz09K.CFrame = _EIHIHsz09K.CFrame + Vector3.new(0, _D9v3iJKPGi, 0) * game:GetService(string.char(82) .. "u" .. "n" .. "S" .. string.char(101) .. "r" .. string.char(118) .. "i" .. string.char(99) .. string.char(101)).Heartbeat:Wait()
+                if IsFlying then
+                    rootPart.CFrame = rootPart.CFrame + Vector3.new(0, VerticalSpeed, 0) * game:GetService("RunService").Heartbeat:Wait()
                 end
             end
         end
     end
 end
 
-local _qlMWvC75rM = game:GetService(string.char(85, 115, 101, 114, 73, 110, 112, 117, 116, 83, 101, 114, 118, 105, 99, 101))
+-- Check if the player is in a vehicle
+local function isInVehicle()
+    local character = game.Players.LocalPlayer.Character
+    if character then
+        local humanoid = character:FindFirstChild("Humanoid")
+        if humanoid then
+            return humanoid.SeatPart ~= nil
+        end
+    end
+    return false
+end
 
-_qlMWvC75rM.InputBegan:Connect(function(input, gameProcessed)
-    if _HOQVEWZ0xY and not gameProcessed then
+-- Original keyboard input handling - keep for PC users
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if SpeedEnabled and not gameProcessed and not isMobile then
         if input.KeyCode == Enum.KeyCode.Space then
-            if not _IuuM076DuG then
-                _D9v3iJKPGi = _zRUNta1q3s
-                _bZzN8FFCpH = true
+            if not IsFrozen then
+                VerticalSpeed = SpeedValue
+                IsFlying = true
             end
         elseif input.KeyCode == Enum.KeyCode.LeftControl then
-            if not _IuuM076DuG then
-                _D9v3iJKPGi = -_zRUNta1q3s
-                _bZzN8FFCpH = true
+            if not IsFrozen then
+                VerticalSpeed = -SpeedValue
+                IsFlying = true
             end
         elseif input.KeyCode == Enum.KeyCode.T then
-            _IuuM076DuG = not _IuuM076DuG
+            IsFrozen = not IsFrozen
             
             if game.Players.LocalPlayer.Character then
-                local _EIHIHsz09K = game.Players.LocalPlayer.Character:FindFirstChild(string.char(72) .. "u" .. "m" .. "a" .. string.char(110) .. "o" .. "i" .. string.char(100) .. "R" .. "o" .. "o" .. "t" .. "P" .. string.char(97) .. string.char(114) .. string.char(116))
-                local _IBbeZFLVa7 = game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100))
+                local rootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+                local humanoid = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
                 
-                if _EIHIHsz09K and _IBbeZFLVa7 then
-                    if _IuuM076DuG then
-                        _bSNABKTIn3 = _EIHIHsz09K.CFrame
-                        _IBbeZFLVa7.WalkSpeed = 0
-                        _D9v3iJKPGi = 0
-                        _bZzN8FFCpH = false
+                if rootPart and humanoid then
+                    if IsFrozen then
+                        FrozenPosition = rootPart.CFrame
+                        humanoid.WalkSpeed = 0
+                        VerticalSpeed = 0
+                        IsFlying = false
                     else
-                        _bSNABKTIn3 = nil
-                        _IBbeZFLVa7.WalkSpeed = _zRUNta1q3s
+                        FrozenPosition = nil
+                        humanoid.WalkSpeed = SpeedValue
                     end
                 end
             end
@@ -124,545 +320,65 @@ _qlMWvC75rM.InputBegan:Connect(function(input, gameProcessed)
     end
 end)
 
-_qlMWvC75rM.InputEnded:Connect(function(input, gameProcessed)
-    if input.KeyCode == Enum.KeyCode.Space or input.KeyCode == Enum.KeyCode.LeftControl then
-        _D9v3iJKPGi = 0
-        _bZzN8FFCpH = false
+UserInputService.InputEnded:Connect(function(input, gameProcessed)
+    if not isMobile and (input.KeyCode == Enum.KeyCode.Space or input.KeyCode == Enum.KeyCode.LeftControl) then
+        VerticalSpeed = 0
+        IsFlying = false
     end
 end)
 
-local _j19qfx3Wy8 = _mgvJAXQpYQ:CreateToggle({
-   Name = "เ" .. string.char(3611) .. "ิ" .. "ด" .. "ร" .. string.char(3632) .. string.char(3610) .. string.char(3610) .. "ว" .. string.char(3636) .. "่" .. string.char(3591) .. string.char(47) .. "บ" .. "ิ" .. string.char(3609),
+local SpeedToggle = MainTab:CreateToggle({
+   Name = "เปิดระบบวิ่ง/บิน",
    CurrentValue = false,
-   Flag = string.char(83, 112, 101, 101, 100, 84, 111, 103, 103, 108, 101),
+   Flag = "SpeedToggle",
    Callback = function(Value)
-      _HOQVEWZ0xY = Value
-      _D9v3iJKPGi = 0
-      _bZzN8FFCpH = false
-      if not _HOQVEWZ0xY then
-         if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
+      SpeedEnabled = Value
+      VerticalSpeed = 0
+      IsFlying = false
+      toggleMobileControls(Value) -- Show/hide mobile controls based on toggle state
+      
+      if not SpeedEnabled then
+         if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
          end
       end
-if false then local _dwtqj15BqR = 307 end  -- ZHPwtKRjdsGFhOOxHiee
    end,
 })
 
-local _ZzbSj9iBU8 = _mgvJAXQpYQ:CreateSlider({
-   Name = "ค" .. "ว" .. string.char(3634) .. string.char(3617) .. string.char(3648) .. "ร" .. string.char(3655) .. "ว" .. "ใ" .. string.char(3609) .. "ก" .. string.char(3634) .. "ร" .. "ว" .. string.char(3636) .. string.char(3656) .. string.char(3591),
+local SpeedSlider = MainTab:CreateSlider({
+   Name = "ความเร็วในการวิ่ง",
    Range = {16, 500},
    Increment = 1,
-   Suffix = string.char(83, 112, 101, 101, 100),
+   Suffix = "Speed",
    CurrentValue = 16,
-   Flag = string.char(83, 112, 101, 101, 100, 83, 108, 105, 100, 101, 114),
+   Flag = "SpeedSlider",
    Callback = function(Value)
-      _zRUNta1q3s = Value
+      SpeedValue = Value
    end,
 })
 
-game:GetService(string.char(82, 117, 110, 83, 101, 114, 118, 105, 99, 101)).Heartbeat:Connect(function()
-    if _HOQVEWZ0xY then
-        updateSpeed()
+-- Check for vehicle
+game:GetService("RunService").Heartbeat:Connect(function()
+    if SpeedEnabled then
+        local inVehicle = isInVehicle()
+        
+        -- If we're in a vehicle, hide mobile controls
+        if isMobile and MobileControlsEnabled then
+            for _, button in pairs(TouchControls) do
+                button.Visible = not inVehicle
+            end
+        end
+        
+        -- Only update speed if we're not in a vehicle
+        if not inVehicle then
+            updateSpeed()
+        end
     end
 end)
 
 game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
     wait(0.5)
-    if _HOQVEWZ0xY then
+    if SpeedEnabled then
         updateSpeed()
     end
 end)
-
-local _cpJHSSVMxx = false
-local _7JOiAVI61i = false
-local _D1l6UycNui = 100
-local _uWnvbgaL07 = Drawing.new(string.char(67, 105, 114, 99, 108, 101))
-
-_uWnvbgaL07.Thickness = 2
-_uWnvbgaL07.NumSides = 60
-_uWnvbgaL07.Radius = _D1l6UycNui
-_uWnvbgaL07.Filled = false
-_uWnvbgaL07.Visible = false
-_uWnvbgaL07.ZIndex = 999
-_uWnvbgaL07.Transparency = 1
-_uWnvbgaL07.Color = Color3.fromRGB(255, 255, 255)
-
-local _Q4K4GO0UOB = Drawing.new(string.char(67, 105, 114, 99, 108, 101))
-_Q4K4GO0UOB.Thickness = 1
-_Q4K4GO0UOB.NumSides = 30
-_Q4K4GO0UOB.Radius = 2
-_Q4K4GO0UOB.Filled = true
-_Q4K4GO0UOB.Visible = false
-_Q4K4GO0UOB.ZIndex = 1000
-_Q4K4GO0UOB.Transparency = 1
-_Q4K4GO0UOB.Color = Color3.fromRGB(255, 0, 0)
-
-local function getClosestPlayerInFOV()
-    local _33YIxVgit7 = nil
-    local _g1quMySnah = _D1l6UycNui
-    
-    local _HFtbZZ6u8T = game.Players.LocalPlayer
-    local _fnRgx5PdL5 = game.Workspace.CurrentCamera
-    local _6FrpdiNRL7 = Vector2.new(_fnRgx5PdL5.ViewportSize.X / 2, _fnRgx5PdL5.ViewportSize.Y / 2)
-    
-    _uWnvbgaL07.Position = _6FrpdiNRL7
-    _Q4K4GO0UOB.Position = _6FrpdiNRL7
-    
-    for _cCk8CO4HXA, player in pairs(game.Players:GetPlayers()) do
-        if player ~= _HFtbZZ6u8T and 
-           player.Character and 
-if false then local _b2qnyFS6F1 = 553 end  -- wGOCaqFJEWkbrzuDmhDj
-           player.Character:FindFirstChild(string.char(72, 101, 97, 100)) and 
-           player.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) and 
-           player.Character.Humanoid.Health > 0 then
-            
-            local _Cxd0ESlLcc = player.Character.Head
-            local _Vu7SIXDrHT = _fnRgx5PdL5:WorldToScreenPoint(_Cxd0ESlLcc.Position)
-            
-            if _Vu7SIXDrHT.Z > 0 then
-                local _30IdltkMhQ = (_6FrpdiNRL7 - Vector2.new(_Vu7SIXDrHT.X, _Vu7SIXDrHT.Y)).Magnitude
-                
-                if _30IdltkMhQ < _g1quMySnah then
-                    _33YIxVgit7 = player
-                    _g1quMySnah = _30IdltkMhQ
-                end
-            end
-        end
-    end
-    
-    return _33YIxVgit7
-end
-
-local _qlMWvC75rM = game:GetService("U" .. string.char(115) .. string.char(101) .. "r" .. "I" .. "n" .. "p" .. string.char(117) .. string.char(116) .. string.char(83) .. string.char(101) .. "r" .. string.char(118) .. "i" .. string.char(99) .. "e")
-local _6qiA3FDS9n = false
-
-_qlMWvC75rM.InputBegan:Connect(function(input, gameProcessed)
-    if input.KeyCode == Enum.KeyCode.LeftShift or input.KeyCode == Enum.KeyCode.RightShift then
-        _6qiA3FDS9n = true
-    end
-end)
-
-_qlMWvC75rM.InputEnded:Connect(function(input, gameProcessed)
-    if input.KeyCode == Enum.KeyCode.LeftShift or input.KeyCode == Enum.KeyCode.RightShift then
-        _6qiA3FDS9n = false
-    end
-end)
-
-local _0USOPMO9Lb = _mgvJAXQpYQ:CreateToggle({
-   Name = "เ" .. "ป" .. string.char(3636) .. string.char(3604) .. string.char(3619) .. string.char(3632) .. string.char(3610) .. "บ" .. string.char(3648) .. string.char(3621) .. "็" .. "ง",
-   CurrentValue = false,
-   Flag = string.char(65) .. string.char(105) .. string.char(109) .. string.char(98) .. string.char(111) .. string.char(116) .. "T" .. "o" .. "g" .. "g" .. string.char(108) .. string.char(101),
-   Callback = function(Value)
-      _cpJHSSVMxx = Value
-      _uWnvbgaL07.Visible = Value
-      _Q4K4GO0UOB.Visible = Value
-   end,
-})
-
-local _IYn3Aemfil = _mgvJAXQpYQ:CreateSlider({
-   Name = string.char(3586) .. "น" .. string.char(3634) .. string.char(3604) .. string.char(3623) .. string.char(3591) .. string.char(3585) .. "ล" .. "ม" .. " " .. "F" .. "O" .. string.char(86),
-   Range = {50, 400},
-   Increment = 10,
-   Suffix = string.char(112, 120),
-   CurrentValue = 100,
-   Flag = string.char(70, 79, 86, 83, 108, 105, 100, 101, 114),
-   Callback = function(Value)
-      _D1l6UycNui = Value
-      _uWnvbgaL07.Radius = Value
-   end,
-})
-
-local _0FsG38EJ4R = false
-local _o3BueWRion = {}
-local _tbEENNRAUj = game:GetService(string.char(82) .. string.char(117) .. "n" .. string.char(83) .. string.char(101) .. string.char(114) .. "v" .. string.char(105) .. string.char(99) .. string.char(101))
-local _p80OLiUf81 = game:GetService(string.char(80, 108, 97, 121, 101, 114, 115))
-local _HUVPuyIqll = workspace.CurrentCamera
-
-local function createESP(player)
-    if player == _p80OLiUf81.LocalPlayer then return end
-    
-    if _o3BueWRion[player] then
-        for _cCk8CO4HXA, drawing in pairs(_o3BueWRion[player]._I1Fmzpkh9y) do
-            drawing:Remove()
-        end
-    end
-    
-    local _I1Fmzpkh9y = {
-        box = Drawing.new(string.char(83, 113, 117, 97, 114, 101)),
-        name = Drawing.new(string.char(84, 101, 120, 116)),
-        distance = Drawing.new(string.char(84, 101, 120, 116)),
-        tracers = Drawing.new(string.char(76, 105, 110, 101))
-if false then local _dwtqj15BqR = 307 end  -- qcmpPIVtofmHTcmczIEI
-    }
-    
-    _I1Fmzpkh9y.box.Thickness = 1
-    _I1Fmzpkh9y.box.Filled = false
-    _I1Fmzpkh9y.box.Color = Color3.fromRGB(255, 255, 255)
-    _I1Fmzpkh9y.box.Transparency = 1
-    _I1Fmzpkh9y.box.Visible = false
-    
-    _I1Fmzpkh9y.name.Size = 16
-    _I1Fmzpkh9y.name.Center = true
-    _I1Fmzpkh9y.name.Outline = true
-    _I1Fmzpkh9y.name.Color = Color3.fromRGB(255, 255, 255)
-    _I1Fmzpkh9y.name.Visible = false
-    
-    _I1Fmzpkh9y.distance.Size = 14
-    _I1Fmzpkh9y.distance.Center = true
-    _I1Fmzpkh9y.distance.Outline = true
-    _I1Fmzpkh9y.distance.Color = Color3.fromRGB(255, 255, 255)
-    _I1Fmzpkh9y.distance.Visible = false
-    
-    _I1Fmzpkh9y.tracers.Thickness = 1
-    _I1Fmzpkh9y.tracers.Color = Color3.fromRGB(255, 255, 255)
-    _I1Fmzpkh9y.tracers.Transparency = 1
-    _I1Fmzpkh9y.tracers.Visible = false
-    
-    _o3BueWRion[player] = {
-        _I1Fmzpkh9y = _I1Fmzpkh9y,
-        connection = _tbEENNRAUj.RenderStepped:Connect(function()
-            local _nXl2rNxIXT = player.Character
-            local _cjNWf4Xks1 = _nXl2rNxIXT and _nXl2rNxIXT:FindFirstChild("H" .. string.char(117) .. "m" .. "a" .. "n" .. "o" .. string.char(105) .. "d" .. string.char(82) .. string.char(111) .. "o" .. string.char(116) .. string.char(80) .. string.char(97) .. "r" .. "t")
-            local _IBbeZFLVa7 = _nXl2rNxIXT and _nXl2rNxIXT:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100))
-            
-            if _0FsG38EJ4R and _nXl2rNxIXT and _cjNWf4Xks1 and _IBbeZFLVa7 and _IBbeZFLVa7.Health > 0 then
-                local _x912L3l5M9 = _cjNWf4Xks1.Position
-                local _Fv48s5pXAi, onScreen = _HUVPuyIqll:WorldToViewportPoint(_x912L3l5M9)
-                
-                if onScreen then
-                    local _eJGpsnT0r6 = (_HUVPuyIqll.CFrame.Position - _x912L3l5M9).Magnitude
-                    local _VLJX0oXqQU = 1 / (_eJGpsnT0r6 * 0.2) * 1000
-                    
-                    local _HSGyyF199P = Vector2.new(_VLJX0oXqQU, _VLJX0oXqQU * 1.5)
-                    _I1Fmzpkh9y.box.Size = _HSGyyF199P
-                    _I1Fmzpkh9y.box.Position = Vector2.new(_Fv48s5pXAi.X - _HSGyyF199P.X/2, _Fv48s5pXAi.Y - _HSGyyF199P.Y/2)
-                    _I1Fmzpkh9y.box.Visible = true
-                    
-                    _I1Fmzpkh9y.name.Text = player.Name
-                    _I1Fmzpkh9y.name.Position = Vector2.new(_Fv48s5pXAi.X, _Fv48s5pXAi.Y - _HSGyyF199P.Y/2 - 20)
-                    _I1Fmzpkh9y.name.Visible = true
-                    
-                    _I1Fmzpkh9y._eJGpsnT0r6.Text = math.floor(_eJGpsnT0r6) .. string.char(32, 115, 116, 117, 100, 115)
-                    _I1Fmzpkh9y._eJGpsnT0r6.Position = Vector2.new(_Fv48s5pXAi.X, _Fv48s5pXAi.Y + _HSGyyF199P.Y/2 + 5)
-                    _I1Fmzpkh9y._eJGpsnT0r6.Visible = true
-                    
-                    _I1Fmzpkh9y.tracers.From = Vector2.new(_HUVPuyIqll.ViewportSize.X/2, _HUVPuyIqll.ViewportSize.Y)
-                    _I1Fmzpkh9y.tracers.To = Vector2.new(_Fv48s5pXAi.X, _Fv48s5pXAi.Y)
-                    _I1Fmzpkh9y.tracers.Visible = true
-                else
-                    for _cCk8CO4HXA, drawing in pairs(_I1Fmzpkh9y) do
-                        drawing.Visible = false
-                    end
-                end
-            else
-                for _cCk8CO4HXA, drawing in pairs(_I1Fmzpkh9y) do
-                    drawing.Visible = false
-                end
-            end
-        end)
-    }
-end
-
-local _tK0GFn2Bl0 = _mgvJAXQpYQ:CreateToggle({
-   Name = string.char(3649) .. "ส" .. string.char(3604) .. "ง" .. string.char(3605) .. "ำ" .. string.char(3649) .. string.char(3627) .. string.char(3609) .. "่" .. string.char(3591) .. string.char(3612) .. string.char(3641) .. "้" .. string.char(3648) .. string.char(3621) .. string.char(3656) .. string.char(3609) .. string.char(32) .. string.char(40) .. string.char(69) .. "S" .. "P" .. string.char(41),
-   CurrentValue = false,
-   Flag = string.char(69, 83, 80, 84, 111, 103, 103, 108, 101),
-   Callback = function(Value)
-      _0FsG38EJ4R = Value
-      if not Value then
-          for _4QlWi1adSY, esp in pairs(_o3BueWRion) do
-              for _cCk8CO4HXA, drawing in pairs(esp._I1Fmzpkh9y) do
-                  drawing.Visible = false
-              end
-          end
-      end
-   end,
-})
-
-local _Pg3INVSkN7 = false
-local _z4i5vAfYBv = {}
-
-local function createSimpleESP(_4QlWi1adSY)
-    if _4QlWi1adSY == _p80OLiUf81.LocalPlayer then return end
-    
-    if _z4i5vAfYBv[_4QlWi1adSY] then
-        for _cCk8CO4HXA, drawing in pairs(_z4i5vAfYBv[_4QlWi1adSY]._I1Fmzpkh9y) do
-            drawing:Remove()
-        end
-    end
-    
-    local _I1Fmzpkh9y = {
-        name = Drawing.new(string.char(84, 101, 120, 116)),
-        _eJGpsnT0r6 = Drawing.new(string.char(84, 101, 120, 116))
-    }
-    
-    _I1Fmzpkh9y.name.Size = 16
-    _I1Fmzpkh9y.name.Center = true
-    _I1Fmzpkh9y.name.Outline = true
-    _I1Fmzpkh9y.name.Color = Color3.fromRGB(255, 255, 255)
-    _I1Fmzpkh9y.name.Visible = false
-    
-    _I1Fmzpkh9y._eJGpsnT0r6.Size = 14
-    _I1Fmzpkh9y._eJGpsnT0r6.Center = true
-    _I1Fmzpkh9y._eJGpsnT0r6.Outline = true
-    _I1Fmzpkh9y._eJGpsnT0r6.Color = Color3.fromRGB(255, 255, 255)
-    _I1Fmzpkh9y._eJGpsnT0r6.Visible = false
-    
-    _z4i5vAfYBv[_4QlWi1adSY] = {
-        _I1Fmzpkh9y = _I1Fmzpkh9y,
-        connection = _tbEENNRAUj.RenderStepped:Connect(function()
-            local _nXl2rNxIXT = _4QlWi1adSY.Character
-            local _cjNWf4Xks1 = _nXl2rNxIXT and _nXl2rNxIXT:FindFirstChild(string.char(72) .. string.char(117) .. string.char(109) .. string.char(97) .. "n" .. string.char(111) .. "i" .. "d" .. "R" .. string.char(111) .. "o" .. string.char(116) .. string.char(80) .. string.char(97) .. string.char(114) .. string.char(116))
-            local _IBbeZFLVa7 = _nXl2rNxIXT and _nXl2rNxIXT:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100))
-            
-            if _Pg3INVSkN7 and _nXl2rNxIXT and _cjNWf4Xks1 and _IBbeZFLVa7 and _IBbeZFLVa7.Health > 0 then
-                local _x912L3l5M9 = _cjNWf4Xks1.Position
-                local _Fv48s5pXAi, onScreen = _HUVPuyIqll:WorldToViewportPoint(_x912L3l5M9)
-                
-                if onScreen then
-                    local _eJGpsnT0r6 = (_HUVPuyIqll.CFrame.Position - _x912L3l5M9).Magnitude
-                    
-                    _I1Fmzpkh9y.name.Text = _4QlWi1adSY.Name
-                    _I1Fmzpkh9y.name.Position = Vector2.new(_Fv48s5pXAi.X, _Fv48s5pXAi.Y - 20)
-                    _I1Fmzpkh9y.name.Visible = true
-                    
-                    _I1Fmzpkh9y._eJGpsnT0r6.Text = math.floor(_eJGpsnT0r6) .. string.char(32, 115, 116, 117, 100, 115)
-                    _I1Fmzpkh9y._eJGpsnT0r6.Position = Vector2.new(_Fv48s5pXAi.X, _Fv48s5pXAi.Y + 5)
-                    _I1Fmzpkh9y._eJGpsnT0r6.Visible = true
-                else
-                    _I1Fmzpkh9y.name.Visible = false
-                    _I1Fmzpkh9y._eJGpsnT0r6.Visible = false
-                end
-            else
-                _I1Fmzpkh9y.name.Visible = false
-                _I1Fmzpkh9y._eJGpsnT0r6.Visible = false
-            end
-        end)
-    }
-end
-
-local _Q00KYXihpS = _mgvJAXQpYQ:CreateToggle({
-   Name = string.char(3649) .. "ส" .. "ด" .. string.char(3591) .. "ช" .. string.char(3639) .. "่" .. "อ" .. "แ" .. string.char(3621) .. "ะ" .. "ร" .. string.char(3632) .. string.char(3618) .. "ะ",
-   CurrentValue = false,
-   Flag = string.char(83) .. "i" .. "m" .. string.char(112) .. string.char(108) .. "e" .. "E" .. string.char(83) .. string.char(80) .. string.char(84) .. string.char(111) .. string.char(103) .. "g" .. string.char(108) .. string.char(101),
-   Callback = function(Value)
-      _Pg3INVSkN7 = Value
-      if not Value then
-          for _4QlWi1adSY, esp in pairs(_z4i5vAfYBv) do
-              for _cCk8CO4HXA, drawing in pairs(esp._I1Fmzpkh9y) do
-                  drawing.Visible = false
-              end
-          end
-      end
-   end,
-})
-
-for _cCk8CO4HXA, _4QlWi1adSY in pairs(_p80OLiUf81:GetPlayers()) do
-    if _4QlWi1adSY ~= _p80OLiUf81.LocalPlayer then
-        createSimpleESP(_4QlWi1adSY)
-    end
-end
-
-_p80OLiUf81.PlayerAdded:Connect(function(_4QlWi1adSY)
-    createSimpleESP(_4QlWi1adSY)
-end)
-
-_p80OLiUf81.PlayerRemoving:Connect(function(_4QlWi1adSY)
-    if _z4i5vAfYBv[_4QlWi1adSY] then
-        _z4i5vAfYBv[_4QlWi1adSY].connection:Disconnect()
-        for _cCk8CO4HXA, drawing in pairs(_z4i5vAfYBv[_4QlWi1adSY]._I1Fmzpkh9y) do
-            drawing:Remove()
-        end
-        _z4i5vAfYBv[_4QlWi1adSY] = nil
-    end
-end)
-
-for _cCk8CO4HXA, _4QlWi1adSY in pairs(_p80OLiUf81:GetPlayers()) do
-    if _4QlWi1adSY ~= _p80OLiUf81.LocalPlayer then
-        createESP(_4QlWi1adSY)
-    end
-end
-
-_p80OLiUf81.PlayerAdded:Connect(function(_4QlWi1adSY)
-    createESP(_4QlWi1adSY)
-end)
-
-_p80OLiUf81.PlayerRemoving:Connect(function(_4QlWi1adSY)
-    if _o3BueWRion[_4QlWi1adSY] then
-        _o3BueWRion[_4QlWi1adSY].connection:Disconnect()
-        for _cCk8CO4HXA, drawing in pairs(_o3BueWRion[_4QlWi1adSY]._I1Fmzpkh9y) do
-            drawing:Remove()
-        end
-        _o3BueWRion[_4QlWi1adSY] = nil
-    end
-end)
-
-game:GetService(string.char(82, 117, 110, 83, 101, 114, 118, 105, 99, 101)).RenderStepped:Connect(function()
-    if _cpJHSSVMxx then
-        local _fnRgx5PdL5 = game.Workspace.CurrentCamera
-        local _DsDxrmfmcV = _fnRgx5PdL5.ViewportSize
-        
-        _uWnvbgaL07.Position = Vector2.new(_DsDxrmfmcV.X / 2, _DsDxrmfmcV.Y / 2)
-        _Q4K4GO0UOB.Position = Vector2.new(_DsDxrmfmcV.X / 2, _DsDxrmfmcV.Y / 2)
-        
-        if _6qiA3FDS9n then
-            local _XhoN8nvZJ0 = getClosestPlayerInFOV()
-            if _XhoN8nvZJ0 and _XhoN8nvZJ0.Character and _XhoN8nvZJ0.Character:FindFirstChild(string.char(72, 101, 97, 100)) then
-                _fnRgx5PdL5.CFrame = CFrame.new(_fnRgx5PdL5.CFrame.Position, _XhoN8nvZJ0.Character.Head.Position)
-            end
-        end
-    end
-end)
-
-local _5xC14FE38Y = Window:CreateTab(string.char(3595, 3656, 3629, 3609, 3594, 3639, 3656, 3629), nil)
-local _hLMjdO81sQ = _5xC14FE38Y:CreateSection("ร" .. string.char(3632) .. "บ" .. "บ" .. string.char(3595) .. "่" .. "อ" .. "น" .. "ช" .. "ื" .. "่" .. "อ")
-
-local _Ul0vOZlQM0 = false
-local _YvVL2OSooO = string.char()
-local _OKiSlnxP5d = nil
-local _3OOnGsRC41 = {}
-
-local function hidePlayerName()
-    local _HFtbZZ6u8T = game._p80OLiUf81.LocalPlayer
-    
-    _3OOnGsRC41 = {}
-    for _cCk8CO4HXA, _4QlWi1adSY in pairs(game._p80OLiUf81:GetPlayers()) do
-        if _4QlWi1adSY ~= _HFtbZZ6u8T then
-            table.insert(_3OOnGsRC41, _4QlWi1adSY.Name)
-        end
-    end
-    
-    if _Ul0vOZlQM0 then
-        if _HFtbZZ6u8T.Character then
-            for _cCk8CO4HXA, obj in pairs(_HFtbZZ6u8T.Character:GetDescendants()) do
-                if obj:IsA(string.char(66) .. "i" .. "l" .. "l" .. "b" .. string.char(111) .. "a" .. string.char(114) .. "d" .. "G" .. "u" .. string.char(105)) or obj:IsA(string.char(83, 117, 114, 102, 97, 99, 101, 71, 117, 105)) then
-                    obj.Enabled = false
-                end
-            end
-            
-            if _HFtbZZ6u8T.Character:FindFirstChild(string.char(72, 101, 97, 100)) then
-                for _cCk8CO4HXA, gui in pairs(_HFtbZZ6u8T.Character.Head:GetChildren()) do
-                    if gui:IsA("B" .. string.char(105) .. string.char(108) .. "l" .. string.char(98) .. string.char(111) .. "a" .. string.char(114) .. string.char(100) .. string.char(71) .. "u" .. "i") then
-                        gui.Enabled = false
-                    end
-                end
-            end
-            
-            if _HFtbZZ6u8T.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
-                _HFtbZZ6u8T.Character.Humanoid.DisplayName = if _YvVL2OSooO ~= string.char() and _OKiSlnxP5d then _YvVL2OSooO else string.char(72, 105, 100, 100, 101, 110)
-                _HFtbZZ6u8T.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
-            end
-        end
-    else
-        if _HFtbZZ6u8T.Character and _HFtbZZ6u8T.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
-            _HFtbZZ6u8T.Character.Humanoid.DisplayName = _HFtbZZ6u8T.Name
-            _HFtbZZ6u8T.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.Viewer
-            
-            for _cCk8CO4HXA, obj in pairs(_HFtbZZ6u8T.Character:GetDescendants()) do
-do local _9CInu1OUtm = 38 end  -- eNMUuQFEGjinKTejfYaX
-                if obj:IsA("B" .. string.char(105) .. "l" .. "l" .. string.char(98) .. string.char(111) .. string.char(97) .. "r" .. string.char(100) .. string.char(71) .. string.char(117) .. string.char(105)) or obj:IsA(string.char(83, 117, 114, 102, 97, 99, 101, 71, 117, 105)) then
-                    obj.Enabled = true
-                end
-            end
-        end
-    end
-end
-
-local function changeFakeName()
-    local _HFtbZZ6u8T = game._p80OLiUf81.LocalPlayer
-    if _OKiSlnxP5d and _Ul0vOZlQM0 then
-        local _ov1Ir3AsjI = nil
-        for _cCk8CO4HXA, _4QlWi1adSY in pairs(game._p80OLiUf81:GetPlayers()) do
-            if _4QlWi1adSY.Name == _OKiSlnxP5d then
-                _ov1Ir3AsjI = _4QlWi1adSY
-                break
-            end
-        end
-        
-        if _ov1Ir3AsjI and _HFtbZZ6u8T.Character and _HFtbZZ6u8T.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
-            if _YvVL2OSooO == string.char() then
-                _HFtbZZ6u8T.Character.Humanoid.DisplayName = _ov1Ir3AsjI.Name
-            else
-                _HFtbZZ6u8T.Character.Humanoid.DisplayName = _YvVL2OSooO
-            end
-            
-            if _ov1Ir3AsjI.Character and _ov1Ir3AsjI.Character:FindFirstChild(string.char(72, 117, 109, 97, 110, 111, 105, 100)) then
-                _HFtbZZ6u8T.Character.Humanoid.NameDisplayDistance = _ov1Ir3AsjI.Character.Humanoid.NameDisplayDistance
-            end
-        end
-    end
-end
-
-local _lUspus71Bl = _5xC14FE38Y:CreateToggle({
-   Name = string.char(3648, 3611, 3636, 3604, 3619, 3632, 3610, 3610, 3595, 3656, 3629, 3609, 3594, 3639, 3656, 3629),
-   CurrentValue = false,
-   Flag = string.char(78, 97, 109, 101, 72, 105, 100, 101, 114, 84, 111, 103, 103, 108, 101),
-   Callback = function(Value)
-      _Ul0vOZlQM0 = Value
-      hidePlayerName()
-   end,
-})
-
-local _aBhULfMT03 = _5xC14FE38Y:CreateInput({
-   Name = string.char(3594, 3639, 3656, 3629, 3611, 3621, 3629, 3617, 32, 40, 3606, 3657, 3634, 3652, 3617, 3656, 3585, 3619, 3629, 3585, 3592, 3632, 3651, 3594, 3657, 3594, 3639, 3656, 3629, 3612, 3641, 3657, 3648, 3621, 3656, 3609, 3607, 3637, 3656, 3648, 3621, 3639, 3629, 3585, 41),
-   PlaceholderText = string.char(3651, 3626, 3656, 3594, 3639, 3656, 3629, 3607, 3637, 3656, 3605, 3657, 3629, 3591, 3585, 3634, 3619, 3649, 3626, 3604, 3591, 46, 46, 46),
-   RemoveTextAfterFocusLost = false,
-   Callback = function(Text)
-      _YvVL2OSooO = Text
-      if _Ul0vOZlQM0 then
-          hidePlayerName()
-          changeFakeName()
-      end
-   end,
-})
-
-local _H747gstX6T = _5xC14FE38Y:CreateDropdown({
-   Name = string.char(3648, 3621, 3639, 3629, 3585, 3612, 3641, 3657, 3648, 3621, 3656, 3609, 3607, 3637, 3656, 3605, 3657, 3629, 3591, 3585, 3634, 3619, 3651, 3594, 3657, 3594, 3639, 3656, 3629),
-   Options = _3OOnGsRC41,
-   CurrentOption = string.char(),
-   Flag = string.char(80, 108, 97, 121, 101, 114, 68, 114, 111, 112, 100, 111, 119, 110),
-   Callback = function(Option)
-      _OKiSlnxP5d = Option
-      if _Ul0vOZlQM0 then
-          changeFakeName()
-      end
-   end,
-})
-
-local _ljt0U2sGCU = _5xC14FE38Y:CreateButton({
-   Name = "ร" .. string.char(3637) .. "เ" .. string.char(3615) .. string.char(3619) .. string.char(3594) .. string.char(3619) .. "า" .. string.char(3618) .. string.char(3594) .. "ื" .. "่" .. string.char(3629) .. "ผ" .. string.char(3641) .. "้" .. "เ" .. "ล" .. "่" .. string.char(3609),
-   Callback = function()
-      local _Ov8LgCgrAo = {}
-      for _cCk8CO4HXA, _4QlWi1adSY in pairs(game._p80OLiUf81:GetPlayers()) do
-          if _4QlWi1adSY ~= game._p80OLiUf81.LocalPlayer then
-              table.insert(_Ov8LgCgrAo, _4QlWi1adSY.Name)
-          end
-      end
-      
-      _H747gstX6T:Refresh(_Ov8LgCgrAo, (_OKiSlnxP5d and table.find(_Ov8LgCgrAo, _OKiSlnxP5d)) and _OKiSlnxP5d or string.char())
-   end,
-})
-
-game._p80OLiUf81.PlayerAdded:Connect(function(_4QlWi1adSY)
-    _ljt0U2sGCU.Callback()
-end)
-
-game._p80OLiUf81.PlayerRemoving:Connect(function(_4QlWi1adSY)
-    _ljt0U2sGCU.Callback()
-    
-    if _OKiSlnxP5d == _4QlWi1adSY.Name then
-        _OKiSlnxP5d = nil
-    end
-end)
-
-game._p80OLiUf81.LocalPlayer.CharacterAdded:Connect(function(_nXl2rNxIXT)
-    wait(1)
-    
-    if _Ul0vOZlQM0 then
-        hidePlayerName()
-        changeFakeName()
-    end
-end)
-
-_ljt0U2sGCU.Callback()
-
