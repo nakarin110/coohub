@@ -362,10 +362,20 @@ end
 
 local function removeESP(player)
     if ESPObjects[player] then
-        for _, obj in pairs(ESPObjects[player]) do
-            if typeof(obj) == "table" and obj.Remove then
-                obj:Remove()
-            end
+        if ESPObjects[player].box then
+            ESPObjects[player].box:Remove()
+        end
+        if ESPObjects[player].nameLabel then
+            ESPObjects[player].nameLabel:Remove()
+        end
+        if ESPObjects[player].healthBarBg then
+            ESPObjects[player].healthBarBg:Remove()
+        end
+        if ESPObjects[player].healthBar then
+            ESPObjects[player].healthBar:Remove()
+        end
+        if ESPObjects[player].toolLabel then
+            ESPObjects[player].toolLabel:Remove()
         end
         ESPObjects[player] = nil
     end
@@ -373,6 +383,13 @@ end
 
 local function updateESP()
     if not ESPEnabled then return end
+    
+    -- ลบ ESP ของผู้เล่นที่ออกไปแล้ว
+    for player, _ in pairs(ESPObjects) do
+        if typeof(player) ~= "string" and (not player.Parent or not player:IsDescendantOf(game)) then
+            removeESP(player)
+        end
+    end
     
     local camera = game:GetService("Workspace").CurrentCamera
     
@@ -492,25 +509,10 @@ end
 local function toggleESP(enabled)
     ESPEnabled = enabled
     
-    -- ลบ Drawing objects ทั้งหมดก่อน
-    for player, espData in pairs(ESPObjects) do
+    -- ลบ ESP objects ที่มีอยู่ทั้งหมดก่อน
+    for player, _ in pairs(ESPObjects) do
         if typeof(player) ~= "string" then
-            if espData.box and espData.box.Remove then
-                espData.box:Remove()
-            end
-            if espData.nameLabel and espData.nameLabel.Remove then
-                espData.nameLabel:Remove()
-            end
-            if espData.healthBarBg and espData.healthBarBg.Remove then
-                espData.healthBarBg:Remove()
-            end
-            if espData.healthBar and espData.healthBar.Remove then
-                espData.healthBar:Remove()
-            end
-            if espData.toolLabel and espData.toolLabel.Remove then
-                espData.toolLabel:Remove()
-            end
-            ESPObjects[player] = nil
+            removeESP(player)
         end
     end
     
@@ -539,7 +541,7 @@ local function toggleESP(enabled)
             ESPObjects.RenderSteppedConnection = game:GetService("RunService").RenderStepped:Connect(updateESP)
         end
     else
-        -- ยกเลิก Connections ทั้งหมด
+
         if ESPObjects.PlayerAddedConnection then
             ESPObjects.PlayerAddedConnection:Disconnect()
             ESPObjects.PlayerAddedConnection = nil
@@ -555,7 +557,7 @@ local function toggleESP(enabled)
             ESPObjects.RenderSteppedConnection = nil
         end
         
-        -- เคลียร์ตารางเก็บ objects
+
         for k in pairs(ESPObjects) do
             ESPObjects[k] = nil
         end
@@ -705,6 +707,11 @@ game.Players.PlayerAdded:Connect(function(player)
     player.CharacterAdded:Connect(function(char)
         wait(0.5)
     end)
+end)
+
+game.Players.PlayerRemoving:Connect(function(player)
+    -- ลบ ESP ทันทีเมื่อผู้เล่นออก
+    removeESP(player)
 end)
 
 if game.Players.LocalPlayer.Character then
