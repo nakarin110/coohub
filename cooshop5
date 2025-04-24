@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Coo hub",
+   Name = "Coo hub V1",
    LoadingTitle = "Coo OT",
    LoadingSubtitle = "สร้างโดย COOHUB",
    ConfigurationSaving = {
@@ -308,53 +308,56 @@ local function createESP(player)
     
     if ESPObjects[player] then removeESP(player) end
     
-    local success, result = pcall(function()
-        local box = Drawing.new("Square")
-        box.Visible = false
-        box.Color = Color3.fromRGB(255, 0, 0)
-        box.Thickness = IsMobile and 2 or 1
-        box.Transparency = 1
-        box.Filled = false
-        
-        local nameLabel = Drawing.new("Text")
-        nameLabel.Visible = false
-        nameLabel.Color = Color3.fromRGB(255, 255, 255)
-        nameLabel.Size = IsMobile and 20 or 16
-        nameLabel.Center = true
-        nameLabel.Outline = true
-        nameLabel.OutlineColor = Color3.fromRGB(0, 0, 0)
-        nameLabel.Font = 3
-
-        -- Add tool display text
-        local toolLabel = Drawing.new("Text")
-        toolLabel.Visible = false
-        toolLabel.Color = Color3.fromRGB(255, 255, 0) -- Yellow color for tools
-        toolLabel.Size = IsMobile and 18 or 14
-        toolLabel.Center = false
-        toolLabel.Outline = true
-        toolLabel.OutlineColor = Color3.fromRGB(0, 0, 0)
-        toolLabel.Font = 3
-        
-        local healthBar = Drawing.new("Square")
-        healthBar.Visible = false
-        healthBar.Color = Color3.fromRGB(0, 255, 0)
-        healthBar.Thickness = IsMobile and 2 or 1
-        healthBar.Transparency = 1
-        healthBar.Filled = true
-        
-        ESPObjects[player] = {
-            box = box,
-            nameLabel = nameLabel,
-            toolLabel = toolLabel, -- Add tool label to ESP objects
-            healthBar = healthBar,
-            player = player,
-            lastUpdate = 0
-        }
-    end)
+    local espFolder = Instance.new("Folder")
+    espFolder.Name = "ESPObjects"
     
-    if not success then
-        warn("ESP Creation Error:", result)
-    end
+    local box = Drawing.new("Square")
+    box.Visible = false
+    box.Color = Color3.fromRGB(255, 0, 0)
+    box.Thickness = 1
+    box.Transparency = 1
+    box.Filled = false
+    
+    local nameLabel = Drawing.new("Text")
+    nameLabel.Visible = false
+    nameLabel.Color = Color3.fromRGB(255, 255, 255)
+    nameLabel.Size = 16
+    nameLabel.Center = true
+    nameLabel.Outline = true
+    nameLabel.OutlineColor = Color3.fromRGB(0, 0, 0)
+    nameLabel.Font = 3
+    
+    local healthBarBg = Drawing.new("Square")
+    healthBarBg.Visible = false
+    healthBarBg.Color = Color3.fromRGB(0, 0, 0)
+    healthBarBg.Thickness = 1
+    healthBarBg.Transparency = 0.5
+    healthBarBg.Filled = true
+    
+    local healthBar = Drawing.new("Square")
+    healthBar.Visible = false
+    healthBar.Color = Color3.fromRGB(0, 255, 0)
+    healthBar.Thickness = 1
+    healthBar.Transparency = 1
+    healthBar.Filled = true
+    
+    local toolLabel = Drawing.new("Text")
+    toolLabel.Visible = false
+    toolLabel.Color = Color3.fromRGB(255, 255, 0)
+    toolLabel.Size = 14
+    toolLabel.Center = false
+    toolLabel.Outline = true
+    toolLabel.OutlineColor = Color3.fromRGB(0, 0, 0)
+    toolLabel.Font = 3
+    
+    ESPObjects[player] = {
+        box = box,
+        nameLabel = nameLabel,
+        healthBarBg = healthBarBg,
+        healthBar = healthBar,
+        toolLabel = toolLabel,
+        player = player
+    }
 end
 
 local function removeESP(player)
@@ -371,93 +374,145 @@ end
 local function updateESP()
     if not ESPEnabled then return end
     
-    local camera = workspace.CurrentCamera
-    if not camera then return end
+    local camera = game:GetService("Workspace").CurrentCamera
     
     for player, espData in pairs(ESPObjects) do
-        if typeof(player) ~= "string" and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-            local currentTime = tick()
-            if IsMobile and (currentTime - espData.lastUpdate) < 0.1 then
-                continue
-            end
-            espData.lastUpdate = currentTime
+        if typeof(player) ~= "string" and player.Character and player.Character:FindFirstChild("HumanoidRootPart") and player.Character:FindFirstChild("Humanoid") then
+            local humanoid = player.Character:FindFirstChild("Humanoid")
+            local hrp = player.Character:FindFirstChild("HumanoidRootPart")
             
-            pcall(function()
-                local humanoid = player.Character:FindFirstChild("Humanoid")
-                local hrp = player.Character.HumanoidRootPart
+            local vector, onScreen = camera:WorldToViewportPoint(hrp.Position)
+            
+            if onScreen then
+                local headPos
+                local rootPos = hrp.Position
                 
-                local vector, onScreen = camera:WorldToViewportPoint(hrp.Position)
+                if player.Character:FindFirstChild("Head") then
+                    headPos = player.Character:FindFirstChild("Head").Position
+                else
+                    headPos = rootPos + Vector3.new(0, 3, 0)
+                end
                 
-                if onScreen and humanoid and humanoid.Health > 0 then
-                    local screenSize = camera.ViewportSize
-                    local screenCenter = Vector2.new(screenSize.X/2, screenSize.Y/2)
-                    local screenPosition = Vector2.new(vector.X, vector.Y)
-                    local distance = (hrp.Position - camera.CFrame.Position).Magnitude
-                    
-                    local scale = math.clamp(1 - (distance/100), 0.3, 1)
-                    local boxSize = Vector2.new(1000/distance, 2000/distance)
-                    
-                    -- Update box and name label (existing code)
-                    espData.box.Size = boxSize
-                    espData.box.Position = Vector2.new(vector.X - boxSize.X/2, vector.Y - boxSize.Y/2)
-                    espData.box.Visible = true
-                    
-                    espData.nameLabel.Text = string.format("%s [%d]", player.Name, math.floor(distance))
-                    espData.nameLabel.Position = Vector2.new(vector.X, vector.Y - boxSize.Y/2 - 20)
-                    espData.nameLabel.Visible = true
-
-                    -- Update tool display
-                    local toolsList = {}
-                    
-                    -- Check equipped tool
+                local rootPosOnScreen = camera:WorldToViewportPoint(rootPos)
+                local headPosOnScreen = camera:WorldToViewportPoint(headPos)
+                
+                local boxSize = Vector2.new(
+                    math.max(math.abs(headPosOnScreen.X - rootPosOnScreen.X) * 3, 30),
+                    math.abs(headPosOnScreen.Y - rootPosOnScreen.Y) * 1.5
+                )
+                
+                local boxPosition = Vector2.new(
+                    rootPosOnScreen.X - boxSize.X / 2,
+                    rootPosOnScreen.Y - boxSize.Y / 2
+                )
+                
+                espData.box.Size = boxSize
+                espData.box.Position = boxPosition
+                espData.box.Visible = true
+                
+                espData.nameLabel.Text = player.Name
+                espData.nameLabel.Position = Vector2.new(
+                    boxPosition.X + boxSize.X / 2,
+                    boxPosition.Y - 20
+                )
+                espData.nameLabel.Visible = true
+                
+                local healthBarHeight = boxSize.Y
+                local healthBarWidth = 5
+                local healthBarPosition = Vector2.new(
+                    boxPosition.X - 10,
+                    boxPosition.Y
+                )
+                
+                espData.healthBarBg.Size = Vector2.new(healthBarWidth, healthBarHeight)
+                espData.healthBarBg.Position = healthBarPosition
+                espData.healthBarBg.Visible = true
+                
+                local healthPercentage = math.clamp(humanoid.Health / humanoid.MaxHealth, 0, 1)
+                local healthBarFillHeight = healthBarHeight * healthPercentage
+                
+                espData.healthBar.Size = Vector2.new(healthBarWidth, healthBarFillHeight)
+                espData.healthBar.Position = Vector2.new(
+                    healthBarPosition.X,
+                    healthBarPosition.Y + healthBarHeight - healthBarFillHeight
+                )
+                espData.healthBar.Visible = true
+                
+                local red = 1 - healthPercentage
+                local green = healthPercentage
+                espData.healthBar.Color = Color3.fromRGB(255 * red, 255 * green, 0)
+                
+                local toolsList = {}
+                
+                if player.Character then
                     local equippedTool = player.Character:FindFirstChildOfClass("Tool")
                     if equippedTool and equippedTool.Name ~= "Fists" then
                         table.insert(toolsList, "⚔️ " .. equippedTool.Name)
                     end
-                    
-                    -- Check backpack tools
-                    if player:FindFirstChild("Backpack") then
-                        for _, tool in pairs(player.Backpack:GetChildren()) do
-                            if tool:IsA("Tool") and tool.Name ~= "Fists" then
-                                table.insert(toolsList, "🎒 " .. tool.Name)
-                            end
+                end
+                
+                if player:FindFirstChild("Backpack") then
+                    for _, tool in pairs(player.Backpack:GetChildren()) do
+                        if tool:IsA("Tool") and tool.Name ~= "Fists" then
+                            table.insert(toolsList, "🎒 " .. tool.Name)
                         end
                     end
-                    
-                    -- Update tool label
-                    if #toolsList > 0 then
-                        espData.toolLabel.Text = table.concat(toolsList, "\n")
-                        espData.toolLabel.Position = Vector2.new(
-                            vector.X + boxSize.X/2 + 5,
-                            vector.Y - boxSize.Y/2
-                        )
-                        espData.toolLabel.Visible = true
-                    else
-                        espData.toolLabel.Visible = false
-                    end
-                    
-                    -- Update health bar (existing code)
-                    local healthPercent = humanoid.Health / humanoid.MaxHealth
-                    local healthBarSize = Vector2.new(5, boxSize.Y * healthPercent)
-                    local healthBarPos = Vector2.new(vector.X - boxSize.X/2 - 7, vector.Y + boxSize.Y/2 - healthBarSize.Y)
-                    
-                    espData.healthBar.Size = healthBarSize
-                    espData.healthBar.Position = healthBarPos
-                    espData.healthBar.Color = Color3.fromRGB(255 * (1-healthPercent), 255 * healthPercent, 0)
-                    espData.healthBar.Visible = true
-                else
-                    espData.box.Visible = false
-                    espData.nameLabel.Visible = false
-                    espData.toolLabel.Visible = false
-                    espData.healthBar.Visible = false
                 end
-            end)
+                
+                if #toolsList > 0 then
+                    espData.toolLabel.Text = table.concat(toolsList, "\n")
+                    espData.toolLabel.Position = Vector2.new(
+                        boxPosition.X + boxSize.X + 5,
+                        boxPosition.Y
+                    )
+                    espData.toolLabel.Visible = true
+                else
+                    espData.toolLabel.Visible = false
+                end
+                
+            else
+                espData.box.Visible = false
+                espData.nameLabel.Visible = false
+                espData.healthBarBg.Visible = false
+                espData.healthBar.Visible = false
+                espData.toolLabel.Visible = false
+            end
+        else
+            if typeof(player) ~= "string" and ESPObjects[player] then
+                espData.box.Visible = false
+                espData.nameLabel.Visible = false
+                espData.healthBarBg.Visible = false
+                espData.healthBar.Visible = false
+                espData.toolLabel.Visible = false
+            end
         end
     end
 end
 
 local function toggleESP(enabled)
     ESPEnabled = enabled
+    
+    -- ลบ Drawing objects ทั้งหมดก่อน
+    for player, espData in pairs(ESPObjects) do
+        if typeof(player) ~= "string" then
+            if espData.box and espData.box.Remove then
+                espData.box:Remove()
+            end
+            if espData.nameLabel and espData.nameLabel.Remove then
+                espData.nameLabel:Remove()
+            end
+            if espData.healthBarBg and espData.healthBarBg.Remove then
+                espData.healthBarBg:Remove()
+            end
+            if espData.healthBar and espData.healthBar.Remove then
+                espData.healthBar:Remove()
+            end
+            if espData.toolLabel and espData.toolLabel.Remove then
+                espData.toolLabel:Remove()
+            end
+            ESPObjects[player] = nil
+        end
+    end
     
     if ESPEnabled then
         for _, player in pairs(game.Players:GetPlayers()) do
@@ -484,12 +539,7 @@ local function toggleESP(enabled)
             ESPObjects.RenderSteppedConnection = game:GetService("RunService").RenderStepped:Connect(updateESP)
         end
     else
-        for player, espData in pairs(ESPObjects) do
-            if typeof(player) ~= "string" then
-                removeESP(player)
-            end
-        end
-        
+        -- ยกเลิก Connections ทั้งหมด
         if ESPObjects.PlayerAddedConnection then
             ESPObjects.PlayerAddedConnection:Disconnect()
             ESPObjects.PlayerAddedConnection = nil
@@ -503,6 +553,11 @@ local function toggleESP(enabled)
         if ESPObjects.RenderSteppedConnection then
             ESPObjects.RenderSteppedConnection:Disconnect()
             ESPObjects.RenderSteppedConnection = nil
+        end
+        
+        -- เคลียร์ตารางเก็บ objects
+        for k in pairs(ESPObjects) do
+            ESPObjects[k] = nil
         end
     end
 end
