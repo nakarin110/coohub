@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Coo hub V1",
+   Name = "Coo hub V1.1",
    LoadingTitle = "Coo OT",
    LoadingSubtitle = "สร้างโดย COOHUB",
    ConfigurationSaving = {
@@ -18,40 +18,27 @@ local Window = Rayfield:CreateWindow({
       SaveKey = false,
       GrabKeyFromSite = false,
       Key = {
-        "coo1-QWE2-RT34-5YUI", "coo2-AS76-F4H3-2JKL", "coo3-ZXC5-VB67-NM89",
-        "coo4-123A-BC45-D6EF", "coo5-GHI7-JK89-L0MN", "coo6-OPQ1-RST2-UV34",
-        "coo7-WXY5-Z678-9012", "coo8-34A5-BC67-DEF8", "coo9-GHI9-JK01-LMN2",
-        "coo10-OP34-QRS5-TUV6", "coo11-WXY7-Z890-123A", "coo12-BCD4-EFG5-HIJ6",
-        "coo13-KLM7-NOP8-QRS9", "coo14-TUV0-WXY1-ZAB2", "coo15-CDE3-FGH4-IJK5",
-        "coo16-LMN6-OPQ7-RST8", "coo17-UVW9-XYZ0-123A", "coo18-BCD4-EFG5-HIJ6",
-        "coo19-KLM7-NOP8-QRS9", "coo20-TUV0-WXY1-ZAB2", "coo21-CDE3-FGH4-IJK5",
-        "coo22-LMN6-OPQ7-RST8", "coo23-UVW9-XYZ0-123A", "coo24-BCD4-EFG5-HIJ6",
-        "coo25-KLM7-NOP8-QRS9", "coo26-TUV0-WXY1-ZAB2", "coo27-CDE3-FGH4-IJK5",
-        "coo28-LMN6-OPQ7-RST8", "coo29-UVW9-XYZ0-123A", "coo30-BCD4-EFG5-HIJ6",
-        "coo31-KLM7-NOP8-QRS9", "coo32-TUV0-WXY1-ZAB2", "coo33-CDE3-FGH4-IJK5",
-        "coo34-LMN6-OPQ7-RST8", "coo35-UVW9-XYZ0-123A", "coo36-BCD4-EFG5-HIJ6",
-        "coo37-KLM7-NOP8-QRS9", "coo38-TUV0-WXY1-ZAB2", "coo39-CDE3-FGH4-IJK5",
-        "coo40-LMN6-OPQ7-RST8", "coo41-UVW9-XYZ0-123A", "coo42-BCD4-EFG5-HIJ6",
-        "coo43-KLM7-NOP8-QRS9", "coo44-TUV0-WXY1-ZAB2", "coo45-CDE3-FGH4-IJK5",
-        "coo46-LMN6-OPQ7-RST8", "coo47-UVW9-XYZ0-123A", "coo48-BCD4-EFG5-HIJ6",
-        "coo49-KLM7-NOP8-QRS9", "coo50-TUV0-WXY1-ZAB2", "coo51-CDE3-FGH4-IJK5",
-        "coo52-LMN6-OPQ7-RST8", "coo53-UVW9-XYZ0-123A", "coo54-BCD4-EFG5-HIJ6",
-        "coo55-KLM7-NOP8-QRS9", "coo56-TUV0-WXY1-ZAB2", "coo57-CDE3-FGH4-IJK5",
-        "coo58-LMN6-OPQ7-RST8", "coo59-UVW9-XYZ0-123A", "coo60-BCD4-EFG5-HIJ6",
-        "coo61-KLM7-NOP8-QRS9", "coo62-TUV0-WXY1-ZAB2", "coo63-CDE3-FGH4-IJK5",
-        "coo64-LMN6-OPQ7-RST8", "coo65-UVW9-XYZ0-123A", "coo66-BCD4-EFG5-HIJ6",
-        "coo67-KLM7-NOP8-QRS9", "coo68-TUV0-WXY1-ZAB2", "coo69-CDE3-FGH4-IJK5",
-        "coo70-LMN6-OPQ7-RST8", "coo71-UVW9-XYZ0-123A", "coo72-BCD4-EFG5-HIJ6",
-        "coo73-KLM7-NOP8-QRS9", "coo74-TUV0-WXY1-ZAB2", "coo75-CDE3-FGH4-IJK5",
-        "coo76-LMN6-OPQ7-RST8", "coo77-UVW9-XYZ0-123A", "coo78-BCD4-EFG5-HIJ6",
-        "coo79-KLM7-NOP8-QRS9", "coo80-TUV0-WXY1-ZAB2", "coo81-CDE3-FGH4-IJK5",
-        "coo82-LMN6-OPQ7-RST8", "coo83-UVW9-XYZ0-123A", "coo84-BCD4-EFG5-HIJ6",
-        "coo85-KLM7-NOP8-QRS9", "coo86-TUV0-WXY1-ZAB2", "coo87-CDE3-FGH4-IJK5",
-        "coo88-LMN6-OPQ7-RST8", "coo89-UVW9-XYZ0-123A", "coo90-BCD4-EFG5-HIJ6",
-        "coo91-KLM7-NOP8-QRS9", "coo92-TUV0-WXY1-ZAB2", "coo93-CDE3-FGH4-IJK5",
-        "coo94-LMN6-OPQ7-RST8", "coo95-UVW9-XYZ0-123A", "coo96-BCD4-EFG5-HIJ6",
-        "coo97-KLM7-NOP8-QRS9", "coo98-TUV0-WXY1-ZAB2", "coo99-CDE3-FGH4-IJK5",
-        "coo100-LMN6-OPQ7-RST8"
+        "coo100-X4R2", "coo101-P9K5", "coo102-M3J7", "coo103-L8H4", "coo104-W2D9",
+        "coo105-Q7V3", "coo106-B5N8", "coo107-Y6C4", "coo108-K9M2", "coo109-T4H7",
+        "coo110-F8L3", "coo111-Z5X9", "coo112-R2W6", "coo113-J7D4", "coo114-N3B8",
+        "coo115-C6V2", "coo116-H9T5", "coo117-M4G7", "coo118-P8K3", "coo119-L2X6",
+        "coo120-W7R4", "coo121-Y3H8", "coo122-B9N5", "coo123-Q4V7", "coo124-T2M6",
+        "coo125-F7K3", "coo126-Z5L9", "coo127-C8W4", "coo128-J2H6", "coo129-P9R5",
+        "coo130-M4B7", "coo131-X8N3", "coo132-L2V6", "coo133-Q7T4", "coo134-Y3K8",
+        "coo135-W9H5", "coo136-B4G7", "coo137-F2M6", "coo138-Z7R3", "coo139-C5L9",
+        "coo140-J8W4", "coo141-P2H6", "coo142-T9N5", "coo143-M4V7", "coo144-X8K3",
+        "coo145-L2B6", "coo146-Q7R4", "coo147-Y3T8", "coo148-W9G5", "coo149-F4H7",
+        "coo150-Z2M6", "coo151-C7L3", "coo152-J5N9", "coo153-P8W4", "coo154-B2V6",
+        "coo155-T9K5", "coo156-M4R7", "coo157-X8H3", "coo158-L2G6", "coo159-Q7B4",
+        "coo160-Y3N8", "coo161-W9T5", "coo162-F4V7", "coo163-Z2K6", "coo164-C7M3",
+        "coo165-J5H9", "coo166-P8L4", "coo167-B2R6", "coo168-T9W5", "coo169-M4G7",
+        "coo170-X8N3", "coo171-L2V6", "coo172-Q7K4", "coo173-Y3H8", "coo174-W9B5",
+        "coo175-F4T7", "coo176-Z2M6", "coo177-C7R3", "coo178-J5L9", "coo179-P8W4",
+        "coo180-B2V6", "coo181-T9K5", "coo182-M4H7", "coo183-X8G3", "coo184-L2N6",
+        "coo185-Q7R4", "coo186-Y3T8", "coo187-W9B5", "coo188-F4V7", "coo189-Z2K6",
+        "coo190-C7M3", "coo191-J5H9", "coo192-P8L4", "coo193-B2W6", "coo194-T9G5",
+        "coo195-M4R7", "coo196-X8N3", "coo197-L2V6", "coo198-Q7K4", "coo199-Y3H8",
+        "coo200-W9B5"
     }
    }
 })
@@ -106,6 +93,7 @@ local IsMobile = false
 local AimbotButtonEnabled = false
 local AimbotMobileActive = false
 local AimbotButton = nil
+local AutoAimEnabled = false
 
 local function checkMobile()
     return game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled
@@ -384,7 +372,7 @@ end
 local function updateESP()
     if not ESPEnabled then return end
     
-    -- ลบ ESP ของผู้เล่นที่ออกไปแล้ว
+   
     for player, _ in pairs(ESPObjects) do
         if typeof(player) ~= "string" and (not player.Parent or not player:IsDescendantOf(game)) then
             removeESP(player)
@@ -509,7 +497,7 @@ end
 local function toggleESP(enabled)
     ESPEnabled = enabled
     
-    -- ลบ ESP objects ที่มีอยู่ทั้งหมดก่อน
+    
     for player, _ in pairs(ESPObjects) do
         if typeof(player) ~= "string" then
             removeESP(player)
@@ -565,7 +553,67 @@ local function toggleESP(enabled)
 end
 
 local function createMobileAimbotButton()
+    local gui = Instance.new("ScreenGui")
+    gui.Name = "AimbotButtonGui"
+    gui.ResetOnSpawn = false
+    
+    local button = Instance.new("TextButton")
+    button.Name = "AimbotButton"
+    button.Size = UDim2.new(0, 60, 0, 60)
+    button.Position = UDim2.new(0.85, 0, 0.5, 0)
+    button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    button.BackgroundTransparency = 0.5
+    button.Text = "🎯"
+    button.TextSize = 30
+    button.Parent = gui
+    
+    -- Make button draggable
+    local dragging
+    local dragInput
+    local dragStart
+    local startPos
 
+    local function update(input)
+        local delta = input.Position - dragStart
+        button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+            startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+
+    button.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = button.Position
+            
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    button.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.Touch and dragging then
+            update(input)
+        end
+    end)
+
+    -- Handle aimbot activation
+    local touchStartTime = 0
+    button.TouchStarted:Connect(function()
+        touchStartTime = tick()
+        AimbotMobileActive = true
+        button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+    end)
+
+    button.TouchEnded:Connect(function()
+        AimbotMobileActive = false
+        button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    end)
+
+    gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    AimbotButton = button
 end
 
 local function removeMobileAimbotButton()
@@ -575,11 +623,24 @@ local function removeMobileAimbotButton()
     end
 end
 
-local function toggleMobileAimbotButton(enabled)
-
-    if AimbotButton and AimbotButton.Parent then
-        AimbotButton.Parent:Destroy()
-        AimbotButton = nil
+local function updateMobileAimbot()
+    if not IsMobile or not AimbotEnabled then return end
+    
+    if AimbotButtonEnabled and (AimbotMobileActive or AutoAimEnabled) then
+        local target = getClosestPlayerInFOV()
+        if target and target.Character and target.Character:FindFirstChild(TargetPart) then
+            local camera = game.Workspace.CurrentCamera
+            local targetPosition = target.Character[TargetPart].Position
+            
+            if AimbotSmoothing > 1 then
+                local currentCFrame = camera.CFrame
+                local targetCFrame = CFrame.new(camera.CFrame.Position, targetPosition)
+                local smoothingFactor = 1 / AimbotSmoothing * AimbotSensitivity
+                camera.CFrame = currentCFrame:Lerp(targetCFrame, smoothingFactor)
+            else
+                camera.CFrame = CFrame.new(camera.CFrame.Position, targetPosition)
+            end
+        end
     end
 end
 
@@ -690,6 +751,10 @@ game:GetService("RunService").RenderStepped:Connect(function()
     else
         TargetInfoText.Visible = false
     end
+
+    if IsMobile then
+        updateMobileAimbot()
+    end
 end)
 
 game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
@@ -710,7 +775,7 @@ game.Players.PlayerAdded:Connect(function(player)
 end)
 
 game.Players.PlayerRemoving:Connect(function(player)
-    -- ลบ ESP ทันทีเมื่อผู้เล่นออก
+   
     removeESP(player)
 end)
 
@@ -861,6 +926,31 @@ local FOVColorPicker = AimbotTab:CreateColorPicker({
     Callback = function(Value)
         FOVCircle.Color = Value
     end
+})
+
+local MobileAimbotToggle = AimbotTab:CreateToggle({
+   Name = "เปิดปุ่ม Aimbot มือถือ",
+   CurrentValue = false,
+   Flag = "MobileAimbotToggle",
+   Callback = function(Value)
+      if not IsMobile then return end
+      AimbotButtonEnabled = Value
+      if Value then
+          createMobileAimbotButton()
+      else
+          removeMobileAimbotButton()
+      end
+   end,
+})
+
+local AutoAimToggle = AimbotTab:CreateToggle({
+   Name = "เปิดล็อคเป้าอัตโนมัติ (มือถือ)",
+   CurrentValue = false,
+   Flag = "AutoAimToggle",
+   Callback = function(Value)
+      if not IsMobile then return end
+      AutoAimEnabled = Value
+   end,
 })
 
 local PartyToggle = PartyTab:CreateToggle({
