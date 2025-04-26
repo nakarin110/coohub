@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Coo hub V1.1",
+   Name = "Coo hub V1.2",
    LoadingTitle = "Coo OT",
    LoadingSubtitle = "สร้างโดย COOHUB",
    ConfigurationSaving = {
@@ -800,7 +800,17 @@ game:GetService("RunService").RenderStepped:Connect(function()
             TargetInfoText.Visible = false
         end
         
-        local isAimbotActive = IsMobile or aimbotKeyDown
+        -- ปรับปรุงเงื่อนไขการเล็งอัตโนมัติ
+        local isAimbotActive = false
+        
+        -- ตรวจสอบว่าเป็นการใช้งานบนมือถือหรือไม่
+        if IsMobile then
+            -- ใช้งานเฉพาะเมื่อปุ่ม AimbotMobileActive ถูกกดหรือเปิดโหมด AutoAim
+            isAimbotActive = (AimbotButtonEnabled and (AimbotMobileActive or AutoAimEnabled))
+        else
+            -- บนคอมพิวเตอร์ใช้งานเมื่อกดปุ่มที่กำหนด
+            isAimbotActive = aimbotKeyDown
+        end
         
         if isAimbotActive then
             if target and target.Character and target.Character:FindFirstChild(TargetPart) then
@@ -832,10 +842,6 @@ game:GetService("RunService").RenderStepped:Connect(function()
         end
     else
         TargetInfoText.Visible = false
-    end
-
-    if IsMobile then
-        updateMobileAimbot()
     end
 end)
 
