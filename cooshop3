@@ -557,131 +557,151 @@ local function createMobileAimbotButton()
     gui.Name = "AimbotButtonGui"
     gui.ResetOnSpawn = false
     
-    -- ตั้งค่าเพื่อให้ทำงานบนทุกแพลตฟอร์มและป้องกันการลบเมื่อเสียชีวิต
+    -- ทำให้ gui สามารถอยู่ข้ามการโหลดตัวละครใหม่ได้
+    gui.Parent = game.Players.LocalPlayer.PlayerGui
     if syn then
         syn.protect_gui(gui)
     end
     
     local button = Instance.new("TextButton")
     button.Name = "AimbotButton"
-    button.Size = UDim2.new(0, 60, 0, 60)
+    button.Size = UDim2.new(0, 80, 0, 80)
     button.Position = UDim2.new(0.85, 0, 0.5, 0)
     button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
     button.BackgroundTransparency = 0.5
     button.Text = "🎯"
-    button.TextSize = 30
+    button.TextSize = 40
+    button.Font = Enum.Font.GothamBold
     button.BorderSizePixel = 2
     button.BorderColor3 = Color3.fromRGB(255, 255, 255)
-    button.AutoButtonColor = true
-    button.ZIndex = 1000
+    button.AutoButtonColor = false
+    
+    -- เพิ่มเอฟเฟคเมื่อกด
+    local UICorner = Instance.new("UICorner")
+    UICorner.CornerRadius = UDim.new(0.5, 0)
+    UICorner.Parent = button
+    
+    local UIStroke = Instance.new("UIStroke")
+    UIStroke.Color = Color3.fromRGB(255, 255, 255)
+    UIStroke.Thickness = 2
+    UIStroke.Transparency = 0.3
+    UIStroke.Parent = button
+    
     button.Parent = gui
     
-    -- ทำให้ปุ่มสามารถลากและวางได้ตามต้องการ
+    -- ทำให้ปุ่มลากไปวางได้ง่ายขึ้น
+    local UserInputService = game:GetService("UserInputService")
     local dragging = false
     local dragInput
     local dragStart
     local startPos
-
+    local lastClick = 0
+    
     local function updateDrag(input)
-        local delta = input.Position - dragStart
-        button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-            startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        if dragging and button and startPos then
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(
+                startPos.X.Scale, 
+                startPos.X.Offset + delta.X,
+                startPos.Y.Scale, 
+                startPos.Y.Offset + delta.Y
+            )
+        end
     end
-
+    
     button.InputBegan:Connect(function(input)
         if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseButton1 then
+            -- ตรวจจับการกดแล้วลาก
+            local clickTime = tick()
+            if clickTime - lastClick < 0.3 then
+                -- Double-click to toggle auto aim
+                AutoAimEnabled = not AutoAimEnabled
+                button.BackgroundColor3 = AutoAimEnabled and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 0, 0)
+                button.Text = AutoAimEnabled and "🔒" or "🎯"
+                
+                -- แสดงข้อความแจ้งเตือน
+                local notification = Instance.new("TextLabel")
+                notification.Text = AutoAimEnabled and "เปิดล็อคเป้าอัตโนมัติ" or "ปิดล็อคเป้าอัตโนมัติ"
+                notification.Size = UDim2.new(0, 200, 0, 30)
+                notification.Position = UDim2.new(0.5, -100, 0.3, 0)
+                notification.BackgroundTransparency = 0.3
+                notification.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+                notification.TextColor3 = Color3.fromRGB(255, 255, 255)
+                notification.TextSize = 18
+                notification.Font = Enum.Font.GothamBold
+                notification.Parent = gui
+                
+                -- ทำให้มีความโค้งมน
+                local UICorner2 = Instance.new("UICorner")
+                UICorner2.CornerRadius = UDim.new(0, 10)
+                UICorner2.Parent = notification
+                
+                game:GetService("Debris"):AddItem(notification, 2) -- ลบข้อความหลังจาก 2 วินาที
+            end
+            lastClick = clickTime
+            
             dragging = true
             dragStart = input.Position
             startPos = button.Position
             
+            -- เปิดใช้งาน Aimbot เมื่อกดปุ่ม
+            if not AutoAimEnabled then
+                AimbotMobileActive = true
+                button.BackgroundColor3 = Color3.fromRGB(0, 200, 255)
+            end
+            
             input.Changed:Connect(function()
                 if input.UserInputState == Enum.UserInputState.End then
                     dragging = false
+                    -- ปิดการใช้งาน Aimbot เมื่อปล่อยปุ่ม
+                    if not AutoAimEnabled then
+                        AimbotMobileActive = false
+                        button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+                    end
                 end
             end)
         end
     end)
-
-    button.InputChanged:Connect(function(input)
-        if (input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseMovement) and dragging then
-            updateDrag(input)
-        end
-    end)
-
-    -- จัดการการเปิดใช้งาน aimbot
-    button.TouchStarted:Connect(function()
-        AimbotMobileActive = true
-        button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-    end)
-
-    button.TouchEnded:Connect(function()
-        if not AutoAimEnabled then
-            AimbotMobileActive = false
-            button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-        end
-    end)
     
-    -- เพิ่มการจัดการคลิกเพื่อรองรับทั้งกดค้างและคลิก
-    button.MouseButton1Down:Connect(function()
-        AimbotMobileActive = true
-        button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-    end)
-    
-    button.MouseButton1Up:Connect(function()
-        if not AutoAimEnabled then
-            AimbotMobileActive = false
-            button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-        end
-    end)
-
-    -- บันทึกการตั้งค่าปุ่ม
-    local function saveButtonPosition()
-        if pcall(function() 
-            writefile("aimbot_button_position.txt", tostring(button.Position.X.Scale) .. "," .. 
-                    tostring(button.Position.X.Offset) .. "," .. 
-                    tostring(button.Position.Y.Scale) .. "," .. 
-                    tostring(button.Position.Y.Offset))
-        end) then
-            print("บันทึกตำแหน่งปุ่มเรียบร้อยแล้ว")
-        end
-    end
-    
-    -- โหลดการตั้งค่าปุ่มที่บันทึกไว้
-    local function loadButtonPosition()
-        if readfile and isfile and isfile("aimbot_button_position.txt") then
-            local data = readfile("aimbot_button_position.txt")
-            local parts = {}
-            for part in data:gmatch("[^,]+") do
-                table.insert(parts, tonumber(part))
-            end
-            
-            if #parts == 4 then
-                button.Position = UDim2.new(parts[1], parts[2], parts[3], parts[4])
+    UserInputService.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseMovement then
+            if dragging then
+                updateDrag(input)
             end
         end
+    end)
+    
+    -- บันทึกข้อมูลการตั้งค่า
+    local DataStoreService = game:GetService("DataStoreService")
+    local success, errorMessage = pcall(function()
+        local buttonPositionStore = DataStoreService:GetDataStore("AimbotButtonPosition_" .. game.Players.LocalPlayer.UserId)
+        local savedPosition = buttonPositionStore:GetAsync("Position")
+        
+        if savedPosition then
+            button.Position = UDim2.new(savedPosition.X.Scale, savedPosition.X.Offset, savedPosition.Y.Scale, savedPosition.Y.Offset)
+        end
+        
+        game.Players.LocalPlayer.PlayerRemoving:Connect(function()
+            pcall(function()
+                buttonPositionStore:SetAsync("Position", {
+                    X = { Scale = button.Position.X.Scale, Offset = button.Position.X.Offset },
+                    Y = { Scale = button.Position.Y.Scale, Offset = button.Position.Y.Offset }
+                })
+            end)
+        end)
+    end)
+    
+    if not success then
+        print("ไม่สามารถบันทึกตำแหน่งปุ่ม Aimbot ได้: " .. (errorMessage or "Unknown Error"))
     end
     
-    -- พยายามโหลดตำแหน่งที่บันทึกไว้
-    pcall(loadButtonPosition)
-    
-    -- บันทึกตำแหน่งเมื่อมีการปรับเปลี่ยน
-    button.Changed:Connect(function(property)
-        if property == "Position" and not dragging then
-            pcall(saveButtonPosition)
-        end
-    end)
-
-    gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
     AimbotButton = button
-    
-    return button
 end
 
 local function removeMobileAimbotButton()
     if AimbotButton and AimbotButton.Parent then
         AimbotButton.Parent:Destroy()
         AimbotButton = nil
-        AimbotMobileActive = false
     end
 end
 
@@ -707,19 +727,6 @@ local function updateMobileAimbot()
 end
 
 IsMobile = checkMobile()
-
--- ตรวจสอบว่าเป็นอุปกรณ์มือถือหรือไม่
-IsMobile = game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled
-
--- เมื่อเริ่มทำงานบนมือถือ ให้ตั้งค่าปุ่ม aimbot
-if IsMobile then
-    -- สร้างปุ่ม Aimbot สำหรับมือถือเมื่อเปิด script (ถ้าเปิด toggle ไว้)
-    game:GetService("RunService").RenderStepped:Connect(function()
-        if AimbotEnabled and AimbotButtonEnabled and not AimbotButton then
-            createMobileAimbotButton()
-        end
-    end)
-end
 
 local SpeedToggle = MainTab:CreateToggle({
    Name = "เปิดระบบวิ่ง/บิน",
@@ -868,17 +875,6 @@ local AimbotToggle = AimbotTab:CreateToggle({
       AimbotEnabled = Value
       FOVCircle.Visible = Value and ShowFOVCircle 
       CenterDot.Visible = Value and ShowCenterDot 
-      
-      -- เพิ่มการจัดการปุ่มสำหรับมือถือเมื่อเปิด/ปิด Aimbot
-      if IsMobile then
-          if Value and AimbotButtonEnabled then
-              if not AimbotButton then
-                  createMobileAimbotButton()
-              end
-          else
-              removeMobileAimbotButton()
-          end
-      end
    end,
 })
 
@@ -1036,45 +1032,6 @@ local AutoAimToggle = AimbotTab:CreateToggle({
    Callback = function(Value)
       if not IsMobile then return end
       AutoAimEnabled = Value
-   end,
-})
-
-local MobileAimbotSizeSlider = AimbotTab:CreateSlider({
-   Name = "ขนาดปุ่ม Aimbot มือถือ",
-   Range = {40, 120},
-   Increment = 5,
-   Suffix = "px",
-   CurrentValue = 60,
-   Flag = "MobileAimbotSizeSlider",
-   Callback = function(Value)
-      if AimbotButton then
-         AimbotButton.Size = UDim2.new(0, Value, 0, Value)
-      end
-   end,
-})
-
-local MobileAimbotOpacitySlider = AimbotTab:CreateSlider({
-   Name = "ความโปร่งใสของปุ่ม",
-   Range = {0, 1},
-   Increment = 0.05,
-   Suffix = "opacity",
-   CurrentValue = 0.5,
-   Flag = "MobileAimbotOpacitySlider",
-   Callback = function(Value)
-      if AimbotButton then
-         AimbotButton.BackgroundTransparency = 1 - Value
-      end
-   end,
-})
-
-local MobileAimbotSymbolInput = AimbotTab:CreateInput({
-   Name = "สัญลักษณ์บนปุ่ม",
-   PlaceholderText = "เช่น 🎯, 🔫, 👁️",
-   RemoveTextAfterFocusLost = false,
-   Callback = function(Text)
-      if AimbotButton and Text ~= "" then
-         AimbotButton.Text = Text
-      end
    end,
 })
 
