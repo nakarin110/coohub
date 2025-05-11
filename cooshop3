@@ -1,884 +1,100 @@
--- Purge AIMBOT Custom UI + ESP
--- Created by Lxwnu
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-local Players = game:GetService("Players")
+local Window = Rayfield:CreateWindow({
+   Name = "Purge hub",
+   LoadingTitle = "Purge OT",
+   LoadingSubtitle = "สร้างโดย Lxwnu",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil,
+      FileName = "W"
+   },
+   KeySystem = false,
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Purge hub keys",
+      Note = "No method of obtaining the key is provided",
+      FileName = "hub",
+      SaveKey = true,
+      GrabKeyFromSite = false,
+      Key = {""}
+   }
+})
+
+local MainTab = Window:CreateTab("หน้าหลัก", nil)
+local MainSection = MainTab:CreateSection("เมนูหลัก")
+
+-- Aimbot variables
+local AimbotEnabled = false
+local AimbotFOV = 100
 local RunService = game:GetService("RunService")
-local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
-local Mouse = LocalPlayer:GetMouse()
 local Camera = workspace.CurrentCamera
 
--- Detect if user is on mobile
-local IsMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled and not UserInputService.MouseEnabled
-
--- AIMBOT Configuration
-local SETTINGS = {
-    Enabled = false,
-    TeamCheck = false, -- Set to false to target all players including teammates
-    TargetPart = "Head", -- The part to aim at
-    FOV = 250, -- FOV circle size
-    Sensitivity = 0.5, -- Lower = smoother, Higher = faster
-    ShowFOV = true, -- Show FOV circle
-    FOVColor = Color3.fromRGB(255, 0, 0), -- Red FOV circle
-    ToggleKey = Enum.KeyCode.RightShift, -- Toggle AIMBOT on/off (for PC)
-    
-    -- ESP Settings
-    ESPEnabled = false,
-    ESPBoxes = true,
-    ESPNames = true,
-    ESPHealth = true,
-    ESPTeamColor = false,
-    ESPColor = Color3.fromRGB(255, 0, 0),
-    ESPTransparency = 0.8
-}
-
--- Create UI
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "PurgeAimbotUI"
-ScreenGui.ResetOnSpawn = false
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.Parent = game.CoreGui
-
--- Main frame
-local MainFrame = Instance.new("Frame")
-MainFrame.Name = "MainFrame"
-MainFrame.Size = IsMobile and UDim2.new(0, 300, 0, 350) or UDim2.new(0, 250, 0, 300)
-MainFrame.Position = UDim2.new(0.5, -125, 0.5, -150)
-MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-MainFrame.BorderSizePixel = 0
-MainFrame.Active = true
-MainFrame.Draggable = true
-MainFrame.Parent = ScreenGui
-
--- Title bar
-local TitleBar = Instance.new("Frame")
-TitleBar.Name = "TitleBar"
-TitleBar.Size = UDim2.new(1, 0, 0, 35)
-TitleBar.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-TitleBar.BorderSizePixel = 0
-TitleBar.Parent = MainFrame
-
--- Title text
-local TitleText = Instance.new("TextLabel")
-TitleText.Name = "TitleText"
-TitleText.Size = UDim2.new(1, -10, 1, 0)
-TitleText.Position = UDim2.new(0, 10, 0, 0)
-TitleText.BackgroundTransparency = 1
-TitleText.TextColor3 = Color3.fromRGB(255, 255, 255)
-TitleText.TextSize = 18
-TitleText.Font = Enum.Font.SourceSansBold
-TitleText.Text = "Purge AIMBOT + ESP"
-TitleText.TextXAlignment = Enum.TextXAlignment.Left
-TitleText.Parent = TitleBar
-
--- Close button
-local CloseButton = Instance.new("TextButton")
-CloseButton.Name = "CloseButton"
-CloseButton.Size = UDim2.new(0, 30, 0, 30)
-CloseButton.Position = UDim2.new(1, -35, 0, 2)
-CloseButton.BackgroundTransparency = 1
-CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-CloseButton.TextSize = 20
-CloseButton.Font = Enum.Font.SourceSansBold
-CloseButton.Text = "X"
-CloseButton.Parent = TitleBar
-
--- Content frame
-local ContentFrame = Instance.new("Frame")
-ContentFrame.Name = "ContentFrame"
-ContentFrame.Size = UDim2.new(1, -20, 1, -45)
-ContentFrame.Position = UDim2.new(0, 10, 0, 40)
-ContentFrame.BackgroundTransparency = 1
-ContentFrame.Parent = MainFrame
-
--- AIMBOT Toggle
-local ToggleFrame = Instance.new("Frame")
-ToggleFrame.Name = "ToggleFrame"
-ToggleFrame.Size = UDim2.new(1, 0, 0, 40)
-ToggleFrame.BackgroundTransparency = 1
-ToggleFrame.Parent = ContentFrame
-
-local ToggleLabel = Instance.new("TextLabel")
-ToggleLabel.Name = "ToggleLabel"
-ToggleLabel.Size = UDim2.new(0.7, 0, 1, 0)
-ToggleLabel.BackgroundTransparency = 1
-ToggleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-ToggleLabel.TextSize = 16
-ToggleLabel.Font = Enum.Font.SourceSans
-ToggleLabel.Text = "เปิด/ปิด AIMBOT"
-ToggleLabel.TextXAlignment = Enum.TextXAlignment.Left
-ToggleLabel.Parent = ToggleFrame
-
-local ToggleButton = Instance.new("TextButton")
-ToggleButton.Name = "ToggleButton"
-ToggleButton.Size = UDim2.new(0, 60, 0, 26)
-ToggleButton.Position = UDim2.new(1, -60, 0.5, -13)
-ToggleButton.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
-ToggleButton.BorderSizePixel = 0
-ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-ToggleButton.TextSize = 14
-ToggleButton.Font = Enum.Font.SourceSansBold
-ToggleButton.Text = "ปิด"
-ToggleButton.Parent = ToggleFrame
-
--- ESP Toggle
-local ESPToggleFrame = Instance.new("Frame")
-ESPToggleFrame.Name = "ESPToggleFrame"
-ESPToggleFrame.Size = UDim2.new(1, 0, 0, 40)
-ESPToggleFrame.Position = UDim2.new(0, 0, 0, 40)
-ESPToggleFrame.BackgroundTransparency = 1
-ESPToggleFrame.Parent = ContentFrame
-
-local ESPToggleLabel = Instance.new("TextLabel")
-ESPToggleLabel.Name = "ESPToggleLabel"
-ESPToggleLabel.Size = UDim2.new(0.7, 0, 1, 0)
-ESPToggleLabel.BackgroundTransparency = 1
-ESPToggleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-ESPToggleLabel.TextSize = 16
-ESPToggleLabel.Font = Enum.Font.SourceSans
-ESPToggleLabel.Text = "เปิด/ปิด ESP"
-ESPToggleLabel.TextXAlignment = Enum.TextXAlignment.Left
-ESPToggleLabel.Parent = ESPToggleFrame
-
-local ESPToggleButton = Instance.new("TextButton")
-ESPToggleButton.Name = "ESPToggleButton"
-ESPToggleButton.Size = UDim2.new(0, 60, 0, 26)
-ESPToggleButton.Position = UDim2.new(1, -60, 0.5, -13)
-ESPToggleButton.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
-ESPToggleButton.BorderSizePixel = 0
-ESPToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-ESPToggleButton.TextSize = 14
-ESPToggleButton.Font = Enum.Font.SourceSansBold
-ESPToggleButton.Text = "ปิด"
-ESPToggleButton.Parent = ESPToggleFrame
-
--- FOV Slider
-local FOVFrame = Instance.new("Frame")
-FOVFrame.Name = "FOVFrame"
-FOVFrame.Size = UDim2.new(1, 0, 0, 40)
-FOVFrame.Position = UDim2.new(0, 0, 0, 80)
-FOVFrame.BackgroundTransparency = 1
-FOVFrame.Parent = ContentFrame
-
-local FOVLabel = Instance.new("TextLabel")
-FOVLabel.Name = "FOVLabel"
-FOVLabel.Size = UDim2.new(1, 0, 0, 20)
-FOVLabel.BackgroundTransparency = 1
-FOVLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-FOVLabel.TextSize = 16
-FOVLabel.Font = Enum.Font.SourceSans
-FOVLabel.Text = "FOV: 250"
-FOVLabel.TextXAlignment = Enum.TextXAlignment.Left
-FOVLabel.Parent = FOVFrame
-
-local FOVSlider = Instance.new("Frame")
-FOVSlider.Name = "FOVSlider"
-FOVSlider.Size = UDim2.new(1, 0, 0, 10)
-FOVSlider.Position = UDim2.new(0, 0, 0, 25)
-FOVSlider.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-FOVSlider.BorderSizePixel = 0
-FOVSlider.Parent = FOVFrame
-
-local FOVFill = Instance.new("Frame")
-FOVFill.Name = "FOVFill"
-FOVFill.Size = UDim2.new(0.5, 0, 1, 0)
-FOVFill.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-FOVFill.BorderSizePixel = 0
-FOVFill.Parent = FOVSlider
-
-local FOVButton = Instance.new("TextButton")
-FOVButton.Name = "FOVButton"
-FOVButton.Size = UDim2.new(1, 0, 1, 0)
-FOVButton.BackgroundTransparency = 1
-FOVButton.Text = ""
-FOVButton.Parent = FOVSlider
-
--- Sensitivity Slider
-local SensFrame = Instance.new("Frame")
-SensFrame.Name = "SensFrame"
-SensFrame.Size = UDim2.new(1, 0, 0, 40)
-SensFrame.Position = UDim2.new(0, 0, 0, 120)
-SensFrame.BackgroundTransparency = 1
-SensFrame.Parent = ContentFrame
-
-local SensLabel = Instance.new("TextLabel")
-SensLabel.Name = "SensLabel"
-SensLabel.Size = UDim2.new(1, 0, 0, 20)
-SensLabel.BackgroundTransparency = 1
-SensLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-SensLabel.TextSize = 16
-SensLabel.Font = Enum.Font.SourceSans
-SensLabel.Text = "ความรวดเร็ว: 0.5"
-SensLabel.TextXAlignment = Enum.TextXAlignment.Left
-SensLabel.Parent = SensFrame
-
-local SensSlider = Instance.new("Frame")
-SensSlider.Name = "SensSlider"
-SensSlider.Size = UDim2.new(1, 0, 0, 10)
-SensSlider.Position = UDim2.new(0, 0, 0, 25)
-SensSlider.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-SensSlider.BorderSizePixel = 0
-SensSlider.Parent = SensFrame
-
-local SensFill = Instance.new("Frame")
-SensFill.Name = "SensFill"
-SensFill.Size = UDim2.new(0.5, 0, 1, 0)
-SensFill.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-SensFill.BorderSizePixel = 0
-SensFill.Parent = SensSlider
-
-local SensButton = Instance.new("TextButton")
-SensButton.Name = "SensButton"
-SensButton.Size = UDim2.new(1, 0, 1, 0)
-SensButton.BackgroundTransparency = 1
-SensButton.Text = ""
-SensButton.Parent = SensSlider
-
--- Show FOV Toggle
-local ShowFOVFrame = Instance.new("Frame")
-ShowFOVFrame.Name = "ShowFOVFrame"
-ShowFOVFrame.Size = UDim2.new(1, 0, 0, 40)
-ShowFOVFrame.Position = UDim2.new(0, 0, 0, 160)
-ShowFOVFrame.BackgroundTransparency = 1
-ShowFOVFrame.Parent = ContentFrame
-
-local ShowFOVLabel = Instance.new("TextLabel")
-ShowFOVLabel.Name = "ShowFOVLabel"
-ShowFOVLabel.Size = UDim2.new(0.7, 0, 1, 0)
-ShowFOVLabel.BackgroundTransparency = 1
-ShowFOVLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-ShowFOVLabel.TextSize = 16
-ShowFOVLabel.Font = Enum.Font.SourceSans
-ShowFOVLabel.Text = "แสดงวงกลม FOV"
-ShowFOVLabel.TextXAlignment = Enum.TextXAlignment.Left
-ShowFOVLabel.Parent = ShowFOVFrame
-
-local ShowFOVButton = Instance.new("TextButton")
-ShowFOVButton.Name = "ShowFOVButton"
-ShowFOVButton.Size = UDim2.new(0, 60, 0, 26)
-ShowFOVButton.Position = UDim2.new(1, -60, 0.5, -13)
-ShowFOVButton.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
-ShowFOVButton.BorderSizePixel = 0
-ShowFOVButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-ShowFOVButton.TextSize = 14
-ShowFOVButton.Font = Enum.Font.SourceSansBold
-ShowFOVButton.Text = "เปิด"
-ShowFOVButton.Parent = ShowFOVFrame
-
--- Status Label
-local StatusFrame = Instance.new("Frame")
-StatusFrame.Name = "StatusFrame"
-StatusFrame.Size = UDim2.new(1, 0, 0, 30)
-StatusFrame.Position = UDim2.new(0, 0, 0, 200)
-StatusFrame.BackgroundTransparency = 1
-StatusFrame.Parent = ContentFrame
-
-local StatusLabel = Instance.new("TextLabel")
-StatusLabel.Name = "StatusLabel"
-StatusLabel.Size = UDim2.new(1, 0, 1, 0)
-StatusLabel.BackgroundTransparency = 1
-StatusLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-StatusLabel.TextSize = 14
-StatusLabel.Font = Enum.Font.SourceSans
-StatusLabel.Text = "สถานะ: รอคำสั่ง"
-StatusLabel.TextXAlignment = Enum.TextXAlignment.Left
-StatusLabel.Parent = StatusFrame
-
--- Mobile Controls Panel (only for mobile devices)
-if IsMobile then
-    local MobilePanel = Instance.new("Frame")
-    MobilePanel.Name = "MobilePanel"
-    MobilePanel.Size = UDim2.new(1, 0, 0, 50)
-    MobilePanel.Position = UDim2.new(0, 0, 0, 240)
-    MobilePanel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-    MobilePanel.BorderSizePixel = 0
-    MobilePanel.Parent = ContentFrame
-    
-    local MobileToggleButton = Instance.new("TextButton")
-    MobileToggleButton.Name = "MobileToggleButton"
-    MobileToggleButton.Size = UDim2.new(0.48, 0, 0.8, 0)
-    MobileToggleButton.Position = UDim2.new(0.01, 0, 0.1, 0)
-    MobileToggleButton.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
-    MobileToggleButton.BorderSizePixel = 0
-    MobileToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-    MobileToggleButton.TextSize = 16
-    MobileToggleButton.Font = Enum.Font.SourceSansBold
-    MobileToggleButton.Text = "AIMBOT: ปิด"
-    MobileToggleButton.Parent = MobilePanel
-    
-    local MobileESPButton = Instance.new("TextButton")
-    MobileESPButton.Name = "MobileESPButton"
-    MobileESPButton.Size = UDim2.new(0.48, 0, 0.8, 0)
-    MobileESPButton.Position = UDim2.new(0.51, 0, 0.1, 0)
-    MobileESPButton.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
-    MobileESPButton.BorderSizePixel = 0
-    MobileESPButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-    MobileESPButton.TextSize = 16
-    MobileESPButton.Font = Enum.Font.SourceSansBold
-    MobileESPButton.Text = "ESP: ปิด"
-    MobileESPButton.Parent = MobilePanel
-    
-    -- Mobile toggle button event
-    MobileToggleButton.TouchTap:Connect(function()
-        SETTINGS.Enabled = not SETTINGS.Enabled
-        MobileToggleButton.BackgroundColor3 = SETTINGS.Enabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-        MobileToggleButton.Text = "AIMBOT: " .. (SETTINGS.Enabled and "เปิด" or "ปิด")
-        ToggleButton.BackgroundColor3 = SETTINGS.Enabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-        ToggleButton.Text = SETTINGS.Enabled and "เปิด" or "ปิด"
-        FOVCircle.Visible = SETTINGS.Enabled and SETTINGS.ShowFOV
-        StatusLabel.Text = "สถานะ: " .. (SETTINGS.Enabled and "กำลังทำงาน" or "รอคำสั่ง")
-    end)
-    
-    -- Mobile ESP toggle button event
-    MobileESPButton.TouchTap:Connect(function()
-        SETTINGS.ESPEnabled = not SETTINGS.ESPEnabled
-        MobileESPButton.BackgroundColor3 = SETTINGS.ESPEnabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-        MobileESPButton.Text = "ESP: " .. (SETTINGS.ESPEnabled and "เปิด" or "ปิด")
-        ESPToggleButton.BackgroundColor3 = SETTINGS.ESPEnabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-        ESPToggleButton.Text = SETTINGS.ESPEnabled and "เปิด" or "ปิด"
-        UpdateESPVisibility()
-    end)
-end
-
--- Credit Label
-local CreditLabel = Instance.new("TextLabel")
-CreditLabel.Name = "CreditLabel"
-CreditLabel.Size = UDim2.new(1, 0, 0, 20)
-CreditLabel.Position = UDim2.new(0, 0, IsMobile and 0, 290 or 0, 230)
-CreditLabel.BackgroundTransparency = 1
-CreditLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
-CreditLabel.TextSize = 12
-CreditLabel.Font = Enum.Font.SourceSans
-CreditLabel.Text = "สร้างโดย Lxwnu | มือถือ + ESP"
-CreditLabel.TextXAlignment = Enum.TextXAlignment.Center
-CreditLabel.Parent = ContentFrame
-
--- FOV Circle
+-- FOV circle
 local FOVCircle = Drawing.new("Circle")
-FOVCircle.Thickness = 2
-FOVCircle.NumSides = 100
-FOVCircle.Radius = SETTINGS.FOV
+FOVCircle.Thickness = 1
+FOVCircle.NumSides = 64
+FOVCircle.Radius = AimbotFOV
 FOVCircle.Filled = false
-FOVCircle.Visible = SETTINGS.ShowFOV
-FOVCircle.ZIndex = 999
-FOVCircle.Transparency = 1
-FOVCircle.Color = SETTINGS.FOVColor
-FOVCircle.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+FOVCircle.Transparency = 0.5
+FOVCircle.Color = Color3.fromRGB(255, 255, 255)
+FOVCircle.Visible = true
 
--- ESP System
-local ESPObjects = {}
-
-local function CreateESP(player)
-    if player == LocalPlayer then return end
-    
-    local espObject = {
-        Box = Drawing.new("Square"),
-        Name = Drawing.new("Text"),
-        Health = Drawing.new("Text"),
-        Tracer = Drawing.new("Line")
-    }
-    
-    -- Box properties
-    espObject.Box.Thickness = 1
-    espObject.Box.Filled = false
-    espObject.Box.Transparency = SETTINGS.ESPTransparency
-    espObject.Box.Color = SETTINGS.ESPColor
-    espObject.Box.Visible = false
-    
-    -- Name properties
-    espObject.Name.Size = 14
-    espObject.Name.Center = true
-    espObject.Name.Outline = true
-    espObject.Name.Color = SETTINGS.ESPColor
-    espObject.Name.Transparency = SETTINGS.ESPTransparency
-    espObject.Name.Visible = false
-    
-    -- Health properties
-    espObject.Health.Size = 13
-    espObject.Health.Center = true
-    espObject.Health.Outline = true
-    espObject.Health.Transparency = SETTINGS.ESPTransparency
-    espObject.Health.Visible = false
-    
-    -- Tracer properties
-    espObject.Tracer.Thickness = 1
-    espObject.Tracer.Transparency = SETTINGS.ESPTransparency
-    espObject.Tracer.Color = SETTINGS.ESPColor
-    espObject.Tracer.Visible = false
-    
-    ESPObjects[player] = espObject
-end
-
-local function RemoveESP(player)
-    if ESPObjects[player] then
-        for _, object in pairs(ESPObjects[player]) do
-            object:Remove()
-        end
-        ESPObjects[player] = nil
-    end
-end
-
-local function UpdateESP(player)
-    if not SETTINGS.ESPEnabled or not player or not player.Character or not player.Character:FindFirstChild("Humanoid") or not player.Character:FindFirstChild("HumanoidRootPart") or not ESPObjects[player] then
-        return
-    end
-    
-    local humanoid = player.Character:FindFirstChild("Humanoid")
-    local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
-    
-    if humanoid.Health <= 0 then
-        ESPObjects[player].Box.Visible = false
-        ESPObjects[player].Name.Visible = false
-        ESPObjects[player].Health.Visible = false
-        ESPObjects[player].Tracer.Visible = false
-        return
-    end
-    
-    local teamColor
-    if player.Team and SETTINGS.ESPTeamColor then
-        teamColor = player.TeamColor.Color
-    else
-        teamColor = SETTINGS.ESPColor
-    end
-    
-    -- Get character bounds
-    local minVec, maxVec = Vector3.new(math.huge, math.huge, math.huge), Vector3.new(-math.huge, -math.huge, -math.huge)
-    for _, part in pairs(player.Character:GetChildren()) do
-        if part:IsA("BasePart") then
-            minVec = Vector3.new(
-                math.min(minVec.X, part.Position.X - part.Size.X/2),
-                math.min(minVec.Y, part.Position.Y - part.Size.Y/2),
-                math.min(minVec.Z, part.Position.Z - part.Size.Z/2)
-            )
-            maxVec = Vector3.new(
-                math.max(maxVec.X, part.Position.X + part.Size.X/2),
-                math.max(maxVec.Y, part.Position.Y + part.Size.Y/2),
-                math.max(maxVec.Z, part.Position.Z + part.Size.Z/2)
-            )
-        end
-    end
-    
-    -- Check if player is behind the camera
-    local rootPos = rootPart.Position
-    local camPos = Camera.CFrame.Position
-    local distance = (rootPos - camPos).Magnitude
-    
-    if distance > 200 then -- Don't render ESP for players too far away
-        ESPObjects[player].Box.Visible = false
-        ESPObjects[player].Name.Visible = false
-        ESPObjects[player].Health.Visible = false
-        ESPObjects[player].Tracer.Visible = false
-        return
-    end
-    
-    -- Convert 3D bounds to 2D screen positions
-    local corners = {
-        Camera:WorldToViewportPoint(Vector3.new(minVec.X, minVec.Y, minVec.Z)),
-        Camera:WorldToViewportPoint(Vector3.new(maxVec.X, minVec.Y, minVec.Z)),
-        Camera:WorldToViewportPoint(Vector3.new(maxVec.X, maxVec.Y, maxVec.Z)),
-        Camera:WorldToViewportPoint(Vector3.new(minVec.X, maxVec.Y, maxVec.Z))
-    }
-    
-    -- Check if any corners are in front of the camera
-    local isVisible = false
-    for _, corner in pairs(corners) do
-        if corner.Z > 0 then
-            isVisible = true
-            break
-        end
-    end
-    
-    if not isVisible then
-        ESPObjects[player].Box.Visible = false
-        ESPObjects[player].Name.Visible = false
-        ESPObjects[player].Health.Visible = false
-        ESPObjects[player].Tracer.Visible = false
-        return
-    end
-    
-    -- Calculate box dimensions and position
-    local minX, minY = math.huge, math.huge
-    local maxX, maxY = -math.huge, -math.huge
-    
-    for _, corner in pairs(corners) do
-        if corner.Z > 0 then -- Only consider points in front of the camera
-            minX = math.min(minX, corner.X)
-            minY = math.min(minY, corner.Y)
-            maxX = math.max(maxX, corner.X)
-            maxY = math.max(maxY, corner.Y)
-        end
-    end
-    
-    local boxSize = Vector2.new(maxX - minX, maxY - minY)
-    local boxPosition = Vector2.new(minX, minY)
-    
-    -- Update ESP elements
-    ESPObjects[player].Box.Size = boxSize
-    ESPObjects[player].Box.Position = boxPosition
-    ESPObjects[player].Box.Color = teamColor
-    ESPObjects[player].Box.Visible = SETTINGS.ESPBoxes
-    
-    local namePos = Vector2.new(minX + boxSize.X / 2, minY - 15)
-    ESPObjects[player].Name.Position = namePos
-    ESPObjects[player].Name.Text = player.Name
-    ESPObjects[player].Name.Color = teamColor
-    ESPObjects[player].Name.Visible = SETTINGS.ESPNames
-    
-    local healthText = math.floor(humanoid.Health) .. "/" .. math.floor(humanoid.MaxHealth)
-    local healthPercent = math.clamp(humanoid.Health / humanoid.MaxHealth, 0, 1)
-    local healthColor = Color3.fromRGB(
-        255 * (1 - healthPercent),
-        255 * healthPercent,
-        0
-    )
-    
-    ESPObjects[player].Health.Text = healthText
-    ESPObjects[player].Health.Position = Vector2.new(minX + boxSize.X / 2, maxY + 5)
-    ESPObjects[player].Health.Color = healthColor
-    ESPObjects[player].Health.Visible = SETTINGS.ESPHealth
-    
-    ESPObjects[player].Tracer.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y)
-    ESPObjects[player].Tracer.To = Vector2.new(minX + boxSize.X / 2, maxY)
-    ESPObjects[player].Tracer.Color = teamColor
-    ESPObjects[player].Tracer.Visible = false  -- Tracers disabled by default
-end
-
-local function UpdateESPVisibility()
-    for player, espObject in pairs(ESPObjects) do
-        for _, object in pairs(espObject) do
-            object.Visible = SETTINGS.ESPEnabled and (player.Character and player.Character:FindFirstChild("Humanoid") and player.Character.Humanoid.Health > 0)
-        end
-    end
-end
-
--- Functions
-local function UpdateFOVCircle()
+-- Update circle position every frame
+RunService.RenderStepped:Connect(function()
     FOVCircle.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
-    FOVCircle.Radius = SETTINGS.FOV
-    FOVCircle.Visible = SETTINGS.Enabled and SETTINGS.ShowFOV
-end
+end)
 
--- Check if a player is valid for targeting
-local function IsValidTarget(player)
-    if not player or not player.Character or not player.Character:FindFirstChild("Humanoid") then
-        return false
-    end
-    
-    if player.Character.Humanoid.Health <= 0 then
-        return false
-    end
-    
-    -- If TeamCheck is false, target everyone including teammates
-    if not SETTINGS.TeamCheck then
-        return true
-    end
-    
-    -- If TeamCheck is true, only target opponents
-    return player.Team ~= LocalPlayer.Team
-end
-
--- Get the closest player within FOV
-local function GetClosestPlayerInFOV()
+-- Find closest player in FOV
+local function GetClosestPlayer()
     local closestPlayer = nil
-    local shortestDistance = SETTINGS.FOV
-    
+    local shortestDistance = AimbotFOV
+
     for _, player in pairs(Players:GetPlayers()) do
-        if player ~= LocalPlayer and IsValidTarget(player) then
-            local character = player.Character
-            if character and character:FindFirstChild(SETTINGS.TargetPart) then
-                local targetPart = character[SETTINGS.TargetPart]
-                local screenPoint = Camera:WorldToScreenPoint(targetPart.Position)
-                local distance = (Vector2.new(screenPoint.X, screenPoint.Y) - Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)).Magnitude
-                
-                if screenPoint.Z > 0 and distance < shortestDistance then
+        if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("Head") then
+            local pos, onScreen = Camera:WorldToViewportPoint(player.Character.Head.Position)
+            if onScreen then
+                local dist = (Vector2.new(pos.X, pos.Y) - FOVCircle.Position).Magnitude
+                if dist < shortestDistance then
+                    shortestDistance = dist
                     closestPlayer = player
-                    shortestDistance = distance
                 end
             end
         end
     end
-    
+
     return closestPlayer
 end
 
--- Mobile aim assist function
-local function MobileAimAssist(target)
-    if not IsMobile or not target then return end
-    
-    local camera = workspace.CurrentCamera
-    if not camera then return end
-    
-    if target.Character and target.Character:FindFirstChild(SETTINGS.TargetPart) then
-        local targetPos = target.Character[SETTINGS.TargetPart].Position
-        camera.CFrame = camera.CFrame:Lerp(CFrame.new(camera.CFrame.Position, targetPos), SETTINGS.Sensitivity / 2)
-    end
-end
-
--- UI Functions
-CloseButton.MouseButton1Click:Connect(function()
-    ScreenGui:Destroy()
-    FOVCircle:Remove()
-    
-    -- Remove ESP objects
-    for _, espObject in pairs(ESPObjects) do
-        for _, object in pairs(espObject) do
-            object:Remove()
-        end
-    end
-    
-    SETTINGS.Enabled = false
-    SETTINGS.ESPEnabled = false
-end)
-
--- Touch input for close button
-CloseButton.TouchTap:Connect(function()
-    ScreenGui:Destroy()
-    FOVCircle:Remove()
-    
-    -- Remove ESP objects
-    for _, espObject in pairs(ESPObjects) do
-        for _, object in pairs(espObject) do
-            object:Remove()
-        end
-    end
-    
-    SETTINGS.Enabled = false
-    SETTINGS.ESPEnabled = false
-end)
-
-ToggleButton.MouseButton1Click:Connect(function()
-    SETTINGS.Enabled = not SETTINGS.Enabled
-    ToggleButton.BackgroundColor3 = SETTINGS.Enabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-    ToggleButton.Text = SETTINGS.Enabled and "เปิด" or "ปิด"
-    FOVCircle.Visible = SETTINGS.Enabled and SETTINGS.ShowFOV
-    StatusLabel.Text = "สถานะ: " .. (SETTINGS.Enabled and "กำลังทำงาน" or "รอคำสั่ง")
-    
-    -- Update mobile button if on mobile
-    if IsMobile and MainFrame:FindFirstChild("MobilePanel") and MainFrame.MobilePanel:FindFirstChild("MobileToggleButton") then
-        MainFrame.MobilePanel.MobileToggleButton.BackgroundColor3 = SETTINGS.Enabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-        MainFrame.MobilePanel.MobileToggleButton.Text = "AIMBOT: " .. (SETTINGS.Enabled and "เปิด" or "ปิด")
-    end
-end)
-
--- Touch input for toggle button
-ToggleButton.TouchTap:Connect(function()
-    SETTINGS.Enabled = not SETTINGS.Enabled
-    ToggleButton.BackgroundColor3 = SETTINGS.Enabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-    ToggleButton.Text = SETTINGS.Enabled and "เปิด" or "ปิด"
-    FOVCircle.Visible = SETTINGS.Enabled and SETTINGS.ShowFOV
-    StatusLabel.Text = "สถานะ: " .. (SETTINGS.Enabled and "กำลังทำงาน" or "รอคำสั่ง")
-    
-    -- Update mobile button if on mobile
-    if IsMobile and MainFrame:FindFirstChild("MobilePanel") and MainFrame.MobilePanel:FindFirstChild("MobileToggleButton") then
-        MainFrame.MobilePanel.MobileToggleButton.BackgroundColor3 = SETTINGS.Enabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-        MainFrame.MobilePanel.MobileToggleButton.Text = "AIMBOT: " .. (SETTINGS.Enabled and "เปิด" or "ปิด")
-    end
-end)
-
--- ESP Toggle button
-ESPToggleButton.MouseButton1Click:Connect(function()
-    SETTINGS.ESPEnabled = not SETTINGS.ESPEnabled
-    ESPToggleButton.BackgroundColor3 = SETTINGS.ESPEnabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-    ESPToggleButton.Text = SETTINGS.ESPEnabled and "เปิด" or "ปิด"
-    UpdateESPVisibility()
-    
-    -- Update mobile ESP button if on mobile
-    if IsMobile and MainFrame:FindFirstChild("MobilePanel") and MainFrame.MobilePanel:FindFirstChild("MobileESPButton") then
-        MainFrame.MobilePanel.MobileESPButton.BackgroundColor3 = SETTINGS.ESPEnabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-        MainFrame.MobilePanel.MobileESPButton.Text = "ESP: " .. (SETTINGS.ESPEnabled and "เปิด" or "ปิด")
-    end
-end)
-
--- Touch input for ESP toggle button
-ESPToggleButton.TouchTap:Connect(function()
-    SETTINGS.ESPEnabled = not SETTINGS.ESPEnabled
-    ESPToggleButton.BackgroundColor3 = SETTINGS.ESPEnabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-    ESPToggleButton.Text = SETTINGS.ESPEnabled and "เปิด" or "ปิด"
-    UpdateESPVisibility()
-    
-    -- Update mobile ESP button if on mobile
-    if IsMobile and MainFrame:FindFirstChild("MobilePanel") and MainFrame.MobilePanel:FindFirstChild("MobileESPButton") then
-        MainFrame.MobilePanel.MobileESPButton.BackgroundColor3 = SETTINGS.ESPEnabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-        MainFrame.MobilePanel.MobileESPButton.Text = "ESP: " .. (SETTINGS.ESPEnabled and "เปิด" or "ปิด")
-    end
-end)
-
-ShowFOVButton.MouseButton1Click:Connect(function()
-    SETTINGS.ShowFOV = not SETTINGS.ShowFOV
-    ShowFOVButton.BackgroundColor3 = SETTINGS.ShowFOV and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-    ShowFOVButton.Text = SETTINGS.ShowFOV and "เปิด" or "ปิด"
-    FOVCircle.Visible = SETTINGS.Enabled and SETTINGS.ShowFOV
-end)
-
--- Touch input for show FOV button
-ShowFOVButton.TouchTap:Connect(function()
-    SETTINGS.ShowFOV = not SETTINGS.ShowFOV
-    ShowFOVButton.BackgroundColor3 = SETTINGS.ShowFOV and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-    ShowFOVButton.Text = SETTINGS.ShowFOV and "เปิด" or "ปิด"
-    FOVCircle.Visible = SETTINGS.Enabled and SETTINGS.ShowFOV
-end)
-
--- Make sliders touch-friendly for mobile
-FOVButton.MouseButton1Down:Connect(function()
-    local input = UserInputService:GetMouseLocation()
-    local sliderPosition = math.clamp((input.X - FOVSlider.AbsolutePosition.X) / FOVSlider.AbsoluteSize.X, 0, 1)
-    
-    SETTINGS.FOV = math.floor(sliderPosition * 500) -- FOV range: 0-500
-    FOVFill.Size = UDim2.new(sliderPosition, 0, 1, 0)
-    FOVLabel.Text = "FOV: " .. SETTINGS.FOV
-    FOVCircle.Radius = SETTINGS.FOV
-    
-    local dragging = true
-    
-    local inputChanged = RunService.RenderStepped:Connect(function()
-        if dragging then
-            local mousePos = UserInputService:GetMouseLocation()
-            local sliderPos = math.clamp((mousePos.X - FOVSlider.AbsolutePosition.X) / FOVSlider.AbsoluteSize.X, 0, 1)
-            SETTINGS.FOV = math.floor(sliderPos * 500)
-            FOVFill.Size = UDim2.new(sliderPos, 0, 1, 0)
-            FOVLabel.Text = "FOV: " .. SETTINGS.FOV
-            FOVCircle.Radius = SETTINGS.FOV
-        end
-    end)
-    
-    local inputEnded
-    inputEnded = UserInputService.InputEnded:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-            dragging = false
-            inputChanged:Disconnect()
-            inputEnded:Disconnect()
-        end
-    end)
-end)
-
--- Touch input for FOV slider
-FOVButton.TouchTap:Connect(function()
-    local input = UserInputService:GetMouseLocation()
-    local sliderPosition = math.clamp((input.X - FOVSlider.AbsolutePosition.X) / FOVSlider.AbsoluteSize.X, 0, 1)
-    
-    SETTINGS.FOV = math.floor(sliderPosition * 500) -- FOV range: 0-500
-    FOVFill.Size = UDim2.new(sliderPosition, 0, 1, 0)
-    FOVLabel.Text = "FOV: " .. SETTINGS.FOV
-    FOVCircle.Radius = SETTINGS.FOV
-end)
-
-SensButton.MouseButton1Down:Connect(function()
-    local input = UserInputService:GetMouseLocation()
-    local sliderPosition = math.clamp((input.X - SensSlider.AbsolutePosition.X) / SensSlider.AbsoluteSize.X, 0, 1)
-    
-    SETTINGS.Sensitivity = sliderPosition * 2 -- Sensitivity range: 0-2
-    SensFill.Size = UDim2.new(sliderPosition, 0, 1, 0)
-    SensLabel.Text = "ความรวดเร็ว: " .. string.format("%.2f", SETTINGS.Sensitivity)
-    
-    local dragging = true
-    
-    local inputChanged = RunService.RenderStepped:Connect(function()
-        if dragging then
-            local mousePos = UserInputService:GetMouseLocation()
-            local sliderPos = math.clamp((mousePos.X - SensSlider.AbsolutePosition.X) / SensSlider.AbsoluteSize.X, 0, 1)
-            SETTINGS.Sensitivity = sliderPos * 2
-            SensFill.Size = UDim2.new(sliderPos, 0, 1, 0)
-            SensLabel.Text = "ความรวดเร็ว: " .. string.format("%.2f", SETTINGS.Sensitivity)
-        end
-    end)
-    
-    local inputEnded
-    inputEnded = UserInputService.InputEnded:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-            dragging = false
-            inputChanged:Disconnect()
-            inputEnded:Disconnect()
-        end
-    end)
-end)
-
--- Touch input for sensitivity slider
-SensButton.TouchTap:Connect(function()
-    local input = UserInputService:GetMouseLocation()
-    local sliderPosition = math.clamp((input.X - SensSlider.AbsolutePosition.X) / SensSlider.AbsoluteSize.X, 0, 1)
-    
-    SETTINGS.Sensitivity = sliderPosition * 2 -- Sensitivity range: 0-2
-    SensFill.Size = UDim2.new(sliderPosition, 0, 1, 0)
-    SensLabel.Text = "ความรวดเร็ว: " .. string.format("%.2f", SETTINGS.Sensitivity)
-end)
-
--- Toggle AIMBOT with key (PC only)
-UserInputService.InputBegan:Connect(function(input)
-    if not IsMobile and input.KeyCode == SETTINGS.ToggleKey then
-        SETTINGS.Enabled = not SETTINGS.Enabled
-        ToggleButton.BackgroundColor3 = SETTINGS.Enabled and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(200, 0, 0)
-        ToggleButton.Text = SETTINGS.Enabled and "เปิด" or "ปิด"
-        FOVCircle.Visible = SETTINGS.Enabled and SETTINGS.ShowFOV
-        StatusLabel.Text = "สถานะ: " .. (SETTINGS.Enabled and "กำลังทำงาน" or "รอคำสั่ง")
-    end
-end)
-
--- Setup ESP for existing players
-for _, player in pairs(Players:GetPlayers()) do
-    if player ~= LocalPlayer then
-        CreateESP(player)
-    end
-end
-
--- Setup ESP for new players
-Players.PlayerAdded:Connect(function(player)
-    CreateESP(player)
-end)
-
--- Clean up ESP when players leave
-Players.PlayerRemoving:Connect(function(player)
-    RemoveESP(player)
-end)
-
--- Main AIMBOT function
+-- Aimbot loop
 RunService.RenderStepped:Connect(function()
-    UpdateFOVCircle()
-    
-    -- Update ESP for all players
-    if SETTINGS.ESPEnabled then
-        for player, _ in pairs(ESPObjects) do
-            if player and player.Parent == Players then
-                UpdateESP(player)
-            else
-                RemoveESP(player)
-            end
-        end
-    end
-    
-    if SETTINGS.Enabled then
-        local target = GetClosestPlayerInFOV()
-        
-        if IsMobile then
-            MobileAimAssist(target)
-        else
-            -- PC aimbot
-            if target and target.Character and target.Character:FindFirstChild(SETTINGS.TargetPart) then
-                local targetPart = target.Character[SETTINGS.TargetPart]
-                local targetPosition = Camera:WorldToScreenPoint(targetPart.Position)
-                
-                if targetPosition.Z > 0 then
-                    local mousePosition = UserInputService:GetMouseLocation()
-                    local moveX = (targetPosition.X - mousePosition.X) * SETTINGS.Sensitivity
-                    local moveY = (targetPosition.Y - mousePosition.Y) * SETTINGS.Sensitivity
-                    
-                    mousemoverel(moveX, moveY)
-                end
-            end
+    if AimbotEnabled then
+        local target = GetClosestPlayer()
+        if target and target.Character and target.Character:FindFirstChild("Head") then
+            Camera.CFrame = CFrame.new(Camera.CFrame.Position, target.Character.Head.Position)
         end
     end
 end)
 
--- Initialize settings
-FOVCircle.Radius = SETTINGS.FOV
-FOVFill.Size = UDim2.new(SETTINGS.FOV / 500, 0, 1, 0)
-SensFill.Size = UDim2.new(SETTINGS.Sensitivity / 2, 0, 1, 0)
-
--- Show welcome notification
-game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Purge AIMBOT + ESP",
-    Text = IsMobile and "พร้อมใช้งานแล้ว - กดปุ่มเปิด/ปิดในหน้าจอ" or "กำลังทำงาน - กด RightShift เพื่อเปิด/ปิด",
-    Duration = 5
+-- Add to UI
+MainTab:CreateToggle({
+    Name = "เปิด/ปิด Aimbot",
+    CurrentValue = false,
+    Callback = function(Value)
+        AimbotEnabled = Value
+    end,
 })
 
--- Return a success message
-return IsMobile and "Purge AIMBOT + ESP พร้อมใช้งานแล้ว! กดปุ่มเปิด/ปิดในหน้าจอ" or "Purge AIMBOT + ESP พร้อมใช้งานแล้ว! กด RightShift เพื่อเปิด/ปิด"
+MainTab:CreateSlider({
+    Name = "ปรับขนาด FOV",
+    Range = {50, 300},
+    Increment = 10,
+    Suffix = "px",
+    CurrentValue = AimbotFOV,
+    Callback = function(Value)
+        AimbotFOV = Value
+        FOVCircle.Radius = AimbotFOV
+    end,
+})
