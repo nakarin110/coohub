@@ -307,105 +307,90 @@ FOVCircle.Transparency = 1
 FOVCircle.Color = SETTINGS.FOVColor
 FOVCircle.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
 
--- ESP Functions
-local function CreateESP(player)
-    local ESP = {}
+-- Update UI sizes for mobile
+if UserInputService.TouchEnabled then
+    -- Make UI bigger for mobile
+    MainFrame.Size = UDim2.new(0, 300, 0, 400)
+    MainFrame.Position = UDim2.new(0.5, -150, 0.5, -200)
     
-    -- Create Box
-    ESP.Box = Drawing.new("Square")
-    ESP.Box.Visible = false
-    ESP.Box.Color = SETTINGS.ESPColor
-    ESP.Box.Thickness = 1
-    ESP.Box.Transparency = 1
-    ESP.Box.Filled = false
-
-    -- Create Name
-    ESP.Name = Drawing.new("Text")
-    ESP.Name.Visible = false
-    ESP.Name.Color = SETTINGS.ESPColor
-    ESP.Name.Size = 14
-    ESP.Name.Center = true
-    ESP.Name.Outline = true
-
-    -- Create Distance
-    ESP.Distance = Drawing.new("Text")
-    ESP.Distance.Visible = false
-    ESP.Distance.Color = SETTINGS.ESPColor
-    ESP.Distance.Size = 12
-    ESP.Distance.Center = true
-    ESP.Distance.Outline = true
-
-    -- Create Health Bar
-    ESP.HealthBar = Drawing.new("Square")
-    ESP.HealthBar.Visible = false
-    ESP.HealthBar.Color = Color3.fromRGB(0, 255, 0)
-    ESP.HealthBar.Thickness = 1
-    ESP.HealthBar.Filled = true
-
-    return ESP
+    -- Make buttons bigger
+    ToggleButton.Size = UDim2.new(0, 80, 0, 40)
+    ShowFOVButton.Size = UDim2.new(0, 80, 0, 40)
+    ESPToggleButton.Size = UDim2.new(0, 80, 0, 40)
+    
+    -- Increase text sizes
+    TitleText.TextSize = 24
+    ToggleLabel.TextSize = 20
+    ShowFOVLabel.TextSize = 20
+    ESPToggleLabel.TextSize = 20
+    FOVLabel.TextSize = 20
+    SensLabel.TextSize = 20
+    StatusLabel.TextSize = 18
 end
 
-local ESPObjects = {}
-
--- Update ESP
-local function UpdateESP()
-    for player, esp in pairs(ESPObjects) do
-        if not player or not player.Character or not SETTINGS.ESPEnabled then
-            esp.Box.Visible = false
-            esp.Name.Visible = false
-            esp.Distance.Visible = false
-            esp.HealthBar.Visible = false
-            continue
-        end
-
-        local character = player.Character
-        local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
-        local humanoid = character:FindFirstChild("Humanoid")
+-- Add touch support for sliders
+local function CreateTouchSlider(slider, fill, label, settingName, maxValue, formatFunc)
+    local function UpdateSlider(input)
+        local pos = input.Position
+        local relativePos = pos - slider.AbsolutePosition
+        local sliderSize = slider.AbsoluteSize
         
-        if not humanoidRootPart or not humanoid then continue end
-
-        local vector, onScreen = Camera:WorldToViewportPoint(humanoidRootPart.Position)
-        local distance = (humanoidRootPart.Position - Camera.CFrame.Position).Magnitude
-
-        if not onScreen or distance > SETTINGS.MaxESPDistance then
-            esp.Box.Visible = false
-            esp.Name.Visible = false
-            esp.Distance.Visible = false
-            esp.HealthBar.Visible = false
-            continue
-        end
-
-        -- Update ESP elements
-        if SETTINGS.ESPBoxes then
-            esp.Box.Visible = true
-        end
-
-        if SETTINGS.ESPNames then
-            esp.Name.Visible = true
-            esp.Name.Position = Vector2.new(vector.X, vector.Y - 40)
-            esp.Name.Text = player.Name
-        end
-
-        if SETTINGS.ESPDistance then
-            esp.Distance.Visible = true
-            esp.Distance.Position = Vector2.new(vector.X, vector.Y + 20)
-            esp.Distance.Text = math.floor(distance) .. " studs"
-        end
-
-        if SETTINGS.ESPHealth then
-            esp.HealthBar.Visible = true
-            local health = humanoid.Health / humanoid.MaxHealth
-            esp.HealthBar.Color = Color3.fromRGB(255 - (255 * health), 255 * health, 0)
-        end
+        local percentage = math.clamp(relativePos.X / sliderSize.X, 0, 1)
+        local value = percentage * maxValue
+        
+        SETTINGS[settingName] = value
+        fill.Size = UDim2.new(percentage, 0, 1, 0)
+        label.Text = formatFunc(value)
+        
+        return percentage
     end
+    
+    slider.TouchEnabled = true
+    
+    slider.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.Touch then
+            UpdateSlider(input)
+        end
+    end)
+    
+    slider.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.Touch then
+            UpdateSlider(input)
+        end
+    end)
 end
 
--- Mobile Touch Controls
+-- Initialize touch sliders
+if UserInputService.TouchEnabled then
+    CreateTouchSlider(
+        FOVSlider, 
+        FOVFill, 
+        FOVLabel, 
+        "FOV", 
+        500, 
+        function(value) return "FOV: " .. math.floor(value) end
+    )
+    
+    CreateTouchSlider(
+        SensSlider, 
+        SensFill, 
+        SensLabel, 
+        "Sensitivity", 
+        2, 
+        function(value) return "ความรวดเร็ว: " .. string.format("%.2f", value) end
+    )
+end
+
+-- Update mobile aim button
 local TouchButton = Instance.new("ImageButton")
-TouchButton.Size = UDim2.new(0, 50, 0, 50)
-TouchButton.Position = UDim2.new(1, -60, 0.5, -25)
+TouchButton.Size = UDim2.new(0, 100, 0, 100)
+TouchButton.Position = UDim2.new(1, -120, 0.5, -50)
 TouchButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-TouchButton.BackgroundTransparency = 0.5
+TouchButton.BackgroundTransparency = 0.7
+TouchButton.Text = "TAP TO AIM"
+TouchButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TouchButton.TextSize = 16
+TouchButton.Font = Enum.Font.SourceSansBold
 TouchButton.Visible = false
 TouchButton.Parent = ScreenGui
 
@@ -567,18 +552,30 @@ RunService.RenderStepped:Connect(function()
     UpdateFOVCircle()
     UpdateESP()
     
-    if SETTINGS.Enabled and (SETTINGS.TouchEnabled or not SETTINGS.MobileEnabled) then
-        local target = GetClosestPlayerInFOV()
-        if target and target.Character and target.Character:FindFirstChild(SETTINGS.TargetPart) then
-            local targetPart = target.Character[SETTINGS.TargetPart]
-            local targetPosition = Camera:WorldToScreenPoint(targetPart.Position)
-            
-            if targetPosition.Z > 0 then
-                local mousePosition = UserInputService:GetMouseLocation()
-                local moveX = (targetPosition.X - mousePosition.X) * SETTINGS.Sensitivity
-                local moveY = (targetPosition.Y - mousePosition.Y) * SETTINGS.Sensitivity
+    if SETTINGS.Enabled then
+        if UserInputService.TouchEnabled then
+            -- Mobile aim logic
+            if SETTINGS.TouchEnabled then
+                local target = GetClosestPlayerInFOV()
+                if target and target.Character and target.Character:FindFirstChild(SETTINGS.TargetPart) then
+                    local targetPart = target.Character[SETTINGS.TargetPart]
+                    Camera.CFrame = CFrame.new(Camera.CFrame.Position, targetPart.Position)
+                end
+            end
+        else
+            -- PC aim logic
+            local target = GetClosestPlayerInFOV()
+            if target and target.Character and target.Character:FindFirstChild(SETTINGS.TargetPart) then
+                local targetPart = target.Character[SETTINGS.TargetPart]
+                local targetPosition = Camera:WorldToScreenPoint(targetPart.Position)
                 
-                mousemoverel(moveX, moveY)
+                if targetPosition.Z > 0 then
+                    local mousePosition = UserInputService:GetMouseLocation()
+                    local moveX = (targetPosition.X - mousePosition.X) * SETTINGS.Sensitivity
+                    local moveY = (targetPosition.Y - mousePosition.Y) * SETTINGS.Sensitivity
+                    
+                    mousemoverel(moveX, moveY)
+                end
             end
         end
     end
